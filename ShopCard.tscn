@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctvxbwlvxay3t"]
+
+[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_6qs1m"]
+
+[node name="ShopCard" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 160.0
+offset_bottom = 201.0
+texture = ExtResource("1_6qs1m")
+
+[node name="TextEdit" type="TextEdit" parent="NinePatchRect"]
+layout_mode = 0
+offset_right = 159.0
+offset_bottom = 39.0
+placeholder_text = "Offer Name"
+editable = false
