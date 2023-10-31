@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://vdcnckar136l"]
+
+[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_b5dt4"]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+offset_right = 178.0
+offset_bottom = 159.0
+texture = ExtResource("1_b5dt4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 179.0
+offset_bottom = 160.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Title"
+horizontal_alignment = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="BlueDataCost" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Blue"
+
+[node name="RedDataCost" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Red"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[node name="Money" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Money"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 131.0
+offset_right = 176.0
+offset_bottom = 157.0
+text = "Accept"
