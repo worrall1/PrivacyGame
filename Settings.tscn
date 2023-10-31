@@ -3,10 +3,16 @@
 [ext_resource type="Script" path="res://SettingsVBox.gd" id="1_l50qu"]
 
 [node name="ColorRect" type="ColorRect"]
-offset_left = 226.0
-offset_top = 105.0
-offset_right = 957.0
-offset_bottom = 555.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.0
+offset_top = 96.0
+offset_right = -595.0
+offset_bottom = -656.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.35874, 2.58265)
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
@@ -50,8 +56,11 @@ text = "Fullscreen"
 
 [node name="EXIT" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "EXIT"
+text = "QUIT GAME
+"
 
 [connection signal="pressed" from="VBoxContainer/Resume" to="VBoxContainer" method="_on_Resume_pressed"]
 [connection signal="value_changed" from="VBoxContainer/SFX" to="VBoxContainer" method="_on_sfx_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/Music" to="VBoxContainer" method="_on_music_value_changed"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/CheckBox" to="VBoxContainer" method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="VBoxContainer/EXIT" to="VBoxContainer" method="_on_exit_pressed"]
