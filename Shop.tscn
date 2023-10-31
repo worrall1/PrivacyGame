@@ -7,3 +7,4 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_ig62i")]
+script = null

@@ -1,3 +1,66 @@
-[gd_scene format=3 uid="uid://ddc3ktyaln0hu"]
+[gd_scene load_steps=2 format=3 uid="uid://ddc3ktyaln0hu"]
 
-[node name="Settings" type="Node2D"]
+[ext_resource type="Script" path="res://SettingsVBox.gd" id="1_l50qu"]
+
+[node name="ColorRect" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.0
+offset_top = 96.0
+offset_right = -595.0
+offset_bottom = -656.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.35874, 2.58265)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.5
+offset_top = -224.0
+offset_right = 230.5
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_l50qu")
+
+[node name="Resume" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "RESUME"
+
+[node name="SFX" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Music" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Fullscreen"
+
+[node name="EXIT" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIT GAME
+"
+
+[connection signal="pressed" from="VBoxContainer/Resume" to="VBoxContainer" method="_on_Resume_pressed"]
+[connection signal="value_changed" from="VBoxContainer/SFX" to="VBoxContainer" method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/Music" to="VBoxContainer" method="_on_music_value_changed"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/CheckBox" to="VBoxContainer" method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="VBoxContainer/EXIT" to="VBoxContainer" method="_on_exit_pressed"]
