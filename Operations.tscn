@@ -1,32 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvnymhrgfegu2"]
+[gd_scene load_steps=5 format=3 uid="uid://dvnymhrgfegu2"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_48h57"]
+[ext_resource type="Script" path="res://Operations.gd" id="1_kelgn"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_vxwuo"]
 [ext_resource type="Texture2D" uid="uid://clbtsbxl8f25n" path="res://Textures/White.png" id="3_w863g"]
 
-[node name="Operations" type="Node2D"]
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_kelgn")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_48h57")]
+[node name="TopBar" parent="." instance=ExtResource("1_48h57")]
 script = null
 
-[node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_vxwuo")]
+[node name="NinePatchRect" parent="." instance=ExtResource("2_vxwuo")]
 
-[node name="Background" type="NinePatchRect" parent="CanvasLayer"]
+[node name="Background" type="NinePatchRect" parent="."]
 offset_top = 49.0
 offset_right = 1918.0
 offset_bottom = 1018.0
 texture = ExtResource("3_w863g")
 
-[node name="Line" type="ColorRect" parent="CanvasLayer"]
+[node name="Line" type="ColorRect" parent="."]
 offset_left = 959.0
 offset_top = 47.0
 offset_right = 975.0
 offset_bottom = 1020.0
 color = Color(0.0392157, 0.0392157, 0.0392157, 1)
 
-[node name="PR2" type="Label" parent="CanvasLayer"]
+[node name="PR2" type="Label" parent="."]
 offset_left = 989.0
 offset_top = 61.0
 offset_right = 1282.0
@@ -35,7 +35,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Security Team"
 
-[node name="PR" type="Label" parent="CanvasLayer"]
+[node name="Hire" type="Button" parent="."]
+offset_left = 1317.0
+offset_top = 140.0
+offset_right = 1578.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "HIRE"
+
+[node name="PR" type="Label" parent="."]
 offset_left = 19.0
 offset_top = 60.0
 offset_right = 312.0
@@ -43,3 +51,87 @@ offset_bottom = 118.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Public Relations (PR)"
+
+[node name="SecurityLabel" type="Label" parent="."]
+offset_left = 1145.0
+offset_top = 173.0
+offset_right = 1308.0
+offset_bottom = 259.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Line3" type="ColorRect" parent="."]
+offset_left = 960.0
+offset_top = 430.0
+offset_right = 1922.0
+offset_bottom = 450.0
+color = Color(0.0117647, 0.0117647, 0.0117647, 1)
+
+[node name="Line2" type="ColorRect" parent="."]
+offset_left = 974.0
+offset_top = 250.0
+offset_right = 1920.0
+offset_bottom = 270.0
+color = Color(0.0117647, 0.0117647, 0.0117647, 1)
+
+[node name="Line4" type="ColorRect" parent="."]
+offset_left = 1435.0
+offset_top = 257.0
+offset_right = 1451.0
+offset_bottom = 442.0
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+
+[node name="PersData" type="Label" parent="."]
+offset_left = 1200.0
+offset_top = 354.0
+offset_right = 1240.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="PersonalData" type="Label" parent="."]
+offset_left = 1102.0
+offset_top = 382.0
+offset_right = 1360.0
+offset_bottom = 427.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Personal Data (GB)"
+
+[node name="SecText" type="Label" parent="."]
+offset_left = 1586.0
+offset_top = 388.0
+offset_right = 1785.0
+offset_bottom = 433.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Security Level"
+
+[node name="SecLevel" type="Label" parent="."]
+offset_left = 1640.0
+offset_top = 346.0
+offset_right = 1680.0
+offset_bottom = 389.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="ChanceText" type="Label" parent="."]
+offset_left = 1076.0
+offset_top = 504.0
+offset_right = 1836.0
+offset_bottom = 783.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "There is a                      chance
+
+
+     of a data breach occuring"
+
+[node name="BreachProb" type="Label" parent="."]
+offset_left = 1446.0
+offset_top = 584.0
+offset_right = 1486.0
+offset_bottom = 607.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+
+[connection signal="pressed" from="Hire" to="." method="_on_hire_pressed"]
