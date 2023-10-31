@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddxtl0c0bcg1m"]
+[gd_scene load_steps=6 format=3 uid="uid://ddxtl0c0bcg1m"]
 
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_1e6du"]
 
@@ -7,7 +7,12 @@ bg_color = Color(0.282353, 0.686275, 0.541176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e053"]
 bg_color = Color(0.160784, 0.458824, 0.34902, 1)
-shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7csx"]
+bg_color = Color(0.215686, 0.65098, 0.831373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skxmv"]
+bg_color = Color(0.121569, 0.470588, 0.611765, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,28 +24,32 @@ grow_vertical = 2
 script = ExtResource("1_1e6du")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 650.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 239.0
-offset_top = 288.0
-offset_right = 440.0
-offset_bottom = 371.0
+layout_mode = 2
+offset_left = 446.0
+offset_top = 483.0
+offset_right = 869.0
+offset_bottom = 634.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_q7d8y")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0e053")
 text = "START"
 
 [node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 688.0
-offset_top = 288.0
-offset_right = 889.0
-offset_bottom = 371.0
-theme_override_styles/hover = SubResource("StyleBoxFlat_0e053")
+layout_mode = 2
+offset_left = 1057.0
+offset_top = 483.0
+offset_right = 1480.0
+offset_bottom = 634.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_o7csx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_skxmv")
 text = "SETTINGS"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
