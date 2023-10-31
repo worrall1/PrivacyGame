@@ -1,57 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpfsy436l5lvu"]
+[gd_scene load_steps=2 format=3 uid="uid://bxd7avsp3rgn3"]
 
-[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_hsllu"]
-[ext_resource type="Script" path="res://TopBar.gd" id="2_frrfe"]
+[ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
 
 [node name="Upgrades" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TopBar" type="NinePatchRect" parent="CanvasLayer"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 20.0
-grow_horizontal = 2
-scale = Vector2(0.999086, 2.4715)
-texture = ExtResource("1_hsllu")
-patch_margin_top = 10
-patch_margin_bottom = 10
-script = ExtResource("2_frrfe")
-metadata/_edit_use_anchors_ = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/TopBar"]
-layout_direction = 2
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 8.0
-grow_horizontal = 2
-scale = Vector2(1.00194, 0.639839)
-alignment = 1
-
-[node name="Button" type="Button" parent="CanvasLayer/TopBar/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-text = "Data"
-
-[node name="Button2" type="Button" parent="CanvasLayer/TopBar/HBoxContainer"]
-layout_mode = 2
-text = "Operations"
-
-[node name="Button3" type="Button" parent="CanvasLayer/TopBar/HBoxContainer"]
-layout_mode = 2
-text = "Home"
-
-[node name="Button4" type="Button" parent="CanvasLayer/TopBar/HBoxContainer"]
-layout_mode = 2
-text = "Ventures"
-
-[node name="Button5" type="Button" parent="CanvasLayer/TopBar/HBoxContainer"]
-layout_mode = 2
-text = "Shop"
-
-[connection signal="pressed" from="CanvasLayer/TopBar/HBoxContainer/Button" to="CanvasLayer/TopBar" method="_on_button_1_pressed"]
-[connection signal="pressed" from="CanvasLayer/TopBar/HBoxContainer/Button2" to="CanvasLayer/TopBar" method="_on_button_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/TopBar/HBoxContainer/Button3" to="CanvasLayer/TopBar" method="_on_button_3_pressed"]
-[connection signal="pressed" from="CanvasLayer/TopBar/HBoxContainer/Button4" to="CanvasLayer/TopBar" method="_on_button_4_pressed"]
-[connection signal="pressed" from="CanvasLayer/TopBar/HBoxContainer/Button5" to="CanvasLayer/TopBar" method="_on_button_5_pressed"]
+[node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_hmu2l")]
