@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkchwootoaxgx"]
+
+[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_jdixa"]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+offset_left = 379.0
+offset_top = 161.0
+offset_right = 1540.0
+offset_bottom = 935.0
+texture = ExtResource("1_jdixa")

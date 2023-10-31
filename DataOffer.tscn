@@ -42,9 +42,16 @@ layout_direction = 1
 layout_mode = 2
 color = Color(0.00392157, 0.00392157, 0.00392157, 1)
 
-[node name="Money" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Money" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "Money"
+
+[node name="Rep" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Rep"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
