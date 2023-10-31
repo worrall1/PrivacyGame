@@ -1,6 +1,5 @@
 extends Node
 
-
 var money = 0
 var mps = 0
 var blueData = 0
@@ -10,9 +9,6 @@ var rdps = 0
 var date = 0 #integer count of how many days have elapsed
 var sfxVol = 0.5
 var musicVol = 0.5
-
-
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
