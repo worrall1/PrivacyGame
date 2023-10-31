@@ -9,6 +9,7 @@ var rdps = 0
 var date = 0 #integer count of how many days have elapsed
 var sfxVol = 0.5
 var musicVol = 0.5
+var reputation = 100 #integer 1 - 100 value for reputation
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
