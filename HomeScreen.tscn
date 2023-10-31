@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://daputx404ywkw"]
+[gd_scene load_steps=3 format=3 uid="uid://daputx404ywkw"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_c6lw8"]
+[ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
 
 [node name="HomeScreen" type="Node2D"]
 position = Vector2(563, -2)
@@ -9,3 +10,5 @@ position = Vector2(563, -2)
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_c6lw8")]
 script = null
+
+[node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_jd85w")]

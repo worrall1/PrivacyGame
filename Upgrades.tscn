@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxd7avsp3rgn3"]
+[gd_scene load_steps=3 format=3 uid="uid://bxd7avsp3rgn3"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
+[ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_ll26n"]
 
 [node name="Upgrades" type="Node2D"]
 
@@ -8,3 +9,17 @@
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_hmu2l")]
 script = null
+
+[node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_ll26n")]
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+offset_left = 143.0
+offset_top = 149.0
+offset_right = 891.0
+offset_bottom = 929.0
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="."]
+offset_left = 1035.0
+offset_top = 111.0
+offset_right = 1846.0
+offset_bottom = 932.0
