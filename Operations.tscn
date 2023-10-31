@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvnymhrgfegu2"]
+[gd_scene load_steps=3 format=3 uid="uid://dvnymhrgfegu2"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_48h57"]
+[ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_vxwuo"]
 
 [node name="Operations" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_48h57")]
+script = null
+
+[node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_vxwuo")]
