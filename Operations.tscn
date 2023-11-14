@@ -58,6 +58,7 @@ offset_top = 173.0
 offset_right = 1308.0
 offset_bottom = 259.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
 
 [node name="Line3" type="ColorRect" parent="."]
 offset_left = 960.0

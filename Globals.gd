@@ -1,6 +1,6 @@
 extends Node
 
-var money = 0
+var money = 500
 var mps = 0
 var blueData = 0
 var bdps = 0
