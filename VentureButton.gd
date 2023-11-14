@@ -1,0 +1,35 @@
+extends TextureButton
+
+var toggle = false
+var textura = load("res://Textures/selected_box.png")
+var default_texture: Texture
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	default_texture = texture_normal
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+
+
+func _on_pressed():
+	if toggle == false:
+		texture_normal = textura
+		
+				
+		toggle = true
+		
+	elif toggle == true:
+		texture_normal = default_texture
+		
+		
+		
+		toggle = false
+	pass # Replace with function body.
+
+

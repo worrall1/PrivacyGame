@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqhvphb1uilps"]
+
+[ext_resource type="Texture2D" uid="uid://clbtsbxl8f25n" path="res://Textures/White.png" id="1_cfeyg"]
+[ext_resource type="Script" path="res://VentureButton.gd" id="2_nil3c"]
+
+[node name="TextureButton" type="TextureButton"]
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 239.0
+offset_bottom = 226.0
+texture_normal = ExtResource("1_cfeyg")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_nil3c")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 213.0
+offset_right = 218.0
+offset_bottom = 236.0
+text = "SOCIAL MEDIA"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

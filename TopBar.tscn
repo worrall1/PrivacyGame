@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_fwnk1"]
 [ext_resource type="Script" path="res://TopBar.gd" id="2_763e6"]
-[ext_resource type="Texture2D" uid="uid://cihh4bg1jbq2w" path="res://icon.svg" id="3_wkq7f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxieo"]
+bg_color = Color(0.129412, 0.686275, 0.65098, 1)
 
 [node name="TopBar" type="NinePatchRect"]
 anchors_preset = 10
@@ -28,35 +30,31 @@ alignment = 1
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Data"
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Operations"
 
 [node name="Button3" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Home"
 
 [node name="Button4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Ventures"
 
 [node name="Button5" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Shop"
-
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_right = 57.0
-offset_bottom = 20.0
-texture_normal = ExtResource("3_wkq7f")
-ignore_texture_size = true
-stretch_mode = 0
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button5" to="." method="_on_button_5_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_settings_pressed"]
