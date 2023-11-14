@@ -14,7 +14,5 @@ func _process(delta):
 	get_node("HBoxContainer/VBoxContainer2/BDPS").text = str(Globals.bdps)
 	get_node("HBoxContainer/VBoxContainer3/RedData").text = str(Globals.redData)
 	get_node("HBoxContainer/VBoxContainer3/RDPS").text = str(Globals.rdps)
+	get_node("HBoxContainer/VBoxContainer3/SecurityLevel").text = str(Globals.securityLevel)
 	pass
-
-
-

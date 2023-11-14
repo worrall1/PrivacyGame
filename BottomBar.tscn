@@ -77,5 +77,8 @@ text = "Reputation"
 
 [node name="SecurityLevel" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 736.0
+offset_top = 18.0
+offset_right = 828.0
+offset_bottom = 44.0
+text = "Placeholder"
