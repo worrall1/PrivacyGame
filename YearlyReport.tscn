@@ -1,10 +1,93 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkchwootoaxgx"]
+[gd_scene load_steps=3 format=3 uid="uid://dkchwootoaxgx"]
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_jdixa"]
+[ext_resource type="Texture2D" uid="uid://cihh4bg1jbq2w" path="res://icon.svg" id="2_qcrk5"]
 
-[node name="NinePatchRect" type="NinePatchRect"]
+[node name="QReportBackground" type="NinePatchRect"]
 offset_left = 379.0
 offset_top = 161.0
 offset_right = 1540.0
 offset_bottom = 935.0
 texture = ExtResource("1_jdixa")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -63.0
+offset_right = 63.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Quarterly Report:"
+
+[node name="Data Generation Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 92.0
+offset_right = 154.0
+offset_bottom = 118.0
+text = "Data Generated:"
+
+[node name="Profit Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 49.0
+offset_right = 116.0
+offset_bottom = 75.0
+text = "Profit:"
+
+[node name="Data Breach Status" type="Label" parent="."]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 174.0
+offset_right = 1041.0
+offset_bottom = 200.0
+text = "Data Breach Status:"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.5
+offset_top = -130.0
+offset_right = 119.5
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Continue"
+
+[node name="Secure_Breached" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 857.0
+offset_top = 224.0
+offset_right = 1088.0
+offset_bottom = 438.0
+texture = ExtResource("2_qcrk5")
+
+[node name="Breach Explanation" type="Label" parent="."]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 465.0
+offset_right = 1149.0
+offset_bottom = 536.0
+text = "Nobody has breached your database this quarter"
+
+[node name="Date" type="Label" parent="."]
+layout_mode = 0
+offset_left = 543.0
+offset_top = 44.0
+offset_right = 606.0
+offset_bottom = 70.0
+text = "2023 Q4"
+
+[node name="Reputation Swing" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 465.0
+offset_right = 184.0
+offset_bottom = 491.0
+text = "Reputation: +20%"
