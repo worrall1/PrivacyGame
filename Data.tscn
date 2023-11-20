@@ -74,3 +74,10 @@ offset_left = 308.0
 offset_top = 331.0
 offset_right = 486.0
 offset_bottom = 490.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 890.0
+offset_top = 533.0
+offset_right = 1064.0
+offset_bottom = 559.0
+text = "Check Back Here in Q2"

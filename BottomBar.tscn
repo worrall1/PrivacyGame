@@ -67,7 +67,7 @@ offset_top = 6.0
 offset_right = 1878.0
 offset_bottom = 54.0
 
-[node name="Label" type="Label" parent="."]
+[node name="ReputationLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1118.0
 offset_top = 18.0
@@ -77,8 +77,15 @@ text = "Reputation"
 
 [node name="SecurityLevel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 736.0
-offset_top = 18.0
-offset_right = 828.0
-offset_bottom = 44.0
-text = "Placeholder"
+offset_left = 162.0
+offset_top = 15.0
+offset_right = 202.0
+offset_bottom = 38.0
+
+[node name="SecurityLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 131.0
+offset_bottom = 42.0
+text = "Security Level:"

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://Globals.gd"
+DataOfferRepo="*res://DataOfferRepo.gd"
 
 [display]
 

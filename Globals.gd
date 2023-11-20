@@ -13,6 +13,8 @@ var reputation = 100 #integer 1 - 100 value for reputation
 var securityFreq = 0
 var breachProb = 0.1
 var securityLevel = "Good"
+var quarter = 0 #how long the game has been going
+var time = 0 #how long since the start of this quarter
 
 
 # Called when the node enters the scene tree for the first time.
