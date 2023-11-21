@@ -43,6 +43,22 @@ offset_bottom = 207.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "HIRE"
 
+[node name="CharityButton" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 204.0
+offset_right = 877.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 50
+text = "Donate to charity"
+
+[node name="StatementButton" type="Button" parent="."]
+offset_left = 86.0
+offset_top = 422.0
+offset_right = 876.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 50
+text = "Release a statement"
+
 [node name="PR" type="Label" parent="."]
 offset_left = 19.0
 offset_top = 60.0
@@ -81,6 +97,14 @@ offset_right = 1451.0
 offset_bottom = 442.0
 color = Color(0.0392157, 0.0392157, 0.0392157, 1)
 
+[node name="StatementCost" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 585.0
+offset_right = 586.0
+offset_bottom = 651.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
 [node name="PersData" type="Label" parent="."]
 offset_left = 1200.0
 offset_top = 354.0
@@ -97,6 +121,26 @@ offset_bottom = 427.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Personal Data (GB)"
+
+[node name="CharityCost" type="Label" parent="."]
+offset_left = 460.0
+offset_top = 371.0
+offset_right = 660.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="ChanceText" type="Label" parent="."]
+offset_left = 1076.0
+offset_top = 504.0
+offset_right = 1836.0
+offset_bottom = 792.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "There is a                      chance
+
+
+     of a data breach occuring"
 
 [node name="SecText" type="Label" parent="."]
 offset_left = 1586.0
@@ -115,18 +159,6 @@ offset_bottom = 389.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
-[node name="ChanceText" type="Label" parent="."]
-offset_left = 1076.0
-offset_top = 504.0
-offset_right = 1836.0
-offset_bottom = 783.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-text = "There is a                      chance
-
-
-     of a data breach occuring"
-
 [node name="BreachProb" type="Label" parent="."]
 offset_left = 1446.0
 offset_top = 584.0
@@ -136,3 +168,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 
 [connection signal="pressed" from="Hire" to="." method="_on_hire_pressed"]
+[connection signal="pressed" from="CharityButton" to="." method="_on_charity_button_pressed"]
+[connection signal="pressed" from="StatementButton" to="." method="_on_statement_button_pressed"]
