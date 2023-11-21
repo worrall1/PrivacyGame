@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://daputx404ywkw"]
+[gd_scene load_steps=4 format=3 uid="uid://daputx404ywkw"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_c6lw8"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
+[ext_resource type="Texture2D" uid="uid://djnad08expqig" path="res://Textures/officeLevels/crib0.png" id="3_tnr68"]
 
 [node name="HomeScreen" type="Node2D"]
 position = Vector2(563, -2)
@@ -12,3 +13,7 @@ position = Vector2(563, -2)
 script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_jd85w")]
+
+[node name="Crib0" type="Sprite2D" parent="."]
+position = Vector2(397, 546)
+texture = ExtResource("3_tnr68")
