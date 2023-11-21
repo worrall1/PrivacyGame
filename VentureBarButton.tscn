@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://crsqbmh4btnre"]
+
+[ext_resource type="Texture2D" uid="uid://cr5ltumxwkrvy" path="res://Textures/1269202-200.png" id="1_53n86"]
+[ext_resource type="StyleBox" uid="uid://ch0lt5yiqek4d" path="res://Textures/VentureBarButton.tres" id="1_qlk5x"]
+[ext_resource type="Script" path="res://VentureBarButton.gd" id="1_v64p1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hnxm"]
+content_margin_left = 10.0
+content_margin_right = 25.0
+bg_color = Color(0.337255, 0.337255, 0.337255, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ydyn"]
+content_margin_left = 10.0
+content_margin_right = 25.0
+bg_color = Color(0.780392, 0.780392, 0.780392, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6g2x"]
+bg_color = Color(0, 0.729412, 0.027451, 0.607843)
+
+[node name="Button" type="Button"]
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 749.0
+offset_bottom = 249.0
+focus_mode = 0
+theme_override_styles/normal = ExtResource("1_qlk5x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0hnxm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1ydyn")
+text = "Purchase 1000 GB's of Personal Emails"
+icon = ExtResource("1_53n86")
+alignment = 2
+script = ExtResource("1_v64p1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 653.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.686275, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_r6g2x")
+text = "PURCHASED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

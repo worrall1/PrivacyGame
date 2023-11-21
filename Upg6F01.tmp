@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxd7avsp3rgn3"]
+[gd_scene load_steps=6 format=3 uid="uid://bxd7avsp3rgn3"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
 [ext_resource type="Script" path="res://Upgrades.gd" id="1_ppvvd"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_ll26n"]
 [ext_resource type="PackedScene" uid="uid://cqhvphb1uilps" path="res://VentureButton.tscn" id="3_fny23"]
-[ext_resource type="PackedScene" uid="uid://crsqbmh4btnre" path="res://VentureBarButton.tscn" id="5_fochf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wcj"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -23,6 +22,12 @@ script = ExtResource("1_ppvvd")
 script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_ll26n")]
+
+[node name="HFlowContainer2" type="HFlowContainer" parent="."]
+offset_left = 1035.0
+offset_top = 111.0
+offset_right = 1846.0
+offset_bottom = 932.0
 
 [node name="TextureButton" parent="." instance=ExtResource("3_fny23")]
 offset_left = 77.0
@@ -92,36 +97,7 @@ offset_right = 1631.0
 offset_bottom = 850.0
 theme_override_font_sizes/font_size = 50
 text = "SELECT
-VENTURE"
+AN
+UPGRADE"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Button" parent="." instance=ExtResource("5_fochf")]
-offset_left = 976.0
-offset_top = 167.0
-offset_right = 1629.0
-offset_bottom = 288.0
-scale = Vector2(1.28, 1.28)
-
-[node name="Button2" parent="." instance=ExtResource("5_fochf")]
-offset_left = 976.0
-offset_top = 350.0
-offset_right = 1629.0
-offset_bottom = 471.0
-scale = Vector2(1.28, 1.28)
-
-[node name="Button3" parent="." instance=ExtResource("5_fochf")]
-offset_left = 976.0
-offset_top = 541.0
-offset_right = 1629.0
-offset_bottom = 662.0
-scale = Vector2(1.28, 1.28)
-
-[node name="Button4" parent="." instance=ExtResource("5_fochf")]
-offset_left = 976.0
-offset_top = 725.0
-offset_right = 1629.0
-offset_bottom = 846.0
-scale = Vector2(1.28, 1.28)
-
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
