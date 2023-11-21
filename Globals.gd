@@ -26,6 +26,9 @@ var repLastQuarter = 0
 var timeModifier = 0
 var reputationModifier = 1
 
+var upgradeArray = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

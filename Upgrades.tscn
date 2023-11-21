@@ -125,3 +125,4 @@ offset_bottom = 846.0
 scale = Vector2(1.28, 1.28)
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

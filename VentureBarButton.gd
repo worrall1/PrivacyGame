@@ -15,6 +15,3 @@ func _process(delta):
 	pass
 
 
-func _on_pressed():
-	get_node("Label").show()
-	pass # Replace with function body.

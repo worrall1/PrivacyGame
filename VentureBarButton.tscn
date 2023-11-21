@@ -59,5 +59,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_r6g2x")
 text = "PURCHASED"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
