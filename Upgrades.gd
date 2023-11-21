@@ -1,6 +1,6 @@
 extends Node2D
 
-var selected
+var selected = 0
 var currentSelection = null
 
 

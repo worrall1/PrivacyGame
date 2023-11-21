@@ -31,7 +31,22 @@ func _on_pressed():
 			
 				
 			toggle = true
-			parent.selectedNode = self
+			parent.currentSelection = self
+			
+		elif parent.selected == 1:
+			
+			
+			parent.currentSelection.texture_normal = default_texture
+			parent.currentSelection.toggle = false
+			
+			texture_normal = textura
+			parent.selected = 1
+			
+				
+			toggle = true
+			parent.currentSelection = self
+			
+			
 		
 	elif toggle == true:
 		texture_normal = default_texture
