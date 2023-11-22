@@ -6,11 +6,13 @@ var charityCost = 200
 var statementCost = 50
 var charityRep = 5
 var statementRep = 2
-var reputation_label
+var eventRep = 3
+var eventCost = 150
 
 # Additional PR Action
-var additionalPRCost = 300
-var additionalPRRep = 8
+var charityCostIncrement = 50
+var statementCostIncrement = 25
+var eventCostIncrement = 75
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +26,7 @@ func _process(delta):
 	$BreachProb.text = str(Globals.breachProb)
 	$StatementCost.text = str(statementCost)
 	$CharityCost.text = str(charityCost)
+	$EventCost.text = str(eventCost)
 	# Disable the hire button if not enough money
 	$Hire.disabled = Globals.money < hireCost
 	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost
@@ -36,9 +39,6 @@ func _on_hire_pressed():
 		hireCost += 50 # Increase the cost for the next hire
 
 		$SecurityLabel.text = str(Globals.securityFreq)
-	pass
-
-
 
 
 func update_pr_buttons():
@@ -52,21 +52,20 @@ func _on_charity_button_pressed():
 	if Globals.money >= charityCost:
 		Globals.money -= charityCost
 		Globals.reputation += charityRep
+		charityCost += charityCostIncrement * 3
 		update_pr_buttons()
-		Globals.reputation += 5
+		
 
 func _on_statement_button_pressed():
 	if Globals.money >= statementCost:
 		Globals.money -= statementCost
 		Globals.reputation += statementRep
+		statementCost += statementCostIncrement * 1.5
 		update_pr_buttons()
-		Globals.reputation += 2
-		
 
-func update_pr_section():
-	pass
-
-
-
-
-
+func _on_event_button_pressed():
+	if Globals.money >= eventCost:
+		Globals.money -= eventCost
+		Globals.reputation += eventRep
+		eventCost += eventCostIncrement * 2.3
+		update_pr_buttons()

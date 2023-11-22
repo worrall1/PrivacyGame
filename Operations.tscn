@@ -167,6 +167,23 @@ offset_bottom = 607.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 
+[node name="EventCost" type="Label" parent="."]
+offset_left = 461.0
+offset_top = 755.0
+offset_right = 643.0
+offset_bottom = 856.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+
+[node name="EventButton" type="Button" parent="."]
+offset_left = 80.0
+offset_top = 622.0
+offset_right = 870.0
+offset_bottom = 726.0
+theme_override_font_sizes/font_size = 50
+text = "Host an event"
+
 [connection signal="pressed" from="Hire" to="." method="_on_hire_pressed"]
 [connection signal="pressed" from="CharityButton" to="." method="_on_charity_button_pressed"]
 [connection signal="pressed" from="StatementButton" to="." method="_on_statement_button_pressed"]
+[connection signal="pressed" from="EventButton" to="." method="_on_event_button_pressed"]
