@@ -98,10 +98,10 @@ offset_bottom = 442.0
 color = Color(0.0392157, 0.0392157, 0.0392157, 1)
 
 [node name="StatementCost" type="Label" parent="."]
-offset_left = 466.0
-offset_top = 585.0
+offset_left = 471.0
+offset_top = 559.0
 offset_right = 586.0
-offset_bottom = 651.0
+offset_bottom = 594.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 
@@ -123,8 +123,8 @@ theme_override_font_sizes/font_size = 30
 text = "Personal Data (GB)"
 
 [node name="CharityCost" type="Label" parent="."]
-offset_left = 460.0
-offset_top = 371.0
+offset_left = 458.0
+offset_top = 342.0
 offset_right = 660.0
 offset_bottom = 460.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)

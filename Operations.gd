@@ -8,24 +8,26 @@ var charityRep = 5
 var statementRep = 2
 var reputation_label
 
+# Additional PR Action
+var additionalPRCost = 300
+var additionalPRRep = 8
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	reputation_label = get_node("/root/CanvasLayer/BottomBar/ReputationLabel")
 	update_pr_buttons()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$PersData.text = str(Globals.redData)
-	update_security_level()  # Update the security level
 	$SecLevel.text = str(Globals.securityLevel)
 	$BreachProb.text = str(Globals.breachProb)
 	$StatementCost.text = str(statementCost)
 	$CharityCost.text = str(charityCost)
 	# Disable the hire button if not enough money
 	$Hire.disabled = Globals.money < hireCost
+	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost
 
-	pass
 
 func _on_hire_pressed():
 	if Globals.money >= hireCost:
@@ -36,20 +38,8 @@ func _on_hire_pressed():
 		$SecurityLabel.text = str(Globals.securityFreq)
 	pass
 
-# Function to update the security level
-func update_security_level():
-	var ratio = Globals.redData / max(Globals.securityFreq, 1) # Avoid division by zero
 
-	if ratio > 1.5:
-		Globals.securityLevel = "inadequate"
-	elif ratio > 1.0:
-		Globals.securityLevel = "poor"
-	elif ratio > 0.5:
-		Globals.securityLevel = "medium"
-	elif ratio > 0.2:
-		Globals.securityLevel = "good"
-	else:
-		Globals.securityLevel = "excellent"
+
 
 func update_pr_buttons():
 	# Disables the PR buttons if there isn't enough money
@@ -63,14 +53,14 @@ func _on_charity_button_pressed():
 		Globals.money -= charityCost
 		Globals.reputation += charityRep
 		update_pr_buttons()
-		#reputation_label.text = str(Globals.reputation)
+		Globals.reputation += 5
 
 func _on_statement_button_pressed():
 	if Globals.money >= statementCost:
 		Globals.money -= statementCost
 		Globals.reputation += statementRep
 		update_pr_buttons()
-		#reputation_label.text = str(Globals.reputation)
+		Globals.reputation += 2
 		
 
 func update_pr_section():

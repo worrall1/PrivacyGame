@@ -52,17 +52,7 @@ func _process(delta):
 			redDataTotal += rdps * reputationModifier * timeModifier
 			seconds += 1
 			breachTemp = redDataTotal
-			for i in range(securityFreq):
-				breachTemp = breachTemp / 2
-			breachProb = breachTemp
-			if (breachProb < 0.04):
-				securityLevel = "Good"
-			elif ((breachProb >= 0.04) && (breachProb < 0.2)):
-				securityLevel = "Threatened"
-			elif ((breachProb >= 0.2) && (breachProb < 0.5)):
-				securityLevel = "Poor"
-			else:
-				securityLevel = "Critical"
+			update_security_level()
 		if(seconds > 20):
 			quarter += 1
 			seconds = 0
@@ -73,3 +63,18 @@ func _process(delta):
 				redData = 0
 			get_tree().change_scene_to_file("res://YearlyReport.tscn")
 	pass
+	
+func update_security_level():
+	var ratio = redData / max(securityFreq, 1) # Avoid division by zero
+	if ratio > 1.5:
+		securityLevel = "inadequate"
+	elif ratio > 1.0:
+		securityLevel = "poor"
+	elif ratio > 0.5:
+		securityLevel = "medium"
+	elif ratio > 0.2:
+		securityLevel = "good"
+	else:
+		securityLevel = "excellent"
+	
+
