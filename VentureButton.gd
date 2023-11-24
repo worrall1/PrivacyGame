@@ -25,7 +25,7 @@ func _on_pressed():
 		
 	if toggle == false:
 		if parent.selected == 0:
-			
+		
 			texture_normal = textura
 			parent.selected = 1
 			
@@ -45,7 +45,7 @@ func _on_pressed():
 				
 			toggle = true
 			parent.currentSelection = self
-			
+				
 			
 		
 	elif toggle == true:

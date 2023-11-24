@@ -44,12 +44,14 @@ focus_mode = 0
 theme_override_styles/normal = ExtResource("1_qlk5x")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0hnxm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1ydyn")
+keep_pressed_outside = true
 text = "Purchase 1000 GB's of Personal Emails"
 icon = ExtResource("1_53n86")
 alignment = 2
 script = ExtResource("1_v64p1")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 653.0
 offset_bottom = 121.0

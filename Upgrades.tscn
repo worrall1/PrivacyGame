@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxd7avsp3rgn3"]
+[gd_scene load_steps=8 format=3 uid="uid://bxd7avsp3rgn3"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
 [ext_resource type="Script" path="res://Upgrades.gd" id="1_ppvvd"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_ll26n"]
 [ext_resource type="PackedScene" uid="uid://cqhvphb1uilps" path="res://VentureButton.tscn" id="3_fny23"]
 [ext_resource type="PackedScene" uid="uid://crsqbmh4btnre" path="res://VentureBarButton.tscn" id="5_fochf"]
+[ext_resource type="PackedScene" uid="uid://cq5vg2mipo4ox" path="res://UpgradeInfo.tscn" id="6_gecuf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wcj"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -124,5 +125,22 @@ offset_right = 1629.0
 offset_bottom = 846.0
 scale = Vector2(1.28, 1.28)
 
+[node name="Panel2" parent="." instance=ExtResource("6_gecuf")]
+offset_left = 501.0
+offset_top = 204.0
+offset_right = 1403.0
+offset_bottom = 911.0
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="TextureButton6" to="." method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="TextureButton7" to="." method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="TextureButton8" to="." method="_on_texture_button_8_pressed"]
+[connection signal="pressed" from="TextureButton9" to="." method="_on_texture_button_9_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

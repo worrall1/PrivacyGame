@@ -27,8 +27,17 @@ var repLastQuarter = 0
 var timeModifier = 1
 var reputationModifier = 1
 
-var upgradeArray = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+# Stores for upgrade selection
 
+var upgradeOne = [false,false,false,false]
+var upgradeTwo = [false,false,false,false]
+var upgradeThree = [false,false,false,false]
+var upgradeFour = [false,false,false,false]
+var upgradeFive = [false,false,false,false]
+var upgradeSix = [false,false,false,false]
+var upgradeSeven = [false,false,false,false]
+var upgradeEight = [false,false,false,false]
+var upgradeNine = [false,false,false,false]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
