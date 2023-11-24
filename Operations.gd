@@ -1,43 +1,71 @@
 extends CanvasLayer
 
-var hire_cost = 100 # Initial cost to hire a team member
+
+var hireCost = 100 # Initial cost to hire a team member
+var charityCost = 200
+var statementCost = 50
+var charityRep = 5
+var statementRep = 2
+var eventRep = 3
+var eventCost = 150
+
+# Additional PR Action
+var charityCostIncrement = 50
+var statementCostIncrement = 25
+var eventCostIncrement = 75
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	update_pr_buttons()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$PersData.text = str(Globals.redData)
-	update_security_level()  # Update the security level
 	$SecLevel.text = str(Globals.securityLevel)
 	$BreachProb.text = str(Globals.breachProb)
-
+	$StatementCost.text = str(statementCost)
+	$CharityCost.text = str(charityCost)
+	$EventCost.text = str(eventCost)
 	# Disable the hire button if not enough money
-	$Hire.disabled = Globals.money < hire_cost
+	$Hire.disabled = Globals.money < hireCost
+	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost
 
-	pass
 
 func _on_hire_pressed():
-	if Globals.money >= hire_cost:
+	if Globals.money >= hireCost:
 		Globals.securityFreq += 1
-		Globals.money -= hire_cost
-		hire_cost += 50 # Increase the cost for the next hire
+		Globals.money -= hireCost
+		hireCost += 50 # Increase the cost for the next hire
 
 		$SecurityLabel.text = str(Globals.securityFreq)
-	pass
 
-# Function to update the security level
-func update_security_level():
-	var ratio = Globals.redData / max(Globals.securityFreq, 1) # Avoid division by zero
 
-	if ratio > 1.5:
-		Globals.securityLevel = "inadequate"
-	elif ratio > 1.0:
-		Globals.securityLevel = "poor"
-	elif ratio > 0.5:
-		Globals.securityLevel = "medium"
-	elif ratio > 0.2:
-		Globals.securityLevel = "good"
-	else:
-		Globals.securityLevel = "excellent"
+func update_pr_buttons():
+	# Disables the PR buttons if there isn't enough money
+	$CharityButton.disabled = Globals.money < charityCost
+	$StatementButton.disabled = Globals.money < statementCost
+	
+
+
+func _on_charity_button_pressed():
+	if Globals.money >= charityCost:
+		Globals.money -= charityCost
+		Globals.reputation += charityRep
+		charityCost += charityCostIncrement * 3
+		update_pr_buttons()
+		
+
+func _on_statement_button_pressed():
+	if Globals.money >= statementCost:
+		Globals.money -= statementCost
+		Globals.reputation += statementRep
+		statementCost += statementCostIncrement * 1.5
+		update_pr_buttons()
+
+func _on_event_button_pressed():
+	if Globals.money >= eventCost:
+		Globals.money -= eventCost
+		Globals.reputation += eventRep
+		eventCost += eventCostIncrement * 2.3
+		update_pr_buttons()
