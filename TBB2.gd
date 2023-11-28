@@ -1,11 +1,8 @@
-extends NinePatchRect
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("Profit").text = str(Globals.money - Globals.moneyLastQuarter)
-	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
-	
 	pass # Replace with function body.
 
 
@@ -13,5 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func checkDataBreach():
-	pass
+
+func _on_pressed():
+	get_tree().change_scene_to_file("res://Operations.tscn")
+	pass # Replace with function body.

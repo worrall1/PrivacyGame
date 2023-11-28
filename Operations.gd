@@ -23,7 +23,7 @@ func _ready():
 func _process(delta):
 	$PersData.text = str(Globals.redData)
 	$SecLevel.text = str(Globals.securityLevel)
-	$BreachProb.text = str(Globals.breachProb)
+	$BreachProb.text = str(Globals.breachProb) + "%"
 	$StatementCost.text = str(statementCost)
 	$CharityCost.text = str(charityCost)
 	$EventCost.text = str(eventCost)

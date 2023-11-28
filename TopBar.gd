@@ -31,11 +31,6 @@ func _on_button_4_pressed():
 	pass # Replace with function body.
 
 
-func _on_button_5_pressed():
-	get_tree().change_scene_to_file("res://Shop.tscn")
-	pass # Replace with function body.
-
-
 func _on_settings_pressed():
 	get_tree().change_scene_to_file("res://Settings.tscn")
 	pass # Replace with function body.
