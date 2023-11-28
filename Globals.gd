@@ -39,6 +39,16 @@ var upgradeSeven = [false,false,false,false]
 var upgradeEight = [false,false,false,false]
 var upgradeNine = [false,false,false,false]
 
+var ventureData = [
+	{"ventType": 1, "ventName" : "Social Media", "unlocked": false,  "upgrades": [false, false, false, false], "cost": [1000, 2000, 3000]}, 
+	{"ventType": 2, "ventName": "Photo Sharing", "unlocked": false,  "upgrades": [false, false, false, false]},
+	{"ventType": 3, "ventName": "E-commerce", "unlocked": false,  "upgrades": [false, false, false, false]},
+	{"ventType": 4, "ventName": "Video Sharing", "unlocked": false,  "upgrades": [false, false, false, false]},
+	{"ventType": 5, "ventName" : "Online Dating", "unlocked": false,  "upgrades": [false, false, false, false]}, 
+	{"ventType": 6, "ventName": "Comparison Shopping", "unlocked": false,  "upgrades": [false, false, false, false]},
+	{"ventType": 7, "ventName": "Navigation Tool", "unlocked": false,  "upgrades": [false, false, false, false]},
+	{"ventType": 8, "ventName": "Online Gambling", "unlocked": false,  "upgrades": [false, false, false, false]}]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
