@@ -21,13 +21,13 @@ func _ready():
 	get_node("Reputation Swing").text = str(Globals.reputation - Globals.repLastQuarter)
 	if (Globals.breachThisQuarter == true):
 		get_node("Breach Explanation").text = "Hackers have breached your database and now have access to all your user's data. People's identities are being stolen and lives are being ruined. People are very upset and this will affect you reputation"
-		#get_node("Secure_Breached").image = breached
+		get_node("Secure_Breached").texture = load("res://Textures/icons/person-incognito.svg")
 		Globals.reputation -= 50
 		if (Globals.reputation < 0):
 			Globals.reputation = 0
 	else:
 		get_node("Breach Explanation").text = "All your data is secure this month. Well done!"
-		#get_node("Secure_Breached").image = breached
+		get_node("Secure_Breached").texture = load("res://Textures/icons/data-breach.svg")
 	pass # Replace with function body.
 
 

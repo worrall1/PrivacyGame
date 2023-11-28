@@ -47,18 +47,18 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	time += delta
+	time += delta * timeModifier
 
 	if (time >= 1):
 		time -= 1
 	
 		if(timeModifier > 0):
-			money += mps * reputationModifier * timeModifier
-			moneyTotal += mps * reputationModifier * timeModifier
-			blueData += bdps * reputationModifier * timeModifier
-			blueDataTotal += bdps * reputationModifier * timeModifier
-			redData += rdps * reputationModifier * timeModifier
-			redDataTotal += rdps * reputationModifier * timeModifier
+			money += mps * reputationModifier
+			moneyTotal += mps * reputationModifier
+			blueData += bdps * reputationModifier
+			blueDataTotal += bdps * reputationModifier
+			redData += rdps * reputationModifier
+			redDataTotal += rdps * reputationModifier
 			seconds += 1
 			breachTemp = redDataTotal
 			update_security_level()

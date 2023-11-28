@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkchwootoaxgx"]
+[gd_scene load_steps=9 format=3 uid="uid://dkchwootoaxgx"]
 
-[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_jdixa"]
+[ext_resource type="Texture2D" uid="uid://djnad08expqig" path="res://Textures/officeLevels/crib0.png" id="1_l52bd"]
 [ext_resource type="Script" path="res://QuarterReport.gd" id="2_74ctw"]
-[ext_resource type="Texture2D" uid="uid://cihh4bg1jbq2w" path="res://icon.svg" id="2_qcrk5"]
+[ext_resource type="Theme" uid="uid://dk2qjb42fk1fb" path="res://Report.tres" id="4_48dly"]
+[ext_resource type="Texture2D" uid="uid://b4w3cbder88xc" path="res://Textures/icons/data-breach.svg" id="5_gxr5n"]
+[ext_resource type="Texture2D" uid="uid://df2qxt61v7f1b" path="res://Textures/icons/money.svg" id="5_kjxds"]
+[ext_resource type="Texture2D" uid="uid://uupbemu2tm1n" path="res://Textures/icons/nonsensetive-data.svg" id="6_ckuuu"]
+[ext_resource type="Texture2D" uid="uid://beivg1gxujayw" path="res://Textures/icons/sensetive-data.svg.svg" id="7_hcp0q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f0fa"]
+bg_color = Color(0.364706, 0.654902, 0.686275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
 
 [node name="QReportBackground" type="NinePatchRect"]
 anchors_preset = 15
@@ -10,61 +22,91 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jdixa")
+texture = ExtResource("1_l52bd")
 script = ExtResource("2_74ctw")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -622.5
+offset_top = -415.0
+offset_right = 622.5
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5f0fa")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -63.0
-offset_right = 63.0
-offset_bottom = 26.0
+offset_left = -144.0
+offset_top = 136.0
+offset_right = 145.0
+offset_bottom = 186.0
 grow_horizontal = 2
+theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 34
 text = "Quarterly Report:"
+horizontal_alignment = 1
 
 [node name="Data Generation Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 92.0
-offset_right = 154.0
-offset_bottom = 118.0
+offset_left = 379.0
+offset_top = 425.0
+offset_right = 600.0
+offset_bottom = 467.0
+theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 28
 text = "Data Generated:"
 
 [node name="Data Generation" type="Label" parent="."]
 layout_mode = 0
-offset_left = 172.0
-offset_top = 92.0
-offset_right = 300.0
-offset_bottom = 118.0
+offset_left = 512.0
+offset_top = 511.0
+offset_right = 640.0
+offset_bottom = 542.0
+theme = ExtResource("4_48dly")
+
+[node name="Data Generation2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 616.0
+offset_right = 645.0
+offset_bottom = 647.0
+theme = ExtResource("4_48dly")
 
 [node name="Profit Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 72.0
-offset_top = 49.0
-offset_right = 120.0
-offset_bottom = 75.0
+offset_left = 376.0
+offset_top = 263.0
+offset_right = 459.0
+offset_bottom = 305.0
+theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 28
 text = "Profit:"
 
 [node name="Profit" type="Label" parent="."]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 49.0
-offset_right = 184.0
-offset_bottom = 75.0
+offset_left = 481.0
+offset_top = 347.0
+offset_right = 529.0
+offset_bottom = 378.0
+theme = ExtResource("4_48dly")
 
 [node name="Data Breach Status" type="Label" parent="."]
 layout_mode = 0
-offset_left = 889.0
-offset_top = 174.0
-offset_right = 1041.0
-offset_bottom = 200.0
+offset_left = 1013.0
+offset_top = 275.0
+offset_right = 1278.0
+offset_bottom = 317.0
+theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 28
 text = "Data Breach Status:"
 
 [node name="Button" type="Button" parent="."]
@@ -74,44 +116,76 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -118.5
-offset_top = -130.0
-offset_right = 119.5
-offset_bottom = -37.0
+offset_left = -120.0
+offset_top = -262.0
+offset_right = 118.0
+offset_bottom = -169.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Continue"
 
-[node name="Secure_Breached" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_left = 857.0
-offset_top = 224.0
-offset_right = 1088.0
-offset_bottom = 438.0
-texture = ExtResource("2_qcrk5")
-
 [node name="Breach Explanation" type="Label" parent="."]
 layout_mode = 0
-offset_left = 769.0
-offset_top = 465.0
-offset_right = 1149.0
-offset_bottom = 536.0
-text = "Nobody has breached your database this quarter"
+offset_left = 1156.0
+offset_top = 344.0
+offset_right = 1683.0
+offset_bottom = 415.0
+theme = ExtResource("4_48dly")
+text = "Nobody has breached your database
+ this quarter"
 
 [node name="Date" type="Label" parent="."]
 layout_mode = 0
-offset_left = 543.0
-offset_top = 44.0
-offset_right = 606.0
-offset_bottom = 70.0
+offset_left = 910.0
+offset_top = 192.0
+offset_right = 1005.0
+offset_bottom = 229.0
+theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 24
 text = "2023 Q4"
+horizontal_alignment = 1
 
 [node name="Reputation Swing" type="Label" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 465.0
-offset_right = 184.0
-offset_bottom = 491.0
+offset_left = 387.0
+offset_top = 708.0
+offset_right = 576.0
+offset_bottom = 742.0
+theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 28
 text = "Reputation: +20%"
+
+[node name="Secure_Breached" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 329.0
+offset_right = 1120.0
+offset_bottom = 435.0
+texture = ExtResource("5_gxr5n")
+expand_mode = 1
+
+[node name="Money" type="Sprite2D" parent="."]
+position = Vector2(417, 362)
+scale = Vector2(0.155382, 0.143555)
+texture = ExtResource("5_kjxds")
+
+[node name="Nonsensetive-data" type="Sprite2D" parent="."]
+position = Vector2(419, 525)
+scale = Vector2(0.143973, 0.125977)
+texture = ExtResource("6_ckuuu")
+
+[node name="Sensetive-data_svg" type="Sprite2D" parent="."]
+position = Vector2(417, 628)
+scale = Vector2(0.171875, 0.162109)
+texture = ExtResource("7_hcp0q")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1166.0
+offset_top = 602.0
+offset_right = 1371.0
+offset_bottom = 636.0
+theme = ExtResource("4_48dly")
+text = "ADD TOOLTIP HERE"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
