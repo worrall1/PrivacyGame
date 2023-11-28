@@ -5,10 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://cihh4bg1jbq2w" path="res://icon.svg" id="2_qcrk5"]
 
 [node name="QReportBackground" type="NinePatchRect"]
-offset_left = 379.0
-offset_top = 161.0
-offset_right = 1540.0
-offset_bottom = 935.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_jdixa")
 script = ExtResource("2_74ctw")
 
@@ -42,7 +43,7 @@ offset_bottom = 118.0
 layout_mode = 0
 offset_left = 72.0
 offset_top = 49.0
-offset_right = 116.0
+offset_right = 120.0
 offset_bottom = 75.0
 text = "Profit:"
 
@@ -107,3 +108,5 @@ offset_top = 465.0
 offset_right = 184.0
 offset_bottom = 491.0
 text = "Reputation: +20%"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

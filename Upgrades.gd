@@ -14,6 +14,11 @@ func _ready():
 	get_node("Button2").hide()
 	get_node("Button3").hide()
 	get_node("Button4").hide()
+	$TextureButton3.set_texture_normal(load("res://Textures/ventures/shop.png"))
+	$TextureButton4.set_texture_normal(load("res://Textures/ventures/video.png"))
+	$TextureButton5.set_texture_normal(load("res://Textures/ventures/dating.png"))
+	$TextureButton7.set_texture_normal(load("res://Textures/ventures/navigation.png"))
+	$TextureButton8.set_texture_normal(load("res://Textures/ventures/casino.png"))
 	$Panel2.hide()
 	pass # Replace with function body.
 
@@ -43,7 +48,17 @@ func _process(delta):
 
 #	VENTURE BUTTON FUNCTIONS
 
+func set_all_images():
+	$TextureButton3.set_texture_normal(load("res://Textures/ventures/shop.png"))
+	$TextureButton4.set_texture_normal(load("res://Textures/ventures/video.png"))
+	$TextureButton5.set_texture_normal(load("res://Textures/ventures/dating.png"))
+	$TextureButton7.set_texture_normal(load("res://Textures/ventures/navigation.png"))
+	$TextureButton8.set_texture_normal(load("res://Textures/ventures/casino.png"))
+	
+
 func _on_button1_pressed():
+	
+	set_all_images()
 	
 	if actingButton==1:
 			
@@ -77,6 +92,7 @@ func _on_button1_pressed():
 	pass # Replace with function body.
 	
 func _on_button_2_pressed():
+	
 	if actingButton==1:
 		
 		Globals.upgradeOne[1]=true

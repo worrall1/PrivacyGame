@@ -14,6 +14,6 @@ script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_jd85w")]
 
-[node name="Crib0" type="Sprite2D" parent="."]
+[node name="Crib" type="Sprite2D" parent="."]
 position = Vector2(397, 546)
 texture = ExtResource("3_tnr68")
