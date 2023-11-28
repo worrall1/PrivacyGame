@@ -4,7 +4,7 @@ var toggle = false
 var textura = load("res://Textures/selected_box.png")
 var default_texture: Texture
 var parent = null
-
+var cost = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	default_texture = texture_normal
@@ -14,6 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	
 	pass
 

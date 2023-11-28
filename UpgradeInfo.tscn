@@ -35,7 +35,6 @@ offset_left = 167.0
 offset_top = 246.0
 offset_right = 809.0
 offset_bottom = 515.0
-text = "Google was hit with a wide-ranging lawsuit alleging the tech giant scraped data from millions of users without their consent and violated copyright laws in order to train and develop its artificial intelligence products."
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
