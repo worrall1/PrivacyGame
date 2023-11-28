@@ -13,6 +13,11 @@ grow_vertical = 2
 texture = ExtResource("1_jdixa")
 script = ExtResource("2_74ctw")
 
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5

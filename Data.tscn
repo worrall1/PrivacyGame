@@ -34,10 +34,10 @@ offset_right = 716.0
 offset_bottom = 263.0
 
 [node name="NinePatchRect4" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 777.0
-offset_top = 103.0
-offset_right = 955.0
-offset_bottom = 262.0
+offset_left = 753.0
+offset_top = 105.0
+offset_right = 931.0
+offset_bottom = 264.0
 
 [node name="NinePatchRect5" parent="." instance=ExtResource("3_kqmnx")]
 offset_left = 1000.0

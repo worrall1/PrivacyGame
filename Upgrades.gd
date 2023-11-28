@@ -194,8 +194,6 @@ func _on_button_4_pressed():
 
 func _on_texture_button_pressed():
 	
-
-	
 	$Button/Label.hide()
 	$Button2/Label.hide()
 	$Button3/Label.hide()
