@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://vmjlfv37nhet"]
+[gd_scene load_steps=4 format=3 uid="uid://vmjlfv37nhet"]
 
 [ext_resource type="Script" path="res://DataScreen.gd" id="1_df1we"]
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_kc13r"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_lkrdd"]
-[ext_resource type="PackedScene" uid="uid://vdcnckar136l" path="res://DataOffer.tscn" id="3_kqmnx"]
 
 [node name="Data" type="Node2D"]
 script = ExtResource("1_df1we")
@@ -14,66 +13,6 @@ script = ExtResource("1_df1we")
 script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_lkrdd")]
-
-[node name="NinePatchRect" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 79.0
-offset_top = 97.0
-offset_right = 257.0
-offset_bottom = 256.0
-
-[node name="NinePatchRect2" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 308.0
-offset_top = 101.0
-offset_right = 486.0
-offset_bottom = 260.0
-
-[node name="NinePatchRect3" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 538.0
-offset_top = 104.0
-offset_right = 716.0
-offset_bottom = 263.0
-
-[node name="NinePatchRect4" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 753.0
-offset_top = 105.0
-offset_right = 931.0
-offset_bottom = 264.0
-
-[node name="NinePatchRect5" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 1000.0
-offset_top = 102.0
-offset_right = 1178.0
-offset_bottom = 261.0
-
-[node name="NinePatchRect6" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 777.0
-offset_top = 329.0
-offset_right = 955.0
-offset_bottom = 488.0
-
-[node name="NinePatchRect7" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 84.0
-offset_top = 333.0
-offset_right = 262.0
-offset_bottom = 492.0
-
-[node name="NinePatchRect8" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 542.0
-offset_top = 335.0
-offset_right = 720.0
-offset_bottom = 494.0
-
-[node name="NinePatchRect9" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 1006.0
-offset_top = 332.0
-offset_right = 1184.0
-offset_bottom = 491.0
-
-[node name="NinePatchRect10" parent="." instance=ExtResource("3_kqmnx")]
-offset_left = 308.0
-offset_top = 331.0
-offset_right = 486.0
-offset_bottom = 490.0
 
 [node name="Label" type="Label" parent="."]
 offset_left = 890.0

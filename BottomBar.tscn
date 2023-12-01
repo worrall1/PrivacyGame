@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://sn6bydjgf6o5"]
+[gd_scene load_steps=10 format=3 uid="uid://sn6bydjgf6o5"]
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_x3o3o"]
 [ext_resource type="Script" path="res://BottomBar.gd" id="2_tgjna"]
+[ext_resource type="Texture2D" uid="uid://djcuxeqsh408q" path="res://Textures/icons/pause-solid.svg" id="3_r1a6l"]
+[ext_resource type="Texture2D" uid="uid://dyfefvv854mdb" path="res://Textures/icons/money.svg" id="3_u6v3q"]
+[ext_resource type="Texture2D" uid="uid://cc3qoowxn637" path="res://Textures/icons/forward-solid.svg" id="4_cf0bk"]
+[ext_resource type="Texture2D" uid="uid://bw6ee3r0p0y8d" path="res://Textures/icons/nonsensetive-data.svg" id="4_fr4ge"]
+[ext_resource type="Texture2D" uid="uid://cec1tv0fqnxr7" path="res://Textures/icons/sensetive-data.svg.svg" id="5_0lwre"]
+[ext_resource type="Texture2D" uid="uid://7q0pafqceoge" path="res://Textures/icons/play-solid.svg" id="5_pj3wo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0bcb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
 
 [node name="NinePatchRect" type="NinePatchRect"]
 anchors_preset = 12
@@ -16,12 +29,34 @@ patch_margin_left = 10
 patch_margin_right = 10
 script = ExtResource("2_tgjna")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 55.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0bcb")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 3.0
+offset_right = 351.0
+offset_bottom = 53.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a0bcb")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 244.0
 offset_top = 2.0
-offset_right = 742.0
+offset_right = 282.0
 offset_bottom = 67.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_u6v3q")
+expand_mode = 5
+stretch_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -33,6 +68,11 @@ text = "0"
 [node name="MPS" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "0"
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_fr4ge")
+expand_mode = 4
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -46,6 +86,11 @@ text = "0"
 layout_mode = 2
 theme_override_colors/font_color = Color(0.0156863, 0.247059, 1, 1)
 text = "0"
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_0lwre")
+expand_mode = 4
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -75,17 +120,36 @@ offset_right = 1228.0
 offset_bottom = 44.0
 text = "Reputation"
 
-[node name="SecurityLevel" type="Label" parent="."]
+[node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 162.0
-offset_top = 15.0
-offset_right = 202.0
-offset_bottom = 38.0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 45.0
+offset_bottom = 49.0
+texture_normal = ExtResource("3_r1a6l")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="SecurityLabel" type="Label" parent="."]
+[node name="TextureButton2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 16.0
-offset_right = 131.0
-offset_bottom = 42.0
-text = "Security Level:"
+offset_left = 88.0
+offset_top = 8.0
+offset_right = 136.0
+offset_bottom = 50.0
+texture_normal = ExtResource("4_cf0bk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 12.0
+offset_right = 82.0
+offset_bottom = 47.0
+texture_normal = ExtResource("5_pj3wo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]

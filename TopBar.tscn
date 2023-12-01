@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvxejfu76p7vu"]
+[gd_scene load_steps=11 format=3 uid="uid://dvxejfu76p7vu"]
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_fwnk1"]
 [ext_resource type="Script" path="res://TopBar.gd" id="2_763e6"]
@@ -6,9 +6,14 @@
 [ext_resource type="Script" path="res://TBB2.gd" id="4_klqhr"]
 [ext_resource type="Script" path="res://TBB3.gd" id="5_oya02"]
 [ext_resource type="Script" path="res://TBB4.gd" id="6_vv2s4"]
+[ext_resource type="Theme" uid="uid://dk2qjb42fk1fb" path="res://Report.tres" id="7_lp0tb"]
+[ext_resource type="Script" path="res://securityButton.gd" id="8_frm32"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxieo"]
 bg_color = Color(0.129412, 0.686275, 0.65098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kht4v"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="TopBar" type="NinePatchRect"]
 anchors_preset = 10
@@ -31,6 +36,12 @@ grow_horizontal = 2
 scale = Vector2(1.00194, 0.639839)
 alignment = 1
 
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
+text = "Home"
+script = ExtResource("5_oya02")
+
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -44,19 +55,36 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Operations"
 script = ExtResource("4_klqhr")
 
-[node name="Button3" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Home"
-script = ExtResource("5_oya02")
-
 [node name="Button4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Ventures"
 script = ExtResource("6_vv2s4")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0064
+offset_top = -2.42768
+offset_right = 114.006
+offset_bottom = 22.5723
+theme = ExtResource("7_lp0tb")
+theme_override_font_sizes/font_size = 15
+text = "Security Level:"
+
+[node name="Button" type="Button" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 122.112
+offset_top = -2.02306
+offset_right = 242.112
+offset_bottom = 19.9769
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_kht4v")
+text = "Placeholder"
+script = ExtResource("8_frm32")
+
+[connection signal="pressed" from="HBoxContainer/Button3" to="HBoxContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button" to="HBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="HBoxContainer/Button2" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button3" to="HBoxContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button4" to="HBoxContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

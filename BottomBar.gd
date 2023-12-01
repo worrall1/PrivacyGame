@@ -14,6 +14,20 @@ func _process(delta):
 	get_node("HBoxContainer/VBoxContainer2/BDPS").text = str(Globals.bdps) + "/s"
 	get_node("HBoxContainer/VBoxContainer3/RedData").text = str(Globals.redData)
 	get_node("HBoxContainer/VBoxContainer3/RDPS").text = str(Globals.rdps) + "/s"
-	get_node("SecurityLevel").text = str(Globals.securityLevel)
 	get_node("ProgressBar").set_value(Globals.reputation)
 	pass
+
+
+func _on_texture_button_pressed():
+	Globals.timeModifier = 0
+	pass # Replace with function body.
+
+
+func _on_texture_button_2_pressed():
+	Globals.timeModifier = 2
+	pass # Replace with function body.
+
+
+func _on_texture_button_3_pressed():
+	Globals.timeModifier = 1
+	pass # Replace with function body.

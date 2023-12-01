@@ -3,6 +3,7 @@ extends Node
 var money = 500
 var mps = 1
 var moneyTotal = 0
+var upkeep = 0
 var blueData = 0
 var bdps = 1
 var blueDataTotal = 0
@@ -26,6 +27,7 @@ var blueDataLastQuarter = 0
 var repLastQuarter = 0
 var timeModifier = 1
 var reputationModifier = 1
+var tutorial = false
 
 # Stores for upgrade selection
 
@@ -53,7 +55,9 @@ func _process(delta):
 		time -= 1
 	
 		if(timeModifier > 0):
+			reputationModifier = (reputation - 50) / 50
 			money += mps * reputationModifier
+			money -= upkeep
 			moneyTotal += mps * reputationModifier
 			blueData += bdps * reputationModifier
 			blueDataTotal += bdps * reputationModifier
