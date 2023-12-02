@@ -42,12 +42,11 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Home"
 script = ExtResource("5_oya02")
 
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Button4" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Data"
-script = ExtResource("3_lie4a")
+text = "Ventures"
+script = ExtResource("6_vv2s4")
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -55,11 +54,12 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
 text = "Operations"
 script = ExtResource("4_klqhr")
 
-[node name="Button4" type="Button" parent="HBoxContainer"]
+[node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Ventures"
-script = ExtResource("6_vv2s4")
+text = "Data"
+script = ExtResource("3_lie4a")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -84,7 +84,7 @@ text = "Placeholder"
 script = ExtResource("8_frm32")
 
 [connection signal="pressed" from="HBoxContainer/Button3" to="HBoxContainer/Button3" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button" to="HBoxContainer/Button" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="HBoxContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button4" to="HBoxContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="HBoxContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button" to="HBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

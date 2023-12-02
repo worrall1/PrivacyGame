@@ -15,7 +15,7 @@ var sfxVol = 0.5
 var musicVol = 0.5
 var reputation = 100 #integer 1 - 100 value for reputation
 var securityFreq = 0
-var breachProb = 0.1
+var breachProb = 0
 var breachTemp = 0 #used when updating breach chance
 var breachThisQuarter = false
 var securityLevel = "Good"
@@ -53,6 +53,7 @@ func _process(delta):
 
 	if (time >= 1):
 		time -= 1
+		breachProb = (redDataTotal / max(securityFreq, 1))/100
 	
 		if(timeModifier > 0):
 			reputationModifier = (reputation - 50) / 50
@@ -78,14 +79,13 @@ func _process(delta):
 	pass
 	
 func update_security_level():
-	var ratio = redData / max(securityFreq, 1) # Avoid division by zero
-	if ratio > 1.5:
+	if breachProb > 0.3:
 		securityLevel = "inadequate"
-	elif ratio > 1.0:
+	elif breachProb > 0.1:
 		securityLevel = "poor"
-	elif ratio > 0.5:
+	elif breachProb > 0.05:
 		securityLevel = "medium"
-	elif ratio > 0.2:
+	elif breachProb > 0.03:
 		securityLevel = "good"
 	else:
 		securityLevel = "excellent"

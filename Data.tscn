@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://vmjlfv37nhet"]
+[gd_scene load_steps=5 format=3 uid="uid://vmjlfv37nhet"]
 
 [ext_resource type="Script" path="res://DataScreen.gd" id="1_df1we"]
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_kc13r"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_lkrdd"]
+[ext_resource type="PackedScene" uid="uid://vdcnckar136l" path="res://DataOffer.tscn" id="4_hnjbq"]
 
 [node name="Data" type="Node2D"]
 script = ExtResource("1_df1we")
@@ -20,3 +21,63 @@ offset_top = 533.0
 offset_right = 1064.0
 offset_bottom = 559.0
 text = "Check Back Here in Q2"
+
+[node name="NinePatchRect" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 84.0
+offset_top = 247.0
+offset_right = 369.0
+offset_bottom = 477.0
+
+[node name="NinePatchRect2" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 449.0
+offset_top = 245.0
+offset_right = 734.0
+offset_bottom = 475.0
+
+[node name="NinePatchRect3" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 816.0
+offset_top = 244.0
+offset_right = 1101.0
+offset_bottom = 474.0
+
+[node name="NinePatchRect4" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 1188.0
+offset_top = 245.0
+offset_right = 1473.0
+offset_bottom = 475.0
+
+[node name="NinePatchRect5" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 1559.0
+offset_top = 246.0
+offset_right = 1844.0
+offset_bottom = 476.0
+
+[node name="NinePatchRect6" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 85.0
+offset_top = 616.0
+offset_right = 370.0
+offset_bottom = 846.0
+
+[node name="NinePatchRect7" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 451.0
+offset_top = 616.0
+offset_right = 736.0
+offset_bottom = 846.0
+
+[node name="NinePatchRect8" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 816.0
+offset_top = 615.0
+offset_right = 1101.0
+offset_bottom = 845.0
+
+[node name="NinePatchRect9" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 1186.0
+offset_top = 616.0
+offset_right = 1471.0
+offset_bottom = 846.0
+
+[node name="NinePatchRect10" parent="." instance=ExtResource("4_hnjbq")]
+offset_left = 1561.0
+offset_top = 616.0
+offset_right = 1846.0
+offset_bottom = 846.0
