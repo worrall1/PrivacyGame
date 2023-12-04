@@ -1,61 +1,46 @@
 extends TextureButton
 
-var toggle = false
-var textura = load("res://Textures/selected_box.png")
-var default_texture: Texture
 var parent = null
-var cost = null
+var cost = 0
+var purchase =false
+var thisNode = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	default_texture = texture_normal
 	parent = get_parent()
+	thisNode = self
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	
+	if Globals.money<cost:
+		self.disabled=true
+		
 	pass
 
 
 
 
-func _on_pressed():
+
+func _on_toggled(button_pressed):
+	if button_pressed==true:
+		
+		if parent.selectedNode!=null&&parent.selectedNode!=thisNode:
+			parent.selectedNode.button_pressed=false
+			parent.selectedNode=thisNode
+
+		parent.selectedNode=thisNode
+		parent.showPanel.hide()
+		parent.venture1.show()
+		parent.venture2.show()
+		parent.venture3.show()
+		parent.venture4.show()
+	else:
+		parent.showPanel.show()
+		parent.venture1.hide()
+		parent.venture2.hide()
+		parent.venture3.hide()
+		parent.venture4.hide()
+		
 	
-		
-	if toggle == false:
-		if parent.selected == 0:
-		
-			texture_normal = textura
-			parent.selected = 1
-			
-				
-			toggle = true
-			parent.currentSelection = self
-			
-		elif parent.selected == 1:
-			
-			
-			parent.currentSelection.texture_normal = default_texture
-			parent.currentSelection.toggle = false
-			
-			texture_normal = textura
-			parent.selected = 1
-			
-				
-			toggle = true
-			parent.currentSelection = self
-				
-			
-		
-	elif toggle == true:
-		texture_normal = default_texture
-		parent.selected=0
-		
-		
-		
-		toggle = false
 	pass # Replace with function body.
-
-

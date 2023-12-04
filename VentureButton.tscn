@@ -8,6 +8,7 @@ offset_left = 21.0
 offset_top = 13.0
 offset_right = 239.0
 offset_bottom = 226.0
+toggle_mode = true
 texture_normal = ExtResource("1_cfeyg")
 ignore_texture_size = true
 stretch_mode = 0
@@ -21,4 +22,4 @@ offset_bottom = 236.0
 text = "SOCIAL MEDIA"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]

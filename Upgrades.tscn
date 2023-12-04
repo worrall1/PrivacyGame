@@ -1,11 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxd7avsp3rgn3"]
+[gd_scene load_steps=32 format=3 uid="uid://bxd7avsp3rgn3"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
 [ext_resource type="Script" path="res://Upgrades.gd" id="1_ppvvd"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_ll26n"]
 [ext_resource type="PackedScene" uid="uid://cqhvphb1uilps" path="res://VentureButton.tscn" id="3_fny23"]
+[ext_resource type="Texture2D" uid="uid://b1ddjaitfrf71" path="res://Textures/ventures/casinoLocked.png" id="5_06g46"]
 [ext_resource type="PackedScene" uid="uid://crsqbmh4btnre" path="res://VentureBarButton.tscn" id="5_fochf"]
+[ext_resource type="Texture2D" uid="uid://c8fdejmn1ix5t" path="res://Textures/ventures/socialmedia.png" id="5_lswbd"]
+[ext_resource type="Texture2D" uid="uid://bspfmyom0y5hv" path="res://Textures/ventures/navigation.png" id="6_5uq0l"]
 [ext_resource type="PackedScene" uid="uid://cq5vg2mipo4ox" path="res://UpgradeInfo.tscn" id="6_gecuf"]
+[ext_resource type="Texture2D" uid="uid://cbkwdpwtwa5ut" path="res://Textures/ventures/socialmediaSelect.png" id="6_vkied"]
+[ext_resource type="Texture2D" uid="uid://bvb5ph36lnsc3" path="res://Textures/ventures/socialmediaLocked.png" id="7_cqm70"]
+[ext_resource type="Texture2D" uid="uid://ij3mqmxj8cww" path="res://Textures/ventures/picture.png" id="8_pv3ic"]
+[ext_resource type="Texture2D" uid="uid://bcjvw3q63ayla" path="res://Textures/ventures/pictureSelect.png" id="9_w6f2p"]
+[ext_resource type="Texture2D" uid="uid://cth32x46k7r48" path="res://Textures/ventures/pictureLocked.png" id="10_37y58"]
+[ext_resource type="Texture2D" uid="uid://ut82ea21uha" path="res://Textures/ventures/shop.png" id="11_jc03y"]
+[ext_resource type="Texture2D" uid="uid://bvuuetd66awe1" path="res://Textures/ventures/shopSelect.png" id="12_wmkla"]
+[ext_resource type="Texture2D" uid="uid://dantypi1r0pnj" path="res://Textures/ventures/shopLocked.png" id="13_2vbqk"]
+[ext_resource type="Texture2D" uid="uid://d4kdvq8hmgewi" path="res://Textures/ventures/video.png" id="14_65a11"]
+[ext_resource type="Texture2D" uid="uid://dihd57nvcfi47" path="res://Textures/ventures/videoSelect.png" id="15_5yumv"]
+[ext_resource type="Texture2D" uid="uid://drc1dlnr1wmuf" path="res://Textures/ventures/videoLocked.png" id="16_qm3sf"]
+[ext_resource type="Texture2D" uid="uid://ciqv6iqajeh07" path="res://Textures/ventures/dating.png" id="17_2lamq"]
+[ext_resource type="Texture2D" uid="uid://de1418bn2clpe" path="res://Textures/ventures/datingSelect.png" id="18_0omy7"]
+[ext_resource type="Texture2D" uid="uid://dod1jg40i3cax" path="res://Textures/ventures/datingLocked.png" id="19_5h71e"]
+[ext_resource type="Texture2D" uid="uid://b57h4u2m26t8x" path="res://Textures/ventures/comparison.png" id="20_308e1"]
+[ext_resource type="Texture2D" uid="uid://bw7nmbohh680t" path="res://Textures/ventures/comparisonSelect.png" id="21_vp87h"]
+[ext_resource type="Texture2D" uid="uid://cvhxi16sabk2r" path="res://Textures/ventures/comparisonLocked.png" id="22_6eh3n"]
+[ext_resource type="Texture2D" uid="uid://u00sc8u1t43f" path="res://Textures/ventures/navigationSelect.png" id="24_bu4dp"]
+[ext_resource type="Texture2D" uid="uid://dmrlpgsnnmrjk" path="res://Textures/ventures/navigationLocked.png" id="25_golxa"]
+[ext_resource type="Texture2D" uid="uid://ca0bydqmj300v" path="res://Textures/ventures/casino.png" id="26_fgb5g"]
+[ext_resource type="Texture2D" uid="uid://c16ixo5hv3pjk" path="res://Textures/ventures/casinoSelect.png" id="27_bqfan"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wcj"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -30,54 +54,81 @@ offset_left = 77.0
 offset_top = 111.0
 offset_right = 295.0
 offset_bottom = 324.0
+texture_normal = ExtResource("5_lswbd")
+texture_pressed = ExtResource("6_vkied")
+texture_disabled = ExtResource("7_cqm70")
 
 [node name="TextureButton2" parent="." instance=ExtResource("3_fny23")]
 offset_left = 77.0
 offset_top = 379.0
 offset_right = 295.0
 offset_bottom = 592.0
+texture_normal = ExtResource("8_pv3ic")
+texture_pressed = ExtResource("9_w6f2p")
+texture_disabled = ExtResource("10_37y58")
 
 [node name="TextureButton3" parent="." instance=ExtResource("3_fny23")]
 offset_left = 77.0
 offset_top = 651.0
 offset_right = 295.0
 offset_bottom = 864.0
+texture_normal = ExtResource("11_jc03y")
+texture_pressed = ExtResource("12_wmkla")
+texture_disabled = ExtResource("13_2vbqk")
 
 [node name="TextureButton4" parent="." instance=ExtResource("3_fny23")]
 offset_left = 359.0
 offset_top = 111.0
 offset_right = 577.0
 offset_bottom = 324.0
+texture_normal = ExtResource("14_65a11")
+texture_pressed = ExtResource("15_5yumv")
+texture_disabled = ExtResource("16_qm3sf")
 
 [node name="TextureButton5" parent="." instance=ExtResource("3_fny23")]
 offset_left = 359.0
 offset_top = 379.0
 offset_right = 577.0
 offset_bottom = 592.0
+texture_normal = ExtResource("17_2lamq")
+texture_pressed = ExtResource("18_0omy7")
+texture_disabled = ExtResource("19_5h71e")
 
 [node name="TextureButton6" parent="." instance=ExtResource("3_fny23")]
 offset_left = 359.0
 offset_top = 651.0
 offset_right = 577.0
 offset_bottom = 864.0
+texture_normal = ExtResource("20_308e1")
+texture_pressed = ExtResource("21_vp87h")
+texture_disabled = ExtResource("22_6eh3n")
 
 [node name="TextureButton7" parent="." instance=ExtResource("3_fny23")]
 offset_left = 631.0
 offset_top = 111.0
 offset_right = 849.0
 offset_bottom = 324.0
+texture_normal = ExtResource("6_5uq0l")
+texture_pressed = ExtResource("24_bu4dp")
+texture_disabled = ExtResource("25_golxa")
 
 [node name="TextureButton8" parent="." instance=ExtResource("3_fny23")]
 offset_left = 631.0
 offset_top = 379.0
 offset_right = 849.0
 offset_bottom = 592.0
+texture_normal = ExtResource("26_fgb5g")
+texture_pressed = ExtResource("27_bqfan")
+texture_disabled = ExtResource("5_06g46")
 
 [node name="TextureButton9" parent="." instance=ExtResource("3_fny23")]
 offset_left = 631.0
 offset_top = 651.0
 offset_right = 849.0
 offset_bottom = 864.0
+texture_normal = ExtResource("26_fgb5g")
+texture_pressed = ExtResource("27_bqfan")
+texture_disabled = ExtResource("5_06g46")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 941.0
@@ -126,20 +177,12 @@ offset_bottom = 846.0
 scale = Vector2(1.28, 1.28)
 
 [node name="Panel2" parent="." instance=ExtResource("6_gecuf")]
+visible = false
 offset_left = 501.0
 offset_top = 204.0
 offset_right = 1403.0
 offset_bottom = 911.0
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
-[connection signal="pressed" from="TextureButton3" to="." method="_on_texture_button_3_pressed"]
-[connection signal="pressed" from="TextureButton4" to="." method="_on_texture_button_4_pressed"]
-[connection signal="pressed" from="TextureButton5" to="." method="_on_texture_button_5_pressed"]
-[connection signal="pressed" from="TextureButton6" to="." method="_on_texture_button_6_pressed"]
-[connection signal="pressed" from="TextureButton7" to="." method="_on_texture_button_7_pressed"]
-[connection signal="pressed" from="TextureButton8" to="." method="_on_texture_button_8_pressed"]
-[connection signal="pressed" from="TextureButton9" to="." method="_on_texture_button_9_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
