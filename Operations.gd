@@ -17,19 +17,20 @@ var eventCostIncrement = 75
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_pr_buttons()
-
+	check_breach_status()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$PersData.text = str(Globals.redData)
 	$SecLevel.text = str(Globals.securityLevel)
-	$BreachProb.text = str(Globals.breachProb * 100) + "%"
+	$BreachProb.text = str(min(Globals.breachProb * 100, 100)) + "%"
 	$StatementCost.text = str(statementCost)
 	$CharityCost.text = str(charityCost)
 	$EventCost.text = str(eventCost)
 	# Disable the hire button if not enough money
 	$Hire.disabled = Globals.money < hireCost
 	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost
+	check_breach_status()
 
 
 func _on_hire_pressed():
@@ -37,7 +38,6 @@ func _on_hire_pressed():
 		Globals.securityFreq += 1
 		Globals.money -= hireCost
 		hireCost += 50 
-
 		$SecurityLabel.text = str(Globals.securityFreq)
 
 
@@ -47,6 +47,16 @@ func update_pr_buttons():
 	$StatementButton.disabled = Globals.money < statementCost
 	
 
+func check_breach_status():
+	var security_breach_sprite = $Securitybreach  # Adjust the path to your Sprite node
+	var no_breach_sprite = $Nobreach  # Adjust the path to your Sprite node
+
+	if Globals.breachProb >= 0.03:
+		security_breach_sprite.visible = true
+		no_breach_sprite.visible = false
+	else:
+		security_breach_sprite.visible = false
+		no_breach_sprite.visible = true
 
 func _on_charity_button_pressed():
 	if Globals.money >= charityCost:
@@ -54,7 +64,7 @@ func _on_charity_button_pressed():
 		Globals.reputation += charityRep
 		charityCost += charityCostIncrement * 3
 		update_pr_buttons()
-		
+
 
 func _on_statement_button_pressed():
 	if Globals.money >= statementCost:
