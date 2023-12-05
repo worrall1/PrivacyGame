@@ -34,7 +34,7 @@ func _process(delta):
 			$Panel/Label.text = "You can also buy upgrades to
 			increase profit and data generation. Try it now"
 			$Panel/Button.hide()
-		if Globals.tutorialProgress == 4:
+		elif Globals.tutorialProgress == 4:
 			show()
 			$Panel/Label.text = "That concludes the first
 			tutorial, we'll catch up with you next quarter"
@@ -49,5 +49,7 @@ func _process(delta):
 func _on_button_pressed():
 	if Globals.tutorialProgress == 0:
 		Globals.tutorialProgress += 1
-	
+	if Globals.tutorialProgress == 4:
+		Globals.tutorialProgress += 1
+		Globals.tutorial = false
 	pass # Replace with function body.
