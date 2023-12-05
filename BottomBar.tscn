@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_x3o3o"]
 [ext_resource type="Script" path="res://BottomBar.gd" id="2_tgjna"]
-[ext_resource type="Texture2D" uid="uid://djcuxeqsh408q" path="res://Textures/icons/pause-solid.svg" id="3_r1a6l"]
-[ext_resource type="Texture2D" uid="uid://dyfefvv854mdb" path="res://Textures/icons/money.svg" id="3_u6v3q"]
-[ext_resource type="Texture2D" uid="uid://cc3qoowxn637" path="res://Textures/icons/forward-solid.svg" id="4_cf0bk"]
-[ext_resource type="Texture2D" uid="uid://bw6ee3r0p0y8d" path="res://Textures/icons/nonsensetive-data.svg" id="4_fr4ge"]
-[ext_resource type="Texture2D" uid="uid://cec1tv0fqnxr7" path="res://Textures/icons/sensetive-data.svg.svg" id="5_0lwre"]
-[ext_resource type="Texture2D" uid="uid://7q0pafqceoge" path="res://Textures/icons/play-solid.svg" id="5_pj3wo"]
+[ext_resource type="Texture2D" uid="uid://blaafqtcig83x" path="res://Textures/icons/pause-solid.svg" id="3_r1a6l"]
+[ext_resource type="Texture2D" uid="uid://df2qxt61v7f1b" path="res://Textures/icons/money.svg" id="3_u6v3q"]
+[ext_resource type="Texture2D" uid="uid://hcaim6fq5m0x" path="res://Textures/icons/forward-solid.svg" id="4_cf0bk"]
+[ext_resource type="Texture2D" uid="uid://uupbemu2tm1n" path="res://Textures/icons/nonsensetive-data.svg" id="4_fr4ge"]
+[ext_resource type="Texture2D" uid="uid://beivg1gxujayw" path="res://Textures/icons/sensetive-data.svg.svg" id="5_0lwre"]
+[ext_resource type="Texture2D" uid="uid://b55h2bc42me3n" path="res://Textures/icons/play-solid.svg" id="5_pj3wo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0bcb"]
 bg_color = Color(1, 1, 1, 1)

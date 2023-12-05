@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://djnad08expqig" path="res://Textures/officeLevels/crib0.png" id="1_l52bd"]
 [ext_resource type="Script" path="res://QuarterReport.gd" id="2_74ctw"]
 [ext_resource type="Theme" uid="uid://dk2qjb42fk1fb" path="res://Report.tres" id="4_48dly"]
-[ext_resource type="Texture2D" uid="uid://bp38ysrw5cg8c" path="res://Textures/icons/data-breach.svg" id="5_gxr5n"]
-[ext_resource type="Texture2D" uid="uid://dyfefvv854mdb" path="res://Textures/icons/money.svg" id="5_kjxds"]
-[ext_resource type="Texture2D" uid="uid://bw6ee3r0p0y8d" path="res://Textures/icons/nonsensetive-data.svg" id="6_ckuuu"]
-[ext_resource type="Texture2D" uid="uid://cec1tv0fqnxr7" path="res://Textures/icons/sensetive-data.svg.svg" id="7_hcp0q"]
+[ext_resource type="Texture2D" uid="uid://b4w3cbder88xc" path="res://Textures/icons/data-breach.svg" id="5_gxr5n"]
+[ext_resource type="Texture2D" uid="uid://df2qxt61v7f1b" path="res://Textures/icons/money.svg" id="5_kjxds"]
+[ext_resource type="Texture2D" uid="uid://uupbemu2tm1n" path="res://Textures/icons/nonsensetive-data.svg" id="6_ckuuu"]
+[ext_resource type="Texture2D" uid="uid://beivg1gxujayw" path="res://Textures/icons/sensetive-data.svg.svg" id="7_hcp0q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f0fa"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -126,13 +126,13 @@ text = "Continue"
 
 [node name="Breach Explanation" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1156.0
-offset_top = 344.0
-offset_right = 1683.0
-offset_bottom = 415.0
+offset_left = 1145.0
+offset_top = 356.0
+offset_right = 1672.0
+offset_bottom = 427.0
 theme = ExtResource("4_48dly")
 text = "Nobody has breached your database
- this quarter"
+this quarter"
 
 [node name="Date" type="Label" parent="."]
 layout_mode = 0
