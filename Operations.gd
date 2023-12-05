@@ -36,7 +36,7 @@ func _on_hire_pressed():
 	if Globals.money >= hireCost:
 		Globals.securityFreq += 1
 		Globals.money -= hireCost
-		hireCost += 50 # Increase the cost for the next hire
+		hireCost += 50 
 
 		$SecurityLabel.text = str(Globals.securityFreq)
 

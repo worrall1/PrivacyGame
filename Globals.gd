@@ -62,8 +62,8 @@ func _process(delta):
 			moneyTotal += mps * reputationModifier
 			blueData += bdps * reputationModifier
 			blueDataTotal += bdps * reputationModifier
-			redData += rdps * reputationModifier
-			redDataTotal += rdps * reputationModifier
+			redData += rdps 
+			redDataTotal += rdps
 			seconds += 1
 			breachTemp = redDataTotal
 			update_security_level()
