@@ -22,4 +22,13 @@ offset_bottom = 236.0
 text = "SOCIAL MEDIA"
 horizontal_alignment = 1
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 164.0
+offset_right = 179.0
+offset_bottom = 195.0
+text = "PURCHASE £200"
+
 [connection signal="toggled" from="." to="." method="_on_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
