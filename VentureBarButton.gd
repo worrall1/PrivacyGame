@@ -21,6 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$RichTextLabel.text = "[color=green]"+ str(moneyInc)+"£/ps[/color]  "+ "[color=blue]"+ str(dataInc)+"/ps[/color]  "+"[color=red]"+ str(privInc)+"/ps[/color]  "+"[color=black]"+ str(repInc)+" rep[/color]"
 	if cost>Globals.money:
 		self.disabled=true
 	else:
@@ -31,10 +32,12 @@ func _process(delta):
 	if temp!=null:
 		if temp[upgradeNumber]==true:
 			$Label.show()
+			$RichTextLabel.hide()
 			self.disabled=true
 		else:
 			$Label.hide()
 			self.disabled=false
+			$RichTextLabel.show()
 
 	pass
 
@@ -49,7 +52,7 @@ func _on_pressed():
 		Globals.rdps+=privInc
 		Globals.bdps+=dataInc
 		Globals.mps+=moneyInc
-		Globals.reputation-=repInc
+		Globals.reputation+=repInc
 		var venture = "upgrade"+str(ventureType)
 		var tempArr = Globals.get(venture)
 		tempArr[upgradeNumber] = true
