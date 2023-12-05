@@ -28,6 +28,7 @@ var repLastQuarter = 0
 var timeModifier = 1
 var reputationModifier = 1
 var tutorial = false
+var tutorialProgress = 0
 
 # Stores for upgrade selection
 

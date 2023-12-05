@@ -17,10 +17,9 @@ func _ready():
 	previousTimeModifier = Globals.timeModifier
 	Globals.timeModifier = 0
 	var year = floor(Globals.quarter/4)
-	get_node("Date").text = str(year)  + str(Globals.quarter%4)
+	get_node("Date").text = str(year)  + str((Globals.quarter%4) + 1)
 	get_node("Profit").text = str(Globals.money - Globals.moneyLastQuarter)
 	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
-	get_node("Reputation Swing").text = str(Globals.reputation - Globals.repLastQuarter)
 	if (Globals.breachThisQuarter == true):
 		get_node("Breach Explanation").text = "Hackers have breached your database
 		and now have access to all your user's data.
