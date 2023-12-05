@@ -33,6 +33,7 @@ func _ready():
 	venture3 = $Button3
 	venture4 = $Button4
 	$TextureButton/Label.text = "SOCIAL MEDIA"
+	$TextureButton2.cost = 5000
 	$TextureButton2/Label.text = "PHOTO SHARING"
 	$TextureButton3/Label.text="E-COMMERCE SITE"
 	$TextureButton4/Label.text="MEDIA SHARING"
@@ -46,6 +47,8 @@ func _ready():
 	get_node("Button2").hide()
 	get_node("Button3").hide()
 	get_node("Button4").hide()
+	
+	$TextureButton.Unlocked = true
 	#set_all_images()
 	$Panel2.hide()
 	$TextureButton.cost =20
