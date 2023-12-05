@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
 [ext_resource type="Texture2D" uid="uid://djnad08expqig" path="res://Textures/officeLevels/crib0.png" id="3_tnr68"]
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
-[ext_resource type="PackedScene" path="res://TutorialPopup.tscn" id="5_8lm8t"]
+[ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="5_8lm8t"]
 
 [node name="HomeScreen" type="Node2D"]
 position = Vector2(563, -2)

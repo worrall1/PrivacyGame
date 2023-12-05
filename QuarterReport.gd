@@ -1,9 +1,14 @@
 extends NinePatchRect
 
+ 
+
 var previousTimeModifier
+
+ 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	if(Globals.money < 3000):
 		texture = load("res://Textures/officeLevels/crib0.png")
 	elif(3000 <= Globals.money < 6000):
@@ -36,16 +41,20 @@ func _ready():
 		Well done!"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/data-breach.svg")
 	set_new_data_offers()
-	get_node("Reputation Swing").text = "Reputation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
+	get_node("Reputation Swing").text = "Repuation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
 	Globals.moneyLastQuarter = Globals.money
 	Globals.blueDataLastQuarter = Globals.blueData
 	Globals.reputationLastQuarter = Globals.reputation
 	pass # Replace with function body.
 
+ 
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+ 
 
 
 func _on_button_pressed():
@@ -54,11 +63,29 @@ func _on_button_pressed():
 	pass # Replace with function body.
 	
 func set_new_data_offers():
+	var startRed = 0
+	if Globals.redDataTotal < 750:
+		startRed = 11
+	elif Globals.redDataTotal < 3000:
+		startRed = (randi() % 5) + 4
+	else:
+		startRed = (randi() % 7) + 2
+	
 	for i in 10:
-		var moneyOffered = 1+1
-		var blueOffered = 1+1
-		var redOffered = 1+1
-		var reputationSwing = 1+1
+		var moneyOffered = 0
+		var blueOffered = Globals.bdps * (randi() % 100 + 35)
+		var redOffered = 0
+		if i > startRed:
+			redOffered = Globals.rdps * (randi() % 100 + 30)
+		
+		moneyOffered = blueOffered * ((randi() % 30 + 45) / 1000)
+		var reputationSwing = blueOffered / 2000
+		if redOffered > 0:
+			moneyOffered += redOffered * ((randi() % 300 + 265) / 1000)
+			reputationSwing += redOffered / 200
+
+ 
+
 		var newTitle = "title"
 		var newExplanation = "explanataion"
 		if i == 0:
