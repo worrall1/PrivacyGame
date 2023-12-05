@@ -1,18 +1,28 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvnymhrgfegu2"]
+[gd_scene load_steps=14 format=3 uid="uid://dvnymhrgfegu2"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_48h57"]
 [ext_resource type="Script" path="res://Operations.gd" id="1_kelgn"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_vxwuo"]
 [ext_resource type="Texture2D" uid="uid://clbtsbxl8f25n" path="res://Textures/White.png" id="3_w863g"]
 [ext_resource type="Texture2D" uid="uid://yf66gj5jw2uk" path="res://Textures/icons/backgroundPR.jpg" id="5_2iwrs"]
+[ext_resource type="Texture2D" uid="uid://b4cklkr71um22" path="res://Textures/icons/backgroundSecurity.jpg" id="6_u6c1t"]
 [ext_resource type="Texture2D" uid="uid://57o1pnwotc51" path="res://Textures/icons/securitybreach.png" id="7_x360j"]
 [ext_resource type="Texture2D" uid="uid://f1js35bfq2n5" path="res://Textures/icons/nobreach.png" id="8_al0wu"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rhgl"]
+bg_color = Color(0.337255, 0.615686, 0.556863, 0.513726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixmdu"]
+bg_color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_om3qp"]
+bg_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vewxf"]
+bg_color = Color(0.0156863, 0.0156863, 0.0156863, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivurg"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_kelgn")
@@ -33,6 +43,25 @@ position = Vector2(479.25, 534)
 scale = Vector2(0.97225, 0.9)
 texture = ExtResource("5_2iwrs")
 
+[node name="BackgroundSecurity" type="Sprite2D" parent="."]
+position = Vector2(1446, 533)
+scale = Vector2(0.949698, 0.898148)
+texture = ExtResource("6_u6c1t")
+
+[node name="Panel" type="Panel" parent="BackgroundSecurity"]
+offset_left = -501.0
+offset_top = -538.0
+offset_right = 502.0
+offset_bottom = 542.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6rhgl")
+
+[node name="Panel2" type="Panel" parent="BackgroundSecurity"]
+offset_left = -1522.59
+offset_top = -541.113
+offset_right = -519.589
+offset_bottom = 538.887
+theme_override_styles/panel = SubResource("StyleBoxFlat_6rhgl")
+
 [node name="Line" type="ColorRect" parent="."]
 offset_left = 959.0
 offset_top = 47.0
@@ -50,11 +79,12 @@ theme_override_font_sizes/font_size = 30
 text = "Security Team"
 
 [node name="Hire" type="Button" parent="."]
-offset_left = 1317.0
-offset_top = 140.0
-offset_right = 1578.0
-offset_bottom = 207.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 1005.0
+offset_top = 143.0
+offset_right = 1266.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0.988235, 0.992157, 0.992157, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ixmdu")
 text = "HIRE"
 
 [node name="CharityButton" type="Button" parent="."]
@@ -100,10 +130,10 @@ theme_override_font_sizes/font_size = 30
 text = "Public Relations (PR)"
 
 [node name="SecurityLabel" type="Label" parent="."]
-offset_left = 1145.0
-offset_top = 173.0
-offset_right = 1308.0
-offset_bottom = 259.0
+offset_left = 1296.0
+offset_top = 157.0
+offset_right = 1459.0
+offset_bottom = 243.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
