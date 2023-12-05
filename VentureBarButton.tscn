@@ -47,4 +47,12 @@ text = "PURCHASED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 79.0
+offset_right = 389.0
+offset_bottom = 119.0
+bbcode_enabled = true
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]
