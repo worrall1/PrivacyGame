@@ -32,10 +32,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -622.5
-offset_top = -415.0
-offset_right = 622.5
-offset_bottom = 415.0
+offset_left = -605.0
+offset_top = -410.0
+offset_right = 640.0
+offset_bottom = 420.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5f0fa")
@@ -72,14 +72,16 @@ offset_top = 511.0
 offset_right = 640.0
 offset_bottom = 542.0
 theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 24
 
 [node name="Data Generation2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 517.0
-offset_top = 616.0
-offset_right = 645.0
-offset_bottom = 647.0
+offset_left = 492.0
+offset_top = 609.0
+offset_right = 620.0
+offset_bottom = 640.0
 theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 24
 
 [node name="Profit Title" type="Label" parent="."]
 layout_mode = 0
@@ -93,11 +95,12 @@ text = "Profit:"
 
 [node name="Profit" type="Label" parent="."]
 layout_mode = 0
-offset_left = 481.0
-offset_top = 347.0
-offset_right = 529.0
-offset_bottom = 378.0
+offset_left = 517.0
+offset_top = 351.0
+offset_right = 565.0
+offset_bottom = 385.0
 theme = ExtResource("4_48dly")
+theme_override_font_sizes/font_size = 24
 
 [node name="Data Breach Status" type="Label" parent="."]
 layout_mode = 0
@@ -126,10 +129,10 @@ text = "Continue"
 
 [node name="Breach Explanation" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1145.0
-offset_top = 356.0
-offset_right = 1672.0
-offset_bottom = 427.0
+offset_left = 1147.0
+offset_top = 342.0
+offset_right = 1674.0
+offset_bottom = 413.0
 theme = ExtResource("4_48dly")
 text = "Nobody has breached your database
 this quarter"
@@ -147,12 +150,12 @@ horizontal_alignment = 1
 
 [node name="Reputation Swing" type="Label" parent="."]
 layout_mode = 0
-offset_left = 387.0
-offset_top = 708.0
-offset_right = 576.0
-offset_bottom = 742.0
+offset_left = 383.0
+offset_top = 733.0
+offset_right = 620.0
+offset_bottom = 775.0
 theme = ExtResource("4_48dly")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 34
 text = "Reputation: +20%"
 
 [node name="Secure_Breached" type="TextureRect" parent="."]
@@ -175,7 +178,7 @@ scale = Vector2(0.143973, 0.125977)
 texture = ExtResource("6_ckuuu")
 
 [node name="Sensetive-data_svg" type="Sprite2D" parent="."]
-position = Vector2(417, 628)
+position = Vector2(419, 626)
 scale = Vector2(0.171875, 0.162109)
 texture = ExtResource("7_hcp0q")
 

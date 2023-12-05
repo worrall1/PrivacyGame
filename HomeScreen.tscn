@@ -17,16 +17,16 @@ script = null
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_jd85w")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -564.0
-offset_top = 3.0
-offset_right = 1356.0
-offset_bottom = 1083.0
+offset_left = -1069.0
+offset_top = -205.0
+offset_right = 1899.0
+offset_bottom = 1646.0
 texture = ExtResource("3_tnr68")
-stretch_mode = 2
+stretch_mode = 4
 script = ExtResource("4_shits")
 
 [node name="Control" parent="." instance=ExtResource("5_8lm8t")]
-offset_left = 278.0
-offset_top = 160.0
-offset_right = 278.0
-offset_bottom = 160.0
+offset_left = 215.0
+offset_top = 192.0
+offset_right = 215.0
+offset_bottom = 192.0

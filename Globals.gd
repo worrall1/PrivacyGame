@@ -14,6 +14,7 @@ var date = 0 #integer count of how many days have elapsed
 var sfxVol = 0.5
 var musicVol = 0.5
 var reputation = 100 #integer 1 - 100 value for reputation
+var reputationLastQuarter = 100
 var securityFreq = 0
 var breachProb = 0
 var breachTemp = 0 #used when updating breach chance
@@ -50,7 +51,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	time += delta * timeModifier
+	if tutorial == false:
+		time += delta * timeModifier
 
 	if (time >= 1):
 		time -= 1
