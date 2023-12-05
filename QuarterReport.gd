@@ -16,17 +16,25 @@ func _ready():
 		texture = load("res://Textures/officeLevels/crib4.png")
 	previousTimeModifier = Globals.timeModifier
 	Globals.timeModifier = 0
+	var year = floor(Globals.quarter/4)
+	get_node("Date").text = str(year)  + str(Globals.quarter%4)
 	get_node("Profit").text = str(Globals.money - Globals.moneyLastQuarter)
 	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
 	get_node("Reputation Swing").text = str(Globals.reputation - Globals.repLastQuarter)
 	if (Globals.breachThisQuarter == true):
-		get_node("Breach Explanation").text = "Hackers have breached your database and now have access to all your user's data. People's identities are being stolen and lives are being ruined. People are very upset and this will affect you reputation"
+		get_node("Breach Explanation").text = "Hackers have breached your database
+		and now have access to all your user's data.
+		People's identities are being stolen
+		and lives are being ruined.
+		People are very upset and this 
+		will affect your reputation"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/person-incognito.svg")
 		Globals.reputation -= 50
 		if (Globals.reputation < 0):
 			Globals.reputation = 0
 	else:
-		get_node("Breach Explanation").text = "All your data is secure this month. Well done!"
+		get_node("Breach Explanation").text = "All your data is secure this month.
+		Well done!"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/data-breach.svg")
 	set_new_data_offers()
 	pass # Replace with function body.

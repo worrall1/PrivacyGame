@@ -19,15 +19,18 @@ func _process(delta):
 
 
 func _on_texture_button_pressed():
-	Globals.timeModifier = 0
+	if(Globals.tutorial == false):
+		Globals.timeModifier = 0
 	pass # Replace with function body.
 
 
 func _on_texture_button_2_pressed():
-	Globals.timeModifier = 2
+	if(Globals.tutorial == false):
+		Globals.timeModifier = 2
 	pass # Replace with function body.
 
 
 func _on_texture_button_3_pressed():
-	Globals.timeModifier = 1
+	if(Globals.tutorial == false):
+		Globals.timeModifier = 1
 	pass # Replace with function body.
