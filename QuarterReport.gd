@@ -17,7 +17,7 @@ func _ready():
 	previousTimeModifier = Globals.timeModifier
 	Globals.timeModifier = 0
 	var year = floor(Globals.quarter/4)
-	get_node("Date").text = str(year)  + str((Globals.quarter%4) + 1)
+	get_node("Date").text = "Year " + str(year + 1) + " Q" + str((Globals.quarter%4) + 1)
 	get_node("Profit").text = str(Globals.money - Globals.moneyLastQuarter)
 	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
 	if (Globals.breachThisQuarter == true):
@@ -36,6 +36,10 @@ func _ready():
 		Well done!"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/data-breach.svg")
 	set_new_data_offers()
+	get_node("Reputation Swing").text = "Repuation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
+	Globals.moneyLastQuarter = Globals.money
+	Globals.blueDataLastQuarter = Globals.blueData
+	Globals.reputationLastQuarter = Globals.reputation
 	pass # Replace with function body.
 
 
