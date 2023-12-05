@@ -62,6 +62,14 @@ func _process(delta):
 	
 	if tutorial == false:
 		time += delta * timeModifier
+	else:
+		if tutorialProgress == 2:
+			if venture1 == true:
+				tutorialProgress += 1
+				
+		if tutorialProgress == 3:
+			if upgrade1[0] == true:
+				tutorialProgress += 1
 
 	if (time >= 1):
 		time -= 1

@@ -36,7 +36,7 @@ func _ready():
 		Well done!"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/data-breach.svg")
 	set_new_data_offers()
-	get_node("Reputation Swing").text = "Repuation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
+	get_node("Reputation Swing").text = "Reputation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
 	Globals.moneyLastQuarter = Globals.money
 	Globals.blueDataLastQuarter = Globals.blueData
 	Globals.reputationLastQuarter = Globals.reputation

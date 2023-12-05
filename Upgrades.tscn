@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bxd7avsp3rgn3"]
+[gd_scene load_steps=33 format=3 uid="uid://bxd7avsp3rgn3"]
 
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
 [ext_resource type="Script" path="res://Upgrades.gd" id="1_ppvvd"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://di4l0xfcjbu2g" path="res://Textures/ventures/navigationLocked.png" id="25_golxa"]
 [ext_resource type="Texture2D" uid="uid://1f6vplvnljon" path="res://Textures/ventures/casino.png" id="26_fgb5g"]
 [ext_resource type="Texture2D" uid="uid://bkb1e7a2beqq2" path="res://Textures/ventures/casinoSelect.png" id="27_bqfan"]
+[ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="31_4oo70"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wcj"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -182,6 +183,12 @@ offset_left = 501.0
 offset_top = 204.0
 offset_right = 1403.0
 offset_bottom = 911.0
+
+[node name="Control" parent="." instance=ExtResource("31_4oo70")]
+offset_left = 735.0
+offset_top = 351.0
+offset_right = 735.0
+offset_bottom = 351.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
