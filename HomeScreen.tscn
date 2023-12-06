@@ -1,13 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://daputx404ywkw"]
+[gd_scene load_steps=11 format=3 uid="uid://daputx404ywkw"]
 
+[ext_resource type="Script" path="res://HomeScreen.gd" id="1_76qjh"]
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_c6lw8"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
 [ext_resource type="Texture2D" uid="uid://djnad08expqig" path="res://Textures/officeLevels/crib0.png" id="3_tnr68"]
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
 [ext_resource type="PackedScene" path="res://TutorialPopup.tscn" id="5_8lm8t"]
+[ext_resource type="Texture2D" uid="uid://xqn241loa5ts" path="res://Textures/particles.png" id="6_t0bp0"]
+[ext_resource type="Texture2D" uid="uid://cnwe41bu55bpf" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
+[ext_resource type="Texture2D" uid="uid://04t3pewjflfu" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bf60y"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [node name="HomeScreen" type="Node2D"]
 position = Vector2(563, -2)
+script = ExtResource("1_76qjh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -30,3 +41,46 @@ offset_left = 215.0
 offset_top = 192.0
 offset_right = 215.0
 offset_bottom = 192.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_bf60y")
+position = Vector2(-301, -4)
+amount = 10
+lifetime = 7.0
+randomness = 1.0
+texture = ExtResource("6_t0bp0")
+emission_shape = 3
+emission_rect_extents = Vector2(200, 1)
+spread = 30.0
+gravity = Vector2(0, 500)
+anim_offset_max = 1.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 1036.0
+offset_top = 127.0
+offset_right = 1284.0
+offset_bottom = 251.0
+texture = ExtResource("8_sfv5e")
+expand_mode = 1
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(1180, 127)
+amount = 1
+texture = ExtResource("9_ojw0e")
+direction = Vector2(0, -2)
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1120.0
+offset_top = 165.0
+offset_right = 1243.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.803922, 0.533333, 0.0941176, 0.917647)
+theme_override_font_sizes/font_size = 18
+text = "£2000000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1

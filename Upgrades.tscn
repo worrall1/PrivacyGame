@@ -30,10 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://dmrlpgsnnmrjk" path="res://Textures/ventures/navigationLocked.png" id="25_golxa"]
 [ext_resource type="Texture2D" uid="uid://ca0bydqmj300v" path="res://Textures/ventures/casino.png" id="26_fgb5g"]
 [ext_resource type="Texture2D" uid="uid://c16ixo5hv3pjk" path="res://Textures/ventures/casinoSelect.png" id="27_bqfan"]
-[ext_resource type="Texture2D" uid="uid://bvrc1wyhjd00u" path="res://Textures/ventures/foodDelivery.jpg" id="29_3ayhw"]
-[ext_resource type="Texture2D" uid="uid://dcp5sc3p02dss" path="res://Textures/ventures/foodDeliverySelect.jpg" id="30_msywd"]
+[ext_resource type="Texture2D" uid="uid://cl22d0i5p7qnq" path="res://Textures/ventures/foodDelivery.png" id="29_j8yw3"]
+[ext_resource type="Texture2D" uid="uid://c1dsj6hcjfuet" path="res://Textures/ventures/foodDeliveryLocked.png" id="30_jil6f"]
 [ext_resource type="PackedScene" path="res://TutorialPopup.tscn" id="31_4oo70"]
-[ext_resource type="Texture2D" uid="uid://ovix3a6yjrw" path="res://Textures/ventures/foodDeliveryLocked.jpg" id="31_rg6p0"]
+[ext_resource type="Texture2D" uid="uid://bbn1s02dsl4qd" path="res://Textures/ventures/foodDeliverySelect.png" id="31_w30h7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wcj"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -130,9 +130,9 @@ offset_left = 631.0
 offset_top = 651.0
 offset_right = 849.0
 offset_bottom = 864.0
-texture_normal = ExtResource("29_3ayhw")
-texture_pressed = ExtResource("30_msywd")
-texture_disabled = ExtResource("31_rg6p0")
+texture_normal = ExtResource("29_j8yw3")
+texture_pressed = ExtResource("30_jil6f")
+texture_disabled = ExtResource("31_w30h7")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 941.0
