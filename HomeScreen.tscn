@@ -56,6 +56,7 @@ gravity = Vector2(0, 500)
 anim_offset_max = 1.0
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+z_index = 1
 offset_left = 1036.0
 offset_top = 127.0
 offset_right = 1284.0
@@ -63,16 +64,8 @@ offset_bottom = 251.0
 texture = ExtResource("8_sfv5e")
 expand_mode = 1
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
-position = Vector2(1180, 127)
-amount = 1
-texture = ExtResource("9_ojw0e")
-direction = Vector2(0, -2)
-gravity = Vector2(0, 0)
-initial_velocity_min = 200.0
-initial_velocity_max = 200.0
-
 [node name="Label" type="Label" parent="."]
+z_index = 2
 offset_left = 1120.0
 offset_top = 165.0
 offset_right = 1243.0
@@ -84,3 +77,12 @@ text = "£2000000000"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(1180, 139)
+amount = 20
+texture = ExtResource("9_ojw0e")
+direction = Vector2(0, -2)
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
