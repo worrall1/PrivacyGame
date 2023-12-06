@@ -54,8 +54,10 @@ func _process(delta):
 		$Button.disabled=true
 		$Button.text = "Purchased"
 		
+		
 	if Globals.money>=cost&&Unlocked==false:
 		$Button.disabled=false
+
 		
 	var venture = "venture"+str(ventureNum)
 	

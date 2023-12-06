@@ -1,18 +1,41 @@
-[gd_scene load_steps=6 format=3 uid="uid://crsqbmh4btnre"]
+[gd_scene load_steps=8 format=3 uid="uid://crsqbmh4btnre"]
 
 [ext_resource type="Texture2D" uid="uid://cr5ltumxwkrvy" path="res://Textures/1269202-200.png" id="1_53n86"]
 [ext_resource type="StyleBox" uid="uid://ch0lt5yiqek4d" path="res://Textures/VentureBarButton.tres" id="1_qlk5x"]
 [ext_resource type="Script" path="res://VentureBarButton.gd" id="1_v64p1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hnxm"]
-content_margin_left = 30.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x032i"]
+content_margin_left = 10.0
 content_margin_right = 25.0
-bg_color = Color(0.337255, 0.337255, 0.337255, 1)
+bg_color = Color(0.317647, 0.639216, 0.815686, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0.121569, 0.321569, 0.423529, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dad4d"]
+content_margin_left = 10.0
+content_margin_right = 25.0
+bg_color = Color(0.172549, 0.423529, 0.556863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.121569, 0.321569, 0.423529, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i0rv"]
+content_margin_left = 10.0
+content_margin_right = 25.0
+bg_color = Color(0.054902, 0.192157, 0.231373, 0.686275)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -28,7 +51,9 @@ offset_right = 749.0
 offset_bottom = 249.0
 focus_mode = 0
 theme_override_styles/normal = ExtResource("1_qlk5x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_0hnxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x032i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dad4d")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0i0rv")
 keep_pressed_outside = true
 text = "Purchase 1000 GB's of Personal Emails"
 icon = ExtResource("1_53n86")
