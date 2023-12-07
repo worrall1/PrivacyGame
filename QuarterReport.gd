@@ -4,6 +4,7 @@ extends NinePatchRect
 
 var previousTimeModifier
 
+var companyNames = ["Daternia", "Technosian", "Saphram Systems", "On the Books"]
  
 
 # Called when the node enters the scene tree for the first time.
@@ -36,6 +37,7 @@ func _ready():
 		Globals.reputation -= 50
 		if (Globals.reputation < 0):
 			Globals.reputation = 0
+		Globals.breachThisQuarter == false
 	else:
 		get_node("Breach Explanation").text = "All your data is secure this month.
 		Well done!"

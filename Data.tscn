@@ -1,25 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://vmjlfv37nhet"]
+[gd_scene load_steps=6 format=3 uid="uid://vmjlfv37nhet"]
 
 [ext_resource type="Script" path="res://DataScreen.gd" id="1_df1we"]
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_kc13r"]
+[ext_resource type="Texture2D" uid="uid://dfqoh0o30lom6" path="res://Textures/backgrounds/backgroundData.jpg" id="2_a7umu"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_lkrdd"]
 [ext_resource type="PackedScene" uid="uid://vdcnckar136l" path="res://DataOffer.tscn" id="4_hnjbq"]
 
 [node name="Data" type="Node2D"]
 script = ExtResource("1_df1we")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_a7umu")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_kc13r")]
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_lkrdd")]
-
-[node name="Label" type="Label" parent="."]
-offset_left = 890.0
-offset_top = 533.0
-offset_right = 1064.0
-offset_bottom = 559.0
-text = "Check Back Here in Q2"
 
 [node name="NinePatchRect" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 84.0

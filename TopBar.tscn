@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://c0bb5yedovxdm"]
 
-[ext_resource type="Texture2D" uid="uid://c3i4s7cuk0ilx" path="res://topBar.png" id="1_t3xsn"]
+[ext_resource type="Texture2D" uid="uid://c8qv48hfrw75b" path="res://topBar.png" id="1_t3xsn"]
 [ext_resource type="Script" path="res://securityButton.gd" id="2_0bfsq"]
 [ext_resource type="StyleBox" uid="uid://c3t0o5na2jhph" path="res://testTopBarnorm.tres" id="3_ql3ym"]
-[ext_resource type="StyleBox" path="res://testTopBarHov.tres" id="4_d7vyr"]
+[ext_resource type="StyleBox" uid="uid://b8d8jdk421tqt" path="res://testTopBarHov.tres" id="4_d7vyr"]
 [ext_resource type="StyleBox" uid="uid://b237vsinv5p5" path="res://testTopBarPres.tres" id="5_yt05p"]
 [ext_resource type="StyleBox" uid="uid://d1l55p1clyo3c" path="res://testTopBarFocus.tres" id="6_7rhbs"]
 [ext_resource type="Script" path="res://TBB3.gd" id="8_swbda"]

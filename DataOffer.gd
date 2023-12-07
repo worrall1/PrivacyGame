@@ -12,10 +12,10 @@ var number = 0
 func _ready():
 	get_node("VBoxContainer/Title").text = title
 	get_node("VBoxContainer/Label").text = label
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer/RedDataCost").text = str(redData)
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer/BlueDataCost").text = str(blueData)
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer2/Money").text = str(money)
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer2/Rep").text = str(rep)
+	get_node("VBoxContainer/HBoxContainer/VBoxContainer/RedDataCost").text = "Sensitive Data: " + str(redData)
+	get_node("VBoxContainer/HBoxContainer/VBoxContainer/BlueDataCost").text = "Analytics Data: " + str(blueData)
+	get_node("VBoxContainer/HBoxContainer/VBoxContainer2/Money").text = "Cost" + str(money)
+	get_node("VBoxContainer/HBoxContainer/VBoxContainer2/Rep").text = "Reputation Cost" + str(rep)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,7 +23,7 @@ func _process(_delta):
 	pass
 
 func _on_button_pressed():
-	if((Globals.blueData > blueData) && (Globals.redData > redData) && (Globals.money > money) && (Globals.rep > rep)):
+	if((Globals.blueData > blueData) && (Globals.redData > redData) && (Globals.money > money) && (Globals.reputation > rep)):
 		Globals.blueData -= blueData
 		Globals.redData -= redData
 		Globals.money -= money

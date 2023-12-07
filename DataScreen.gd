@@ -13,13 +13,51 @@ func _ready():
 	get_node("NinePatchRect8").set_values(DataOfferRepo.title8, DataOfferRepo.blueData8, DataOfferRepo.redData8, DataOfferRepo.money8, DataOfferRepo.rep8, DataOfferRepo.label8, DataOfferRepo.taken8, 8)
 	get_node("NinePatchRect9").set_values(DataOfferRepo.title9, DataOfferRepo.blueData9, DataOfferRepo.redData9, DataOfferRepo.money9, DataOfferRepo.rep9, DataOfferRepo.label9, DataOfferRepo.taken9, 9)
 	get_node("NinePatchRect10").set_values(DataOfferRepo.title10, DataOfferRepo.blueData10, DataOfferRepo.redData10, DataOfferRepo.money10, DataOfferRepo.rep10, DataOfferRepo.label10, DataOfferRepo.taken10, 10)
-	if (Globals.quarter < 2):
-		get_node("Label").visible = true
-	else:
-		get_node("Label").visible = false
+	
+	get_node("NinePatchRect").show()
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if DataOfferRepo.taken1 == true:
+		get_node("NinePatchRect").hide()
+	else:
+		get_node("NinePatchRect").show()
+	if DataOfferRepo.taken2 == true:
+		get_node("NinePatchRect2").hide()
+	else:
+		get_node("NinePatchRect2").show()
+	if DataOfferRepo.taken3 == true:
+		get_node("NinePatchRect3").hide()
+	else:
+		get_node("NinePatchRect3").show()
+	if DataOfferRepo.taken4 == true:
+		get_node("NinePatchRect4").hide()
+	else:
+		get_node("NinePatchRect4").show()
+	if DataOfferRepo.taken5 == true:
+		get_node("NinePatchRect5").hide()
+	else:
+		get_node("NinePatchRect5").show()
+	if DataOfferRepo.taken6 == true:
+		get_node("NinePatchRect6").hide()
+	else:
+		get_node("NinePatchRect6").show()
+	if DataOfferRepo.taken7 == true:
+		get_node("NinePatchRect7").hide()
+	else:
+		get_node("NinePatchRect7").show()
+	if DataOfferRepo.taken8 == true:
+		get_node("NinePatchRect8").hide()
+	else:
+		get_node("NinePatchRect8").show()
+	if DataOfferRepo.taken9 == true:
+		get_node("NinePatchRect9").hide()
+	else:
+		get_node("NinePatchRect9").show()
+	if DataOfferRepo.taken10 == true:
+		get_node("NinePatchRect10").hide()
+	else:
+		get_node("NinePatchRect10").show()
 	pass
