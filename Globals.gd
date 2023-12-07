@@ -1,6 +1,6 @@
 extends Node
 
-var money = 500
+var money = 1000
 var mps = 1
 var moneyTotal = 0
 var upkeep = 0
@@ -32,16 +32,25 @@ var tutorial = false
 var tutorialProgress = 0
 
 # Stores for upgrade selection
+var venture1 = false
+var venture2 = false
+var venture3 = false
+var venture4 = false
+var venture5 = false
+var venture6 = false
+var venture7 = false
+var venture8 = false
+var venture9 = false
 
-var upgradeOne = [false,false,false,false]
-var upgradeTwo = [false,false,false,false]
-var upgradeThree = [false,false,false,false]
-var upgradeFour = [false,false,false,false]
-var upgradeFive = [false,false,false,false]
-var upgradeSix = [false,false,false,false]
-var upgradeSeven = [false,false,false,false]
-var upgradeEight = [false,false,false,false]
-var upgradeNine = [false,false,false,false]
+var upgrade1 = [false,false,false,false]
+var upgrade2 = [false,false,false,false]
+var upgrade3 = [false,false,false,false]
+var upgrade4 = [false,false,false,false]
+var upgrade5 = [false,false,false,false]
+var upgrade6 = [false,false,false,false]
+var upgrade7 = [false,false,false,false]
+var upgrade8 = [false,false,false,false]
+var upgrade9 = [false,false,false,false]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,6 +62,14 @@ func _process(delta):
 	
 	if tutorial == false:
 		time += delta * timeModifier
+	else:
+		if tutorialProgress == 2:
+			if venture1 == true:
+				tutorialProgress += 1
+				
+		if tutorialProgress == 3:
+			if upgrade1[0] == true:
+				tutorialProgress += 1
 
 	if (time >= 1):
 		time -= 1

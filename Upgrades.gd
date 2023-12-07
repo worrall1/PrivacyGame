@@ -32,485 +32,275 @@ func _ready():
 	venture2 = $Button2
 	venture3 = $Button3
 	venture4 = $Button4
+	
+	#Venture 1
 	$TextureButton/Label.text = "SOCIAL MEDIA"
-	$TextureButton2.cost = 5000
+	
+	$TextureButton.cost =200
+	$TextureButton.ventureNum = 1
+	$TextureButton.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton.venture1Cost = 50
+	$TextureButton.venture1Priv = 2
+	$TextureButton.venture1Money = 1
+	$TextureButton.venture1Data = 2
+	$TextureButton.venture1Rep = 0
+	$TextureButton.venture2Text = "Run an ad campaign £75"
+	$TextureButton.venture2Cost = 120
+	$TextureButton.venture2Priv = 4
+	$TextureButton.venture2Money = 2
+	$TextureButton.venture2Data = 5
+	$TextureButton.venture2Rep = 0
+	$TextureButton.venture3Text = "Replace me"
+	$TextureButton.venture3Cost = 250
+	$TextureButton.venture3Priv = 4
+	$TextureButton.venture3Money = 3
+	$TextureButton.venture3Data = 6
+	$TextureButton.venture3Rep = -3
+	$TextureButton.venture4Text = "Replace me"
+	$TextureButton.venture4Cost = 750
+	$TextureButton.venture4Priv = 8
+	$TextureButton.venture4Money = 0
+	$TextureButton.venture4Data = 9
+	$TextureButton.venture4Rep = -10
+	
+	#Venture 2
 	$TextureButton2/Label.text = "PHOTO SHARING"
+	$TextureButton2.cost =250
+	$TextureButton2.ventureNum = 2
+	$TextureButton2.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton2.venture1Cost = 75
+	$TextureButton2.venture1Priv = 3
+	$TextureButton2.venture1Money = 2
+	$TextureButton2.venture1Data = 3
+	$TextureButton2.venture1Rep = 0
+	$TextureButton2.venture2Text = "Run an ad campaign £75"
+	$TextureButton2.venture2Cost = 150
+	$TextureButton2.venture2Priv = 5
+	$TextureButton2.venture2Money = 2
+	$TextureButton2.venture2Data = 7
+	$TextureButton2.venture2Rep = -2
+	$TextureButton2.venture3Text = "Replace me"
+	$TextureButton2.venture3Cost = 300
+	$TextureButton2.venture3Priv = 8
+	$TextureButton2.venture3Money = 4
+	$TextureButton2.venture3Data = 9
+	$TextureButton2.venture3Rep = -8
+	$TextureButton2.venture4Text = "Replace me"
+	$TextureButton2.venture4Cost = 800
+	$TextureButton2.venture4Priv = 10
+	$TextureButton2.venture4Money = 3
+	$TextureButton2.venture4Data = 11
+	$TextureButton2.venture4Rep = -15
+	
 	$TextureButton3/Label.text="E-COMMERCE SITE"
+	$TextureButton3.cost =1200
+	$TextureButton3.ventureNum = 3
+	$TextureButton3.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton3.venture1Cost = 500
+	$TextureButton3.venture1Priv = 6
+	$TextureButton3.venture1Money = 4
+	$TextureButton3.venture1Data = 6
+	$TextureButton3.venture1Rep = -3
+	$TextureButton3.venture2Text = "Run an ad campaign £75"
+	$TextureButton3.venture2Cost = 950
+	$TextureButton3.venture2Priv = 8
+	$TextureButton3.venture2Money = 13
+	$TextureButton3.venture2Data = 6
+	$TextureButton3.venture2Rep = -5
+	$TextureButton3.venture3Text = "Replace me"
+	$TextureButton3.venture3Cost = 2000
+	$TextureButton3.venture3Priv = 10
+	$TextureButton3.venture3Money = 18
+	$TextureButton3.venture3Data = 8
+	$TextureButton3.venture3Rep = -6
+	$TextureButton3.venture4Text = "Replace me"
+	$TextureButton3.venture4Cost = 3000
+	$TextureButton3.venture4Priv = 10
+	$TextureButton3.venture4Money = 20
+	$TextureButton3.venture4Data = 9
+	$TextureButton3.venture4Rep = -15
+	
 	$TextureButton4/Label.text="MEDIA SHARING"
+	$TextureButton4.cost =300
+	$TextureButton4.ventureNum = 4
+	$TextureButton4.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton4.venture1Cost = 80
+	$TextureButton4.venture1Priv = 3
+	$TextureButton4.venture1Money = 5
+	$TextureButton4.venture1Data = 3
+	$TextureButton4.venture1Rep = -1
+	$TextureButton4.venture2Text = "Run an ad campaign £75"
+	$TextureButton4.venture2Cost = 160
+	$TextureButton4.venture2Priv = 6
+	$TextureButton4.venture2Money = 4
+	$TextureButton4.venture2Data = 8
+	$TextureButton4.venture2Rep = -4
+	$TextureButton4.venture3Text = "Replace me"
+	$TextureButton4.venture3Cost = 320
+	$TextureButton4.venture3Priv = 7
+	$TextureButton4.venture3Money =2
+	$TextureButton4.venture3Data = 9
+	$TextureButton4.venture3Rep = -10
+	$TextureButton4.venture4Text = "Replace me"
+	$TextureButton4.venture4Cost = 850
+	$TextureButton4.venture4Priv = 12
+	$TextureButton4.venture4Money = 6
+	$TextureButton4.venture4Data = 8
+	$TextureButton4.venture4Rep = -4
+	
 	$TextureButton5/Label.text = "ONLINE DATING"
+	$TextureButton5.cost =700
+	$TextureButton5.ventureNum = 5
+	$TextureButton5.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton5.venture1Cost = 180
+	$TextureButton5.venture1Priv = 5
+	$TextureButton5.venture1Money = 3
+	$TextureButton5.venture1Data = 5
+	$TextureButton5.venture1Rep = -3
+	$TextureButton5.venture2Text = "Run an ad campaign £75"
+	$TextureButton5.venture2Cost = 500
+	$TextureButton5.venture2Priv = 8
+	$TextureButton5.venture2Money = 7
+	$TextureButton5.venture2Data = 7
+	$TextureButton5.venture2Rep = -1
+	$TextureButton5.venture3Text = "Replace me"
+	$TextureButton5.venture3Cost = 950
+	$TextureButton5.venture3Priv = 14
+	$TextureButton5.venture3Money = 3
+	$TextureButton5.venture3Data = 16
+	$TextureButton5.venture3Rep = -10
+	$TextureButton5.venture4Text = "Replace me"
+	$TextureButton5.venture4Cost = 2000
+	$TextureButton5.venture4Priv = 2
+	$TextureButton5.venture4Money = 12
+	$TextureButton5.venture4Data = 1
+	$TextureButton5.venture4Rep = -14
+
 	$TextureButton6/Label.text = "COMPARISON SHOPPING"
+	$TextureButton6.cost =650
+	$TextureButton6.ventureNum = 6
+	$TextureButton6.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton6.venture1Cost = 175
+	$TextureButton6.venture1Priv = 3
+	$TextureButton6.venture1Money = 5
+	$TextureButton6.venture1Data = 6
+	$TextureButton6.venture1Rep = 0
+	$TextureButton6.venture2Text = "Run an ad campaign £75"
+	$TextureButton6.venture2Cost = 450
+	$TextureButton6.venture2Priv = 3
+	$TextureButton6.venture2Money = 10
+	$TextureButton6.venture2Data = 3
+	$TextureButton6.venture2Rep = -4
+	$TextureButton6.venture3Text = "Replace me"
+	$TextureButton6.venture3Cost = 900
+	$TextureButton6.venture3Priv = 4
+	$TextureButton6.venture3Money = 6
+	$TextureButton6.venture3Data = 5
+	$TextureButton6.venture3Rep = -6
+	$TextureButton6.venture4Text = "Replace me"
+	$TextureButton6.venture4Cost = 1900
+	$TextureButton6.venture4Priv = 5
+	$TextureButton6.venture4Money = 12
+	$TextureButton6.venture4Data = 6
+	$TextureButton6.venture4Rep = -18
+
 	$TextureButton7/Label.text = "MAPS SERVICE"
+	$TextureButton7.cost =2500
+	$TextureButton7.ventureNum = 7
+	$TextureButton7.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton7.venture1Cost = 1050
+	$TextureButton7.venture1Priv = 6
+	$TextureButton7.venture1Money = 18
+	$TextureButton7.venture1Data = 6
+	$TextureButton7.venture1Rep = -5
+	$TextureButton7.venture2Text = "Run an ad campaign £75"
+	$TextureButton7.venture2Cost = 1950
+	$TextureButton7.venture2Priv = 9
+	$TextureButton7.venture2Money = 20
+	$TextureButton7.venture2Data = 9
+	$TextureButton7.venture2Rep = -8
+	$TextureButton7.venture3Text = "Replace me"
+	$TextureButton7.venture3Cost = 2750
+	$TextureButton7.venture3Priv = 15
+	$TextureButton7.venture3Money = 6
+	$TextureButton7.venture3Data = 13
+	$TextureButton7.venture3Rep = -20
+	$TextureButton7.venture4Text = "Replace me"
+	$TextureButton7.venture4Cost = 10000
+	$TextureButton7.venture4Priv = 30
+	$TextureButton7.venture4Money = 8
+	$TextureButton7.venture4Data = 24
+	$TextureButton7.venture4Rep = -30
+	
 	$TextureButton8/Label.text = "CASINO SITE"
+	$TextureButton8.ventureNum = 8
+	$TextureButton8.cost =2000
+	$TextureButton8.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton8.venture1Cost = 1000
+	$TextureButton8.venture1Priv = 9
+	$TextureButton8.venture1Money = 14
+	$TextureButton8.venture1Data = 7
+	$TextureButton8.venture1Rep = -7
+	$TextureButton8.venture2Text = "Run an ad campaign £75"
+	$TextureButton8.venture2Cost = 1850
+	$TextureButton8.venture2Priv = 11
+	$TextureButton8.venture2Money = 18
+	$TextureButton8.venture2Data = 8
+	$TextureButton8.venture2Rep = -10
+	$TextureButton8.venture3Text = "Replace me"
+	$TextureButton8.venture3Cost = 2500
+	$TextureButton8.venture3Priv = 8
+	$TextureButton8.venture3Money = 20
+	$TextureButton8.venture3Data = 5
+	$TextureButton8.venture3Rep = -15
+	$TextureButton8.venture4Text = "Replace me"
+	$TextureButton8.venture4Cost = 5000
+	$TextureButton8.venture4Priv = 30
+	$TextureButton8.venture4Money = 8
+	$TextureButton8.venture4Data = 24
+	$TextureButton8.venture4Rep = -30
+	
 	$TextureButton9/Label.text="FOOD DELIVERY SERVICE"
+	$TextureButton9.cost = 1250
+	$TextureButton9.ventureNum = 9
+	$TextureButton9.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton9.venture1Cost = 550
+	$TextureButton9.venture1Priv = 2
+	$TextureButton9.venture1Money = 1
+	$TextureButton9.venture1Data = 2
+	$TextureButton9.venture1Rep = 0
+	$TextureButton9.venture2Text = "Run an ad campaign £75"
+	$TextureButton9.venture2Cost = 1000
+	$TextureButton9.venture2Priv = 4
+	$TextureButton9.venture2Money = 2
+	$TextureButton9.venture2Data = 5
+	$TextureButton9.venture2Rep = 0
+	$TextureButton9.venture3Text = "Replace me"
+	$TextureButton9.venture3Cost = 2100
+	$TextureButton9.venture3Priv = 4
+	$TextureButton9.venture3Money = 3
+	$TextureButton9.venture3Data = 6
+	$TextureButton9.venture3Rep = 3
+	$TextureButton9.venture4Text = "Replace me"
+	$TextureButton9.venture4Cost = 3500
+	$TextureButton9.venture4Priv = 8
+	$TextureButton9.venture4Money = 0
+	$TextureButton9.venture4Data = 9
+	$TextureButton9.venture4Rep = -10
 
 	get_node("Button").hide()
 	get_node("Button2").hide()
 	get_node("Button3").hide()
 	get_node("Button4").hide()
 	
-	$TextureButton.Unlocked = true
-	#set_all_images()
 	$Panel2.hide()
-	$TextureButton.cost =20
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-#	if selected ==1:
-#		get_node("Label").hide()
-#		get_node("Button").show()
-#		get_node("Button2").show()
-#		get_node("Button3").show()
-#		get_node("Button4").show()
-#
-#	else:
-#
-#		get_node("Label").show()
-#		get_node("Button").hide()
-#		get_node("Button2").hide()
-#		get_node("Button3").hide()
-#		get_node("Button4").hide()
-#
-#
-#
-#
-#
-#	pass
-#
-##	VENTURE BUTTON FUNCTIONS
-#
-#func set_all_images():
-#	$TextureButton/Label.text = "SOCIAL MEDIA"
-#
-#	$TextureButton2/Label.text = "PHOTO SHARING"
-#
-#	$TextureButton3.set_texture_normal(load("res://Textures/ventures/shop.png"))
-#	$TextureButton3/Label.text="E-COMMERCE SITE"
-#
-#	$TextureButton4.set_texture_normal(load("res://Textures/ventures/video.png"))
-#	$TextureButton4/Label.text="MEDIA SHARING"
-#
-#	$TextureButton5.set_texture_normal(load("res://Textures/ventures/dating.png"))
-#	$TextureButton5/Label.text = "ONLINE DATING"
-#
-#	$TextureButton6/Label.text = "COMPARISON SHOPPING"
-#
-#	$TextureButton7.set_texture_normal(load("res://Textures/ventures/navigation.png"))
-#	$TextureButton7/Label.text = "MAPS SERVICE"
-#
-#	$TextureButton8.set_texture_normal(load("res://Textures/ventures/casino.png"))
-#	$TextureButton8/Label.text = "CASINO SITE"
-#
-#	$TextureButton9/Label.text="FOOD DELIVERY SERVICE"
-#
-#
-#
-#func _on_button1_pressed():
-#
-#
-#
-#	if actingButton==1:
-#		Globals.upgradeOne[0]=true
-#		$Button/Label.show()
-#	elif actingButton==2:
-#		Globals.upgradeTwo[0]=true
-#		$Button/Label.show()
-#	elif actingButton==3:
-#		Globals.upgradeThree[0]=true
-#		$Button/Label.show()
-#	elif actingButton==4:
-#		Globals.upgradeFour[0]=true
-#		$Button/Label.show()
-#	elif actingButton==5:
-#		Globals.upgradeFive[0]=true
-#		$Button/Label.show()
-#	elif actingButton==6:
-#		Globals.upgradeSix[0]=true
-#		$Button/Label.show()
-#	elif actingButton==7:
-#		Globals.upgradeSeven[0]=true
-#		$Button/Label.show()
-#	elif actingButton==8:
-#		Globals.upgradeEight[0]=true
-#		$Button/Label.show()
-#	elif actingButton==9:
-#		Globals.upgradeNine[0]=true
-#		$Button/Label.show()
-#
-#	pass # Replace with function body.
-#
-#func _on_button_2_pressed():
-#
-#
-#
-#	if actingButton==1:
-#
-#		Globals.upgradeOne[1]=true
-#		$Button2/Label.show()
-#
-#	elif actingButton==2:
-#		Globals.upgradeTwo[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==3:
-#		Globals.upgradeThree[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==4:
-#		Globals.upgradeFour[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==5:
-#		Globals.upgradeFive[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==6:
-#		Globals.upgradeSix[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==7:
-#		Globals.upgradeSeven[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==8:
-#		Globals.upgradeEight[1]=true
-#		$Button2/Label.show()
-#	elif actingButton==9:
-#		Globals.upgradeNine[1]=true
-#		$Button2/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_button_3_pressed():
-#	if actingButton==1:
-#
-#		Globals.upgradeOne[2]=true
-#		$Button3/Label.show()
-#
-#	elif actingButton==2:
-#		Globals.upgradeTwo[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==3:
-#		Globals.upgradeThree[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==4:
-#		Globals.upgradeFour[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==5:
-#		Globals.upgradeFive[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==6:
-#		Globals.upgradeSix[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==7:
-#		Globals.upgradeSeven[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==8:
-#		Globals.upgradeEight[2]=true
-#		$Button3/Label.show()
-#	elif actingButton==9:
-#		Globals.upgradeNine[2]=true
-#		$Button3/Label.show()
-#	pass # Replace with function body.
-#
-#func _on_button_4_pressed():
-#	if actingButton==1:
-#
-#		Globals.upgradeOne[3]=true
-#		$Button4/Label.show()
-#
-#	elif actingButton==2:
-#		Globals.upgradeTwo[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==3:
-#		Globals.upgradeThree[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==4:
-#		Globals.upgradeFour[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==5:
-#		Globals.upgradeFive[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==6:
-#		Globals.upgradeSix[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==7:
-#		Globals.upgradeSeven[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==8:
-#		Globals.upgradeEight[3]=true
-#		$Button4/Label.show()
-#	elif actingButton==9:
-#		Globals.upgradeNine[3]=true
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-###	TEXTURE BUTTON FUNCTIONS
-#
-#func _on_texture_button_pressed():
-#
-#
-#	seen1+=1
-#	$Panel2/Label.text="Social Media"
-#	$Panel2/RichTextLabel.add_text("Every year millionns of social media users are at risk of privacy breaches.")
-#
-#	set_all_images()
-#	$Button.text="Addictive Design"
-#	$Button2.text="Personalised Ads"
-#	$Button3.text="Dark Patterns"
-#	$Button4.text="Dark Patterns"
-#
-#	if Globals.money<510:
-#		$Button.disabled=true
-#	else:
-#		$Button.disabled=false
-#	if Globals.money<2000:
-#		$Button2.disabled=true
-#	else:
-#		$Button2.disabled=false
-#	if Globals.money<4000:
-#		$Button3.disabled=true
-#	else:
-#		$Button3.disabled=false
-#	if Globals.money<5000:
-#		$Button4.disabled=true
-#	else:
-#		$Button4.disabled=false
-#
-#
-#
-#
-#
-#
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen1<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#
-#
-#
-#
-#	actingButton=1
-#
-#	if Globals.upgradeOne[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeOne[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeOne[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeOne[3]==true:
-#		$Button4/Label.show()
-#
-#
-#func _on_texture_button_2_pressed():
-#
-#	set_all_images()
-#
-#	seen2+=1
-#	$Panel2/Label.text=""
-#
-#
-#
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen2<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=2
-#
-#
-#
-#	if Globals.upgradeTwo[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeTwo[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeTwo[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeTwo[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_texture_button_3_pressed():
-#
-#	seen3+=1
-#	set_all_images()
-#
-#
-#
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen3<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=3
-#
-#	if Globals.upgradeThree[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeThree[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeThree[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeThree[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_texture_button_4_pressed():
-#	seen4+=1
-#	set_all_images()
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#
-#	if seen4<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=4
-#
-#	if Globals.upgradeFour[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeFour[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeFour[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeFour[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_texture_button_5_pressed():
-#	set_all_images()
-#	seen5+=1
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen5<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=5
-#
-#	if Globals.upgradeFive[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeFive[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeFive[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeFive[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_texture_button_6_pressed():
-#	set_all_images()
-#	seen6+=1
-#
-#	if seen6<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	$Panel2.show()
-#	actingButton=6
-#
-#	if Globals.upgradeSix[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeSix[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeSix[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeSix[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_texture_button_7_pressed():
-#	set_all_images()
-#	seen7+=1
-#
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen7<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=7
-#
-#	if Globals.upgradeSeven[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeSeven[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeSeven[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeSeven[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#func _on_texture_button_8_pressed():
-#	set_all_images()
-#	seen8+=1
-#
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen8<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=8
-#
-#	if Globals.upgradeEight[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeEight[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeEight[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeEight[3]==true:
-#		$Button4/Label.show()
-#	pass # Replace with function body.
-#
-#
-#
-#
-#func _on_texture_button_9_pressed():
-#	set_all_images()
-#	seen9+=1
-#
-#	$Button/Label.hide()
-#	$Button2/Label.hide()
-#	$Button3/Label.hide()
-#	$Button4/Label.hide()
-#	if seen9<2:
-#		$Panel2.show()
-#	else:
-#		$Panel2.hide()
-#	actingButton=9
-#
-#	if Globals.upgradeNine[0]==true:
-#		$Button/Label.show()
-#	if Globals.upgradeNine[1]==true:
-#		$Button2/Label.show()
-#	if Globals.upgradeNine[2]==true:
-#		$Button3/Label.show()
-#	if Globals.upgradeNine[3]==true:
-#		$Button4/Label.show()
+
 	pass # Replace with function body.
 
 
