@@ -1,16 +1,16 @@
 [gd_scene load_steps=10 format=3 uid="uid://sn6bydjgf6o5"]
 
-[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_x3o3o"]
+[ext_resource type="Texture2D" uid="uid://wdayetwxle3o" path="res://Textures/backgrounds/bottomBar.png" id="1_rirpf"]
 [ext_resource type="Script" path="res://BottomBar.gd" id="2_tgjna"]
-[ext_resource type="Texture2D" uid="uid://djcuxeqsh408q" path="res://Textures/icons/pause-solid.svg" id="3_r1a6l"]
 [ext_resource type="Texture2D" uid="uid://dyfefvv854mdb" path="res://Textures/icons/money.svg" id="3_u6v3q"]
-[ext_resource type="Texture2D" uid="uid://cc3qoowxn637" path="res://Textures/icons/forward-solid.svg" id="4_cf0bk"]
 [ext_resource type="Texture2D" uid="uid://bw6ee3r0p0y8d" path="res://Textures/icons/nonsensetive-data.svg" id="4_fr4ge"]
 [ext_resource type="Texture2D" uid="uid://cec1tv0fqnxr7" path="res://Textures/icons/sensetive-data.svg.svg" id="5_0lwre"]
-[ext_resource type="Texture2D" uid="uid://7q0pafqceoge" path="res://Textures/icons/play-solid.svg" id="5_pj3wo"]
+[ext_resource type="Texture2D" uid="uid://bo8hu7yn1ggp7" path="res://Textures/iconsWhite/pause-solid.svg" id="6_xyis5"]
+[ext_resource type="Texture2D" uid="uid://bu5ys7m23b0rj" path="res://Textures/iconsWhite/forward-solid.svg" id="7_5vmwq"]
+[ext_resource type="Texture2D" uid="uid://ykyw0iov5233" path="res://Textures/iconsWhite/play-solid.svg" id="8_cpbov"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0bcb"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.0862745, 0.207843, 0.301961, 1)
 corner_radius_top_left = 7
 corner_radius_top_right = 7
 corner_radius_bottom_right = 7
@@ -21,10 +21,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
+offset_top = -89.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("1_x3o3o")
+texture = ExtResource("1_rirpf")
 patch_margin_left = 10
 patch_margin_right = 10
 script = ExtResource("2_tgjna")
@@ -32,25 +32,25 @@ script = ExtResource("2_tgjna")
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 5.0
-offset_top = 5.0
-offset_right = 145.0
-offset_bottom = 55.0
+offset_top = 36.0
+offset_right = 166.0
+offset_bottom = 86.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_a0bcb")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 211.0
-offset_top = 3.0
+offset_top = 34.0
 offset_right = 351.0
-offset_bottom = 53.0
+offset_bottom = 84.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_a0bcb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 244.0
-offset_top = 2.0
-offset_right = 282.0
-offset_bottom = 67.0
+offset_top = 33.0
+offset_right = 294.0
+offset_bottom = 98.0
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
@@ -108,47 +108,62 @@ text = "0"
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
 offset_left = 1256.0
-offset_top = 6.0
+offset_top = 37.0
 offset_right = 1878.0
-offset_bottom = 54.0
+offset_bottom = 85.0
 
 [node name="ReputationLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1118.0
-offset_top = 18.0
-offset_right = 1228.0
-offset_bottom = 44.0
-text = "Reputation"
+offset_left = 1085.0
+offset_top = 44.0
+offset_right = 1242.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 25
+text = "REPUTATION"
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 10.0
+offset_top = 41.0
 offset_right = 45.0
-offset_bottom = 49.0
-texture_normal = ExtResource("3_r1a6l")
+offset_bottom = 80.0
+texture_normal = ExtResource("6_xyis5")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 8.0
-offset_right = 136.0
-offset_bottom = 50.0
-texture_normal = ExtResource("4_cf0bk")
+offset_left = 109.0
+offset_top = 41.0
+offset_right = 157.0
+offset_bottom = 83.0
+texture_normal = ExtResource("7_5vmwq")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureButton3" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 12.0
-offset_right = 82.0
-offset_bottom = 47.0
-texture_normal = ExtResource("5_pj3wo")
+offset_left = 66.0
+offset_top = 44.0
+offset_right = 92.0
+offset_bottom = 79.0
+texture_normal = ExtResource("8_cpbov")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(66, 44.1111)
+scale = Vector2(1, 0.703705)
+points = PackedVector2Array(-9, -2, -8.99999, 24.9875, -9, 50)
+width = 3.0
+default_color = Color(0.262745, 0.505882, 0.690196, 1)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(109, 44)
+scale = Vector2(1, 0.703705)
+points = PackedVector2Array(-9, -2, -8.99999, 24.9875, -9, 50)
+width = 3.0
+default_color = Color(0.262745, 0.505882, 0.690196, 1)
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]
