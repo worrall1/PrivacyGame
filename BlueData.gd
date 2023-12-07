@@ -6,8 +6,11 @@ var move_distance: float = 100  # Adjust the distance as needed
 
 func _ready():
 	original_position = position
+	visible = false
 
 func _process(delta):
-	position.y -= move_speed * delta  # Move up
-	if position.y < original_position.y - move_distance:
-		position.y = original_position.y  # Reset to the original position
+	if Globals.bdps > 15:
+		visible = true
+		position.y -= move_speed * delta  # Move up
+		if position.y < original_position.y - move_distance:
+			position.y = original_position.y  # Reset to the original position
