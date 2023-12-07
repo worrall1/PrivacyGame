@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://daputx404ywkw"]
+[gd_scene load_steps=12 format=3 uid="uid://daputx404ywkw"]
 
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_76qjh"]
 [ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_c6lw8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
 [ext_resource type="PackedScene" path="res://TutorialPopup.tscn" id="5_8lm8t"]
 [ext_resource type="Texture2D" uid="uid://xqn241loa5ts" path="res://Textures/particles.png" id="6_t0bp0"]
+[ext_resource type="Texture2D" uid="uid://oe2ww1y3sr2e" path="res://Textures/dataMonitor.png" id="7_fcun6"]
 [ext_resource type="Texture2D" uid="uid://cnwe41bu55bpf" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
 [ext_resource type="Texture2D" uid="uid://04t3pewjflfu" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
 
@@ -43,17 +44,25 @@ offset_top = 192.0
 offset_right = 215.0
 offset_bottom = 192.0
 
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = -449.0
+offset_top = 279.0
+offset_right = -31.0
+offset_bottom = 814.0
+texture = ExtResource("7_fcun6")
+expand_mode = 1
+
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_bf60y")
-position = Vector2(-301, -4)
-amount = 10
-lifetime = 7.0
+position = Vector2(-244, 355)
+amount = 1
+lifetime = 1.3
 randomness = 1.0
 texture = ExtResource("6_t0bp0")
 emission_shape = 3
-emission_rect_extents = Vector2(200, 1)
-spread = 30.0
+emission_rect_extents = Vector2(175, 1)
 gravity = Vector2(0, 500)
+anim_speed_max = 0.05
 anim_offset_max = 1.0
 
 [node name="TextureRect2" type="TextureRect" parent="."]

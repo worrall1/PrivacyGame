@@ -3,7 +3,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CPUParticles2D.amount= Globals.bdps * 10
+	if Globals.bdps>1:
+		$CPUParticles2D.amount= Globals.bdps * 10
+	elif Globals.bdps==1:
+		$CPUParticles2D.amount = 1
 	$CPUParticles2D2.amount = Globals.mps
 	pass # Replace with function body.
 

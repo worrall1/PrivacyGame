@@ -1,18 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddxtl0c0bcg1m"]
+[gd_scene load_steps=7 format=3 uid="uid://ddxtl0c0bcg1m"]
 
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_1e6du"]
+[ext_resource type="Texture2D" uid="uid://ca7kr446n0yo" path="res://Textures/backgroundTitle.png" id="2_oekwt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7d8y"]
 bg_color = Color(0.282353, 0.686275, 0.541176, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 6
+shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e053"]
 bg_color = Color(0.160784, 0.458824, 0.34902, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7csx"]
 bg_color = Color(0.215686, 0.65098, 0.831373, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 6
+shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skxmv"]
 bg_color = Color(0.121569, 0.470588, 0.611765, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,22 +68,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="BackgroundTitle" type="Sprite2D" parent="ColorRect"]
+position = Vector2(960, 539)
+texture = ExtResource("2_oekwt")
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
-offset_left = 446.0
-offset_top = 483.0
-offset_right = 869.0
-offset_bottom = 634.0
+offset_left = 482.0
+offset_top = 692.0
+offset_right = 905.0
+offset_bottom = 843.0
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_q7d8y")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0e053")
 text = "START"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 2
-offset_left = 1057.0
-offset_top = 483.0
-offset_right = 1480.0
-offset_bottom = 634.0
+offset_left = 1107.0
+offset_top = 692.0
+offset_right = 1530.0
+offset_bottom = 843.0
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_o7csx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_skxmv")
 text = "SETTINGS"
