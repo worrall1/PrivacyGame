@@ -37,6 +37,7 @@ stretch_mode = 4
 script = ExtResource("4_shits")
 
 [node name="Control" parent="." instance=ExtResource("5_8lm8t")]
+visible = false
 offset_left = 215.0
 offset_top = 192.0
 offset_right = 215.0
