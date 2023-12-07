@@ -6,42 +6,9 @@
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
 [ext_resource type="PackedScene" path="res://TutorialPopup.tscn" id="5_8lm8t"]
 [ext_resource type="Texture2D" uid="uid://cmenmrkosgnvg" path="res://Textures/icons/redData.png" id="6_kvfwf"]
-
-[sub_resource type="Animation" id="Animation_wi45o"]
-resource_name = "moveup"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 2]
-}
-
-[sub_resource type="Animation" id="Animation_5nkrn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_aob0e"]
-_data = {
-"RESET": SubResource("Animation_5nkrn"),
-"moveup": SubResource("Animation_wi45o")
-}
+[ext_resource type="Script" path="res://RedData.gd" id="7_buhkh"]
+[ext_resource type="Texture2D" uid="uid://dmnd7ar3o2ctj" path="res://Textures/icons/blueData.png" id="8_0ejuv"]
+[ext_resource type="Script" path="res://BlueData.gd" id="9_rfmpq"]
 
 [node name="HomeScreen" type="Node2D"]
 position = Vector2(563, -2)
@@ -63,18 +30,146 @@ stretch_mode = 4
 script = ExtResource("4_shits")
 
 [node name="Control" parent="." instance=ExtResource("5_8lm8t")]
+visible = false
 offset_left = 215.0
 offset_top = 192.0
 offset_right = 215.0
 offset_bottom = 192.0
 
-[node name="RedData" type="Sprite2D" parent="."]
-position = Vector2(-465, 260)
-scale = Vector2(0.49375, 0.53625)
+[node name="RedData2" type="Sprite2D" parent="."]
+position = Vector2(-461, 280)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_kvfwf")
-vframes = 4
+script = ExtResource("7_buhkh")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RedData"]
-libraries = {
-"": SubResource("AnimationLibrary_aob0e")
-}
+[node name="RedData" type="Sprite2D" parent="."]
+position = Vector2(-521, 279)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="BlueData2" type="Sprite2D" parent="."]
+position = Vector2(-203, 283)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData3" type="Sprite2D" parent="."]
+position = Vector2(-162, 284)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData" type="Sprite2D" parent="."]
+position = Vector2(-245, 283)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="RedData3" type="Sprite2D" parent="."]
+position = Vector2(-110, 211)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData4" type="Sprite2D" parent="."]
+position = Vector2(-62, 211)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData5" type="Sprite2D" parent="."]
+position = Vector2(-25, 210)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="BlueData5" type="Sprite2D" parent="."]
+position = Vector2(159, 270)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData4" type="Sprite2D" parent="."]
+position = Vector2(99, 270)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData6" type="Sprite2D" parent="."]
+position = Vector2(212, 271)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData7" type="Sprite2D" parent="."]
+position = Vector2(780, 252)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData8" type="Sprite2D" parent="."]
+position = Vector2(720, 252)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData9" type="Sprite2D" parent="."]
+position = Vector2(833, 253)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="RedData6" type="Sprite2D" parent="."]
+position = Vector2(253, 357)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData7" type="Sprite2D" parent="."]
+position = Vector2(301, 357)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData8" type="Sprite2D" parent="."]
+position = Vector2(338, 356)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData9" type="Sprite2D" parent="."]
+position = Vector2(967, 296)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData10" type="Sprite2D" parent="."]
+position = Vector2(1015, 296)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="RedData11" type="Sprite2D" parent="."]
+position = Vector2(1052, 295)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")
+
+[node name="BlueData10" type="Sprite2D" parent="."]
+position = Vector2(1207, 259)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="BlueData11" type="Sprite2D" parent="."]
+position = Vector2(1147, 259)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_0ejuv")
+script = ExtResource("9_rfmpq")
+
+[node name="RedData12" type="Sprite2D" parent="."]
+position = Vector2(1260, 295)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_kvfwf")
+script = ExtResource("7_buhkh")

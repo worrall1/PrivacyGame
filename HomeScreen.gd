@@ -9,6 +9,7 @@ func _ready():
 	$RedData2.position.y = $RedData.texture.get_height()
 	redData1Height = $RedData.texture.get_height()
 	redData2Height = $RedData2.texture.get_height()
+	$AnimationPlayer.play("MoveUp")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
