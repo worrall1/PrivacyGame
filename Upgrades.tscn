@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://bxd7avsp3rgn3"]
 
-[ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_hmu2l"]
+[ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_hmu2l"]
 [ext_resource type="Script" path="res://Upgrades.gd" id="1_ppvvd"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_ll26n"]
 [ext_resource type="PackedScene" uid="uid://cqhvphb1uilps" path="res://VentureButton.tscn" id="3_fny23"]
@@ -49,7 +49,6 @@ script = ExtResource("1_ppvvd")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_hmu2l")]
-script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_ll26n")]
 

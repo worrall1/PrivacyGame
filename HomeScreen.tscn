@@ -1,19 +1,19 @@
 [gd_scene load_steps=16 format=3 uid="uid://daputx404ywkw"]
 
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_76qjh"]
-[ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_c6lw8"]
+[ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_c6lw8"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
 [ext_resource type="Texture2D" uid="uid://djnad08expqig" path="res://Textures/officeLevels/crib0.png" id="3_tnr68"]
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
 [ext_resource type="PackedScene" path="res://TutorialPopup.tscn" id="5_8lm8t"]
-[ext_resource type="Texture2D" uid="uid://vms5j0lrb5ka" path="res://Textures/particles.png" id="6_t0bp0"]
+[ext_resource type="Texture2D" uid="uid://xqn241loa5ts" path="res://Textures/particles.png" id="6_t0bp0"]
 [ext_resource type="Script" path="res://RedData.gd" id="7_buhkh"]
-[ext_resource type="Texture2D" uid="uid://bry5dek7epam5" path="res://Textures/dataMonitor.png" id="7_fcun6"]
-[ext_resource type="Texture2D" uid="uid://je0p33rd51oh" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
-[ext_resource type="Texture2D" uid="uid://dbr6nrnlvd3ta" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
+[ext_resource type="Texture2D" uid="uid://oe2ww1y3sr2e" path="res://Textures/dataMonitor.png" id="7_fcun6"]
+[ext_resource type="Texture2D" uid="uid://cnwe41bu55bpf" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
+[ext_resource type="Texture2D" uid="uid://04t3pewjflfu" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
 [ext_resource type="Script" path="res://BlueData.gd" id="9_rfmpq"]
-[ext_resource type="Texture2D" uid="uid://cxvysgoe1e4xr" path="res://Textures/backgrounds/redData.png" id="11_rw01r"]
-[ext_resource type="Texture2D" uid="uid://bwoardo26l6qt" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
+[ext_resource type="Texture2D" uid="uid://ce7q4irdql133" path="res://Textures/backgrounds/redData.png" id="11_rw01r"]
+[ext_resource type="Texture2D" uid="uid://sv56m76uhk5m" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bf60y"]
 particles_animation = true
@@ -28,7 +28,6 @@ script = ExtResource("1_76qjh")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_c6lw8")]
-script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_jd85w")]
 

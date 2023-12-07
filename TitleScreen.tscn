@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddxtl0c0bcg1m"]
 
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_1e6du"]
-[ext_resource type="Texture2D" uid="uid://dfq0ib7cg287r" path="res://Textures/backgroundTitle.png" id="2_oekwt"]
+[ext_resource type="Texture2D" uid="uid://ca7kr446n0yo" path="res://Textures/backgroundTitle.png" id="2_oekwt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7d8y"]
 bg_color = Color(0.282353, 0.686275, 0.541176, 1)

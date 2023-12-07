@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwmdngd280alp"]
 
-[ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_ig62i"]
+[ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_ig62i"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_stfd2"]
 
 [node name="Shop" type="Node2D"]
@@ -8,7 +8,6 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_ig62i")]
-script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_stfd2")]
 

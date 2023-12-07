@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://vmjlfv37nhet"]
 
 [ext_resource type="Script" path="res://DataScreen.gd" id="1_df1we"]
-[ext_resource type="PackedScene" uid="uid://dvxejfu76p7vu" path="res://TopBar.tscn" id="1_kc13r"]
+[ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_kc13r"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_lkrdd"]
 [ext_resource type="PackedScene" uid="uid://vdcnckar136l" path="res://DataOffer.tscn" id="4_hnjbq"]
 
@@ -11,7 +11,6 @@ script = ExtResource("1_df1we")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TopBar" parent="CanvasLayer" instance=ExtResource("1_kc13r")]
-script = null
 
 [node name="NinePatchRect" parent="CanvasLayer" instance=ExtResource("2_lkrdd")]
 

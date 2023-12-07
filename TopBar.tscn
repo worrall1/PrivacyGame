@@ -1,90 +1,102 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvxejfu76p7vu"]
+[gd_scene load_steps=11 format=3 uid="uid://c0bb5yedovxdm"]
 
-[ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_fwnk1"]
-[ext_resource type="Script" path="res://TopBar.gd" id="2_763e6"]
-[ext_resource type="Script" path="res://TBB1.gd" id="3_lie4a"]
-[ext_resource type="Script" path="res://TBB2.gd" id="4_klqhr"]
-[ext_resource type="Script" path="res://TBB3.gd" id="5_oya02"]
-[ext_resource type="Script" path="res://TBB4.gd" id="6_vv2s4"]
-[ext_resource type="Theme" uid="uid://dk2qjb42fk1fb" path="res://Report.tres" id="7_lp0tb"]
-[ext_resource type="Script" path="res://securityButton.gd" id="8_frm32"]
+[ext_resource type="Texture2D" uid="uid://c3i4s7cuk0ilx" path="res://topBar.png" id="1_t3xsn"]
+[ext_resource type="Script" path="res://securityButton.gd" id="2_0bfsq"]
+[ext_resource type="StyleBox" uid="uid://c3t0o5na2jhph" path="res://testTopBarnorm.tres" id="3_ql3ym"]
+[ext_resource type="StyleBox" path="res://testTopBarHov.tres" id="4_d7vyr"]
+[ext_resource type="StyleBox" uid="uid://b237vsinv5p5" path="res://testTopBarPres.tres" id="5_yt05p"]
+[ext_resource type="StyleBox" uid="uid://d1l55p1clyo3c" path="res://testTopBarFocus.tres" id="6_7rhbs"]
+[ext_resource type="Script" path="res://TBB3.gd" id="8_swbda"]
+[ext_resource type="Script" path="res://TBB4.gd" id="9_322yo"]
+[ext_resource type="Script" path="res://TBB2.gd" id="10_2xf3h"]
+[ext_resource type="Script" path="res://TBB1.gd" id="11_mnkg6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxieo"]
-bg_color = Color(0.129412, 0.686275, 0.65098, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kht4v"]
-bg_color = Color(0, 0, 0, 1)
-
-[node name="TopBar" type="NinePatchRect"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 20.0
-grow_horizontal = 2
-scale = Vector2(0.999086, 2.4715)
-texture = ExtResource("1_fwnk1")
-patch_margin_top = 10
-patch_margin_bottom = 10
-script = ExtResource("2_763e6")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_direction = 2
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 31.0
-grow_horizontal = 2
-scale = Vector2(1.00194, 0.639839)
-alignment = 1
-
-[node name="Button3" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Home"
-script = ExtResource("5_oya02")
-
-[node name="Button4" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Ventures"
-script = ExtResource("6_vv2s4")
-
-[node name="Button2" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Operations"
-script = ExtResource("4_klqhr")
-
-[node name="Button" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_styles/focus = SubResource("StyleBoxFlat_qxieo")
-text = "Data"
-script = ExtResource("3_lie4a")
+[node name="TextureRect" type="TextureRect"]
+offset_top = -34.0
+offset_right = 1920.0
+offset_bottom = 114.0
+texture = ExtResource("1_t3xsn")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 7.0064
-offset_top = -2.42768
-offset_right = 114.006
-offset_bottom = 22.5723
-theme = ExtResource("7_lp0tb")
-theme_override_font_sizes/font_size = 15
-text = "Security Level:"
+offset_left = 13.0
+offset_top = 62.0
+offset_right = 244.0
+offset_bottom = 107.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 30
+text = "SECURITY LEVEL :"
 
 [node name="Button" type="Button" parent="."]
-clip_contents = true
 layout_mode = 0
-offset_left = 122.112
-offset_top = -2.02306
-offset_right = 242.112
-offset_bottom = 19.9769
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("StyleBoxFlat_kht4v")
-text = "Placeholder"
-script = ExtResource("8_frm32")
+offset_left = 278.0
+offset_top = 62.0
+offset_right = 434.0
+offset_bottom = 107.0
+text = "PLACEHOLDER"
+script = ExtResource("2_0bfsq")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 34.0
+offset_right = 1920.0
+offset_bottom = 112.0
+alignment = 1
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.180392, 0.180392, 0.180392, 1)
+theme_override_colors/font_outline_color = Color(0.121569, 0.356863, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_ql3ym")
+theme_override_styles/hover = ExtResource("4_d7vyr")
+theme_override_styles/pressed = ExtResource("5_yt05p")
+theme_override_styles/focus = ExtResource("6_7rhbs")
+text = "HOME"
+script = ExtResource("8_swbda")
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.180392, 0.180392, 0.180392, 1)
+theme_override_colors/font_outline_color = Color(0.121569, 0.356863, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_ql3ym")
+theme_override_styles/hover = ExtResource("4_d7vyr")
+theme_override_styles/pressed = ExtResource("5_yt05p")
+theme_override_styles/focus = ExtResource("6_7rhbs")
+text = "VENTURES"
+script = ExtResource("9_322yo")
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.180392, 0.180392, 0.180392, 1)
+theme_override_colors/font_outline_color = Color(0.121569, 0.356863, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_ql3ym")
+theme_override_styles/hover = ExtResource("4_d7vyr")
+theme_override_styles/pressed = ExtResource("5_yt05p")
+theme_override_styles/focus = ExtResource("6_7rhbs")
+text = "OPERATIONS"
+script = ExtResource("10_2xf3h")
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.180392, 0.180392, 0.180392, 1)
+theme_override_colors/font_outline_color = Color(0.121569, 0.356863, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_ql3ym")
+theme_override_styles/hover = ExtResource("4_d7vyr")
+theme_override_styles/pressed = ExtResource("5_yt05p")
+theme_override_styles/focus = ExtResource("6_7rhbs")
+text = "DATA"
+script = ExtResource("11_mnkg6")
+
+[connection signal="pressed" from="HBoxContainer/Button2" to="HBoxContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button3" to="HBoxContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button4" to="HBoxContainer/Button4" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="HBoxContainer/Button2" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button" to="HBoxContainer/Button" method="_on_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button5" to="HBoxContainer/Button5" method="_on_pressed"]
