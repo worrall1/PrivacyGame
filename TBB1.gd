@@ -19,4 +19,8 @@ func _process(delta):
 func _on_pressed():
 	if(Globals.tutorial == false):
 		get_tree().change_scene_to_file("res://Data.tscn")
+	else:
+		if(Globals.tutorialProgress == 12):
+			Globals.tutorialProgress += 1
+			get_tree().change_scene_to_file("res://Data.tscn")
 	pass # Replace with function body.

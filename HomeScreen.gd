@@ -8,13 +8,19 @@ func _ready():
 	elif Globals.bdps==1:
 		$CPUParticles2D.amount = 1
 	$CPUParticles2D2.amount = Globals.mps
+	
+	if Globals.tutorialProgress == 7:
+		if Globals.quarter > 0:
+			Globals.tutorial = true
+	if Globals.tutorialProgress == 12:
+		if Globals.quarter > 1:
+			Globals.tutorial = true
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Label.text = "£" + str(Globals.money)
-	
 	pass
 
 

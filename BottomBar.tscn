@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cn08hqjdj3a0q" path="res://Textures/backgrounds/bottomBar.png" id="1_rirpf"]
 [ext_resource type="Script" path="res://BottomBar.gd" id="2_tgjna"]
-[ext_resource type="Texture2D" uid="uid://dyfefvv854mdb" path="res://Textures/icons/money.svg" id="3_u6v3q"]
-[ext_resource type="Texture2D" uid="uid://bw6ee3r0p0y8d" path="res://Textures/icons/nonsensetive-data.svg" id="4_fr4ge"]
-[ext_resource type="Texture2D" uid="uid://cec1tv0fqnxr7" path="res://Textures/icons/sensetive-data.svg.svg" id="5_0lwre"]
+[ext_resource type="Texture2D" uid="uid://cu75c6ntku4eg" path="res://Textures/iconsWhite/money.svg" id="3_vd28u"]
+[ext_resource type="Texture2D" uid="uid://f1lhysa32hpx" path="res://Textures/iconsWhite/nonsensetive-data.svg" id="4_cfbbn"]
+[ext_resource type="Texture2D" uid="uid://bbn37pugtckkd" path="res://Textures/iconsWhite/sensetive-data.svg.svg" id="5_erqlt"]
 [ext_resource type="Texture2D" uid="uid://gkilkfbtahj4" path="res://Textures/iconsWhite/pause-solid.svg" id="6_xyis5"]
 [ext_resource type="Texture2D" uid="uid://bxxg1b40hbnn2" path="res://Textures/iconsWhite/forward-solid.svg" id="7_5vmwq"]
 [ext_resource type="Texture2D" uid="uid://dxtjrxgwoiwdp" path="res://Textures/iconsWhite/play-solid.svg" id="8_cpbov"]
@@ -39,40 +39,46 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_a0bcb")
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 211.0
+offset_left = 207.0
 offset_top = 34.0
-offset_right = 351.0
+offset_right = 432.0
 offset_bottom = 84.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_a0bcb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 244.0
+offset_left = 211.0
 offset_top = 33.0
-offset_right = 294.0
-offset_bottom = 98.0
+offset_right = 366.0
+offset_bottom = 89.0
+alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-texture = ExtResource("3_u6v3q")
-expand_mode = 5
-stretch_mode = 4
+texture = ExtResource("3_vd28u")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
 [node name="Money" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.933333, 0.188235, 1)
 text = "0"
 
 [node name="MPS" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.933333, 0.188235, 1)
 text = "0"
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
-texture = ExtResource("4_fr4ge")
+texture = ExtResource("4_cfbbn")
 expand_mode = 4
+stretch_mode = 5
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -88,9 +94,11 @@ theme_override_colors/font_color = Color(0.0156863, 0.247059, 1, 1)
 text = "0"
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
-texture = ExtResource("5_0lwre")
+texture = ExtResource("5_erqlt")
 expand_mode = 4
+stretch_mode = 5
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2

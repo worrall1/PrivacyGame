@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://vmjlfv37nhet"]
+[gd_scene load_steps=7 format=3 uid="uid://vmjlfv37nhet"]
 
 [ext_resource type="Script" path="res://DataScreen.gd" id="1_df1we"]
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_kc13r"]
 [ext_resource type="Texture2D" uid="uid://dfqoh0o30lom6" path="res://Textures/backgrounds/backgroundData.jpg" id="2_a7umu"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_lkrdd"]
 [ext_resource type="PackedScene" uid="uid://vdcnckar136l" path="res://DataOffer.tscn" id="4_hnjbq"]
+[ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="6_7svl6"]
 
 [node name="Data" type="Node2D"]
 script = ExtResource("1_df1we")
@@ -79,3 +80,9 @@ offset_left = 1561.0
 offset_top = 616.0
 offset_right = 1846.0
 offset_bottom = 846.0
+
+[node name="Control" parent="." instance=ExtResource("6_7svl6")]
+offset_left = 773.0
+offset_top = 378.0
+offset_right = 773.0
+offset_bottom = 378.0

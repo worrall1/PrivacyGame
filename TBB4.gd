@@ -15,7 +15,7 @@ func _on_pressed():
 	if(Globals.tutorial == false):
 		get_tree().change_scene_to_file("res://Upgrades.tscn")
 	else:
-		if(Globals.tutorialProgress == 1):
+		if(Globals.tutorialProgress == 3):
 			Globals.tutorialProgress += 1
 			get_tree().change_scene_to_file("res://Upgrades.tscn")
 	pass # Replace with function body.

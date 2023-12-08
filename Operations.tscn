@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvnymhrgfegu2"]
+[gd_scene load_steps=15 format=3 uid="uid://dvnymhrgfegu2"]
 
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_48h57"]
 [ext_resource type="Script" path="res://Operations.gd" id="1_kelgn"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cknhgq0owqkkt" path="res://Textures/icons/backgroundSecurity.jpg" id="6_u6c1t"]
 [ext_resource type="Texture2D" uid="uid://rexcbx017nnw" path="res://Textures/icons/securitybreach.png" id="7_x360j"]
 [ext_resource type="Texture2D" uid="uid://dmh07xthwd7j" path="res://Textures/icons/nobreach.png" id="8_al0wu"]
+[ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="9_ch2ay"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rhgl"]
 bg_color = Color(0.337255, 0.615686, 0.556863, 0.513726)
@@ -271,6 +272,12 @@ z_index = -1
 position = Vector2(1434, 875)
 scale = Vector2(0.66092, 0.675287)
 texture = ExtResource("8_al0wu")
+
+[node name="Control" parent="." instance=ExtResource("9_ch2ay")]
+offset_left = 782.0
+offset_top = 409.0
+offset_right = 782.0
+offset_bottom = 409.0
 
 [connection signal="pressed" from="Hire" to="." method="_on_hire_pressed"]
 [connection signal="pressed" from="CharityButton" to="." method="_on_charity_button_pressed"]

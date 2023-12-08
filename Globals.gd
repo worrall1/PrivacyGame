@@ -1,6 +1,6 @@
 extends Node
 
-var money = 1000
+var money = 250
 var mps = 1
 var moneyTotal = 0
 var upkeep = 0
@@ -63,12 +63,12 @@ func _process(delta):
 	if tutorial == false:
 		time += delta * timeModifier
 	else:
-		if tutorialProgress == 2:
+		if tutorialProgress == 4:
 			if venture1 == true:
 				tutorialProgress += 1
 				
-		if tutorialProgress == 3:
-			if upgrade1[0] == true:
+		if tutorialProgress == 5:
+			if ((upgrade1[0] == true) || (upgrade1[1] == true) || (upgrade1[2] == true)):
 				tutorialProgress += 1
 
 	if (time >= 1):
@@ -76,7 +76,7 @@ func _process(delta):
 		breachProb = (redDataTotal / max(securityFreq, 1))/100
 	
 		if(timeModifier > 0):
-			reputationModifier = (reputation - 50) / 50
+			reputationModifier = reputation / 100
 			money += mps * reputationModifier
 			money -= upkeep
 			moneyTotal += mps * reputationModifier

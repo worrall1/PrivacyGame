@@ -28,9 +28,9 @@ func _ready():
 	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
 	if (Globals.breachThisQuarter == true):
 		get_node("Breach Explanation").text = "Hackers have breached your database
-		and now have access to all your user's data.
-		People's identities are being stolen
-		and lives are being ruined.
+		and now have access to all your users' 
+		data. People's identities are being 
+		stolen and lives are being ruined.
 		People are very upset and this 
 		will affect your reputation"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/person-incognito.svg")

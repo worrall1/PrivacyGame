@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://vdcnckar136l"]
+[gd_scene load_steps=6 format=3 uid="uid://vdcnckar136l"]
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_b5dt4"]
 [ext_resource type="Script" path="res://DataOffer.gd" id="2_wxfa6"]
+[ext_resource type="Texture2D" uid="uid://f1lhysa32hpx" path="res://Textures/iconsWhite/nonsensetive-data.svg" id="3_cwwag"]
+[ext_resource type="Texture2D" uid="uid://bbn37pugtckkd" path="res://Textures/iconsWhite/sensetive-data.svg.svg" id="4_vlii5"]
+[ext_resource type="Texture2D" uid="uid://cu75c6ntku4eg" path="res://Textures/iconsWhite/money.svg" id="5_4u48h"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 offset_right = 285.0
@@ -24,41 +27,68 @@ text_direction = 3
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="BlueDataCost" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="BlueDataCost" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.345098, 0.54902, 1, 1)
 text = "Blue"
 horizontal_alignment = 2
 
-[node name="RedDataCost" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+texture = ExtResource("3_cwwag")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RedDataCost" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.12549, 0.0862745, 1)
 text = "Red"
 horizontal_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
-layout_direction = 1
+[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
-color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+texture = ExtResource("4_vlii5")
+expand_mode = 4
+stretch_mode = 5
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="Money" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Rep" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Rep"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Money" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
 text = "Money"
 
-[node name="Rep" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
-text = "Rep"
+texture = ExtResource("5_4u48h")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
