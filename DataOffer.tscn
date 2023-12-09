@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bvcl4nnyulyp0" path="res://Textures/Black.png" id="1_b5dt4"]
 [ext_resource type="Script" path="res://DataOffer.gd" id="2_wxfa6"]
-[ext_resource type="Texture2D" uid="uid://f1lhysa32hpx" path="res://Textures/iconsWhite/nonsensetive-data.svg" id="3_cwwag"]
-[ext_resource type="Texture2D" uid="uid://bbn37pugtckkd" path="res://Textures/iconsWhite/sensetive-data.svg.svg" id="4_vlii5"]
-[ext_resource type="Texture2D" uid="uid://cu75c6ntku4eg" path="res://Textures/iconsWhite/money.svg" id="5_4u48h"]
+[ext_resource type="Texture2D" uid="uid://bmjptrwax5kb0" path="res://Textures/iconsWhite/nonsensetive-data.svg" id="3_cwwag"]
+[ext_resource type="Texture2D" uid="uid://bc3wryqo8vg3p" path="res://Textures/iconsWhite/sensetive-data.svg.svg" id="4_vlii5"]
+[ext_resource type="Texture2D" uid="uid://baxe3cl70qhwj" path="res://Textures/iconsWhite/money.svg" id="5_4u48h"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
 offset_right = 285.0

@@ -27,7 +27,7 @@ func _process(delta):
 	var splitBreach = str(maxBreach).split(".")
 	var niceBreach = ""
 	var dot = false
-	var sigfigs = 5
+	var sigfigs = 4
 	for item in splitBreach:	
 		if dot == true:
 			niceBreach += "."

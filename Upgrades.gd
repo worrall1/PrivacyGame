@@ -73,7 +73,7 @@ func _ready():
 	$TextureButton2.givesData = 2
 	$TextureButton2.givesPriv = 2
 	
-	$TextureButton2.cost =250
+	$TextureButton2.cost =275
 	$TextureButton2.ventureNum = 2
 	$TextureButton2.venture1Text = "Buy 2000 Followers £50"
 	$TextureButton2.venture1Cost = 75

@@ -10,12 +10,12 @@ var number = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("VBoxContainer/Title").text = title
-	get_node("VBoxContainer/Label").text = label
-	get_node("VBoxContainer/VBoxContainer/HBoxContainer2/RedDataCost").text = "-" + str(redData)
-	get_node("VBoxContainer/VBoxContainer/HBoxContainer/BlueDataCost").text = "-" + str(blueData)
-	get_node("VBoxContainer/VBoxContainer/HBoxContainer4/Money").text = "+" + str(money)
-	get_node("VBoxContainer/VBoxContainer/HBoxContainer3/Rep").text = "-" + str(rep) + " Reputation"
+	$VBoxContainer/Title.text = title
+	$VBoxContainer/Label.text = label
+	$VBoxContainer/VBoxContainer/HBoxContainer2/RedDataCost.text = "-" + str(redData)
+	$VBoxContainer/VBoxContainer/HBoxContainer/BlueDataCost.text = "-" + str(blueData)
+	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = "+" + str(money)
+	$VBoxContainer/VBoxContainer/HBoxContainer3/Rep.text = "-" + str(rep) + " Reputation"
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,10 +64,10 @@ func set_values(newTitle, newBlueData, newRedData, newMoney, newRep, newLabel, t
 	money = newMoney
 	rep = newRep
 	label = newLabel
-	get_node("VBoxContainer/Title").text = title
-	get_node("VBoxContainer/Label").text = label
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer/RedDataCost").text = str(redData)
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer/BlueDataCost").text = str(blueData)
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer2/Money").text = str(money)
-	get_node("VBoxContainer/HBoxContainer/VBoxContainer2/Rep").text = "-" + str(rep) + "Reputation"
+	$VBoxContainer/Title.text = title
+	$VBoxContainer/Label.text = label
+	$VBoxContainer/VBoxContainer/HBoxContainer2/RedDataCost.text = str(redData)
+	$VBoxContainer/VBoxContainer/HBoxContainer/BlueDataCost.text = str(blueData)
+	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = str(money)
+	$VBoxContainer/VBoxContainer/HBoxContainer3/Rep.text = "-" + str(rep) + "Reputation"
 	pass
