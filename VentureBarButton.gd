@@ -22,10 +22,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$RichTextLabel.text = "[color=green]"+ str(moneyInc)+"£/ps[/color]  "+ "[color=blue]"+ str(dataInc)+"/ps[/color]  "+"[color=red]"+ str(privInc)+"/ps[/color]                                                                             "+"[color=black]"+ str(repInc)+" rep[/color]"
-	if cost > Globals.money:
-		self.disabled=true
-	else:
-		self.disabled = false
+	
 	var venture = "upgrade"+str(ventureType)
 	var temp = Globals.get(venture)
 	
@@ -36,7 +33,10 @@ func _process(delta):
 			self.disabled=true
 		else:
 			$Label.hide()
-			self.disabled=false
+			if cost > Globals.money:
+				self.disabled = true
+			else:
+				self.disabled = false
 			$RichTextLabel.show()
 
 	pass

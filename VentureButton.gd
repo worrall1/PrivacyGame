@@ -52,29 +52,18 @@ func _process(delta):
 	$Button.text="Purchase £"+str(cost)
 	if Unlocked==false:
 		self.disabled=true
+		if Globals.money >= cost:
+			$Button.disabled = false
 	elif Unlocked == true:
 		self.disabled=false
 		$Button.disabled=true
 		$Button.text = "Purchased"
 		
-		
-	if Globals.money>=cost&&Unlocked==false:
-		$Button.disabled=false
 
-		
 	var venture = "venture"+str(ventureNum)
 	
 	if Globals.get(venture)==true:
 		Unlocked=true
-	
-
-	
-
-	
-		
-	
-		
-	pass
 
 
 
@@ -114,8 +103,8 @@ func _on_toggled(button_pressed):
 		parent.venture3.moneyInc = venture3Money
 		
 		parent.venture4.text = venture4Text
-		parent.venture3.ventureType = ventureNum
-		parent.venture3.upgradeNumber = 3
+		parent.venture4.ventureType = ventureNum
+		parent.venture4.upgradeNumber = 3
 		parent.venture4.dataInc = venture4Data
 		parent.venture4.privInc = venture4Priv
 		parent.venture4.repInc = venture4Rep
@@ -137,8 +126,6 @@ func _on_toggled(button_pressed):
 		parent.venture3.hide()
 		parent.venture4.hide()
 		
-	
-	pass # Replace with function body.
 
 
 func _on_button_pressed():
@@ -148,15 +135,9 @@ func _on_button_pressed():
 		Globals.mps += givesMoney
 		Globals.bdps += givesData
 		Globals.rdps += givesPriv
-		Unlocked=true
+		Unlocked = true
 		var venture = "venture"+str(ventureNum)
 		Globals.get(venture)
 		Globals.set(venture,true)
 	
-	
 
-
-	
-	
-	
-	pass # Replace with function body.
