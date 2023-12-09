@@ -23,18 +23,21 @@ var venture2Data = 0
 var venture2Priv = 0
 var venture2Rep = 0
 var venture2Money = 0
+var venture2Icon = null
 var venture3Text = "null"
 var venture3Cost = 40
 var venture3Data = 0
 var venture3Priv = 0
 var venture3Rep = 0
 var venture3Money = 0
+var venture3Icon = null
 var venture4Text = "Placeholder"
 var venture4Cost = 50
 var venture4Data = 0
 var venture4Priv = 0
 var venture4Rep = 0
 var venture4Money = 0
+var venture4Icon = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -93,6 +96,7 @@ func _on_toggled(button_pressed):
 		parent.venture2.privInc = venture2Priv
 		parent.venture2.repInc = venture2Rep
 		parent.venture2.moneyInc = venture2Money
+		parent.venture2.icon = venture2Icon
 		
 		parent.venture3.text = venture3Text
 		parent.venture3.ventureType = ventureNum
@@ -101,6 +105,7 @@ func _on_toggled(button_pressed):
 		parent.venture3.privInc = venture3Priv
 		parent.venture3.repInc = venture3Rep
 		parent.venture3.moneyInc = venture3Money
+		parent.venture3.icon = venture3Icon
 		
 		parent.venture4.text = venture4Text
 		parent.venture4.ventureType = ventureNum
@@ -109,6 +114,7 @@ func _on_toggled(button_pressed):
 		parent.venture4.privInc = venture4Priv
 		parent.venture4.repInc = venture4Rep
 		parent.venture4.moneyInc = venture4Money
+		parent.venture4.icon = venture4Icon
 		
 		parent.venture1.cost = venture1Cost
 		parent.venture2.cost = venture2Cost

@@ -67,6 +67,10 @@ func _ready():
 	$TextureButton.venture4Data = 9
 	$TextureButton.venture4Rep = -10
 	
+	$TextureButton.venture2Icon = preload("res://Textures/priceIcons/price75.png")
+	$TextureButton.venture3Icon = preload("res://Textures/priceIcons/price250.png")
+	$TextureButton.venture4Icon = preload("res://Textures/priceIcons/price750.png")
+	
 	#Venture 2
 	$TextureButton2/Label.text = "PHOTO SHARING"
 	$TextureButton2.givesMoney = 1
@@ -100,6 +104,11 @@ func _ready():
 	$TextureButton2.venture4Data = 11
 	$TextureButton2.venture4Rep = -15
 	
+	$TextureButton2.venture1Icon = preload("res://Textures/priceIcons/price75.png")
+	$TextureButton2.venture2Icon = preload("res://Textures/priceIcons/price150.png")
+	$TextureButton2.venture3Icon = preload("res://Textures/priceIcons/price300.png")
+	$TextureButton2.venture4Icon = preload("res://Textures/priceIcons/price800.png")
+	
 	$TextureButton3/Label.text="E-COMMERCE SITE"
 	$TextureButton3.givesMoney = 9
 	$TextureButton3.givesData = 2
@@ -131,6 +140,11 @@ func _ready():
 	$TextureButton3.venture4Money = 20
 	$TextureButton3.venture4Data = 9
 	$TextureButton3.venture4Rep = -15
+	
+	$TextureButton3.venture1Icon = preload("res://Textures/priceIcons/price500.png")
+	$TextureButton3.venture2Icon = preload("res://Textures/priceIcons/price950.png")
+	$TextureButton3.venture3Icon = preload("res://Textures/priceIcons/price2000.png")
+	$TextureButton3.venture4Icon = preload("res://Textures/priceIcons/price3000.png")
 	
 	$TextureButton4/Label.text="VIDEO SHARING"
 	$TextureButton4.givesMoney = 1
@@ -164,6 +178,11 @@ func _ready():
 	$TextureButton4.venture4Data = 8
 	$TextureButton4.venture4Rep = -4
 	
+	$TextureButton4.venture1Icon = preload("res://Textures/priceIcons/price80.png")
+	$TextureButton4.venture2Icon = preload("res://Textures/priceIcons/price160.png")
+	$TextureButton4.venture3Icon = preload("res://Textures/priceIcons/price320.png")
+	$TextureButton4.venture4Icon = preload("res://Textures/priceIcons/price850.png")
+	
 	$TextureButton5/Label.text = "ONLINE DATING"
 	$TextureButton5.givesMoney = 2
 	$TextureButton5.givesData = 12
@@ -195,6 +214,11 @@ func _ready():
 	$TextureButton5.venture4Money = 12
 	$TextureButton5.venture4Data = 1
 	$TextureButton5.venture4Rep = -14
+	
+	$TextureButton5.venture1Icon = preload("res://Textures/priceIcons/price180.png")
+	$TextureButton5.venture2Icon = preload("res://Textures/priceIcons/price500.png")
+	$TextureButton5.venture3Icon = preload("res://Textures/priceIcons/price950.png")
+	$TextureButton5.venture4Icon = preload("res://Textures/priceIcons/price2000.png")
 
 	$TextureButton6/Label.text = "COMPARISON SHOPPING"
 	$TextureButton6.givesMoney = 3
@@ -227,6 +251,11 @@ func _ready():
 	$TextureButton6.venture4Money = 12
 	$TextureButton6.venture4Data = 6
 	$TextureButton6.venture4Rep = -18
+	
+	$TextureButton6.venture1Icon = preload("res://Textures/priceIcons/price175.png")
+	$TextureButton6.venture2Icon = preload("res://Textures/priceIcons/price450.png")
+	$TextureButton6.venture3Icon = preload("res://Textures/priceIcons/price900.png")
+	$TextureButton6.venture4Icon = preload("res://Textures/priceIcons/price1900.png")
 
 	$TextureButton7/Label.text = "MAPS SERVICE"
 	$TextureButton7.givesMoney = 10
@@ -260,6 +289,11 @@ func _ready():
 	$TextureButton7.venture4Data = 24
 	$TextureButton7.venture4Rep = -30
 	
+	$TextureButton7.venture1Icon = preload("res://Textures/priceIcons/price1050.png")
+	$TextureButton7.venture2Icon = preload("res://Textures/priceIcons/price1950.png")
+	$TextureButton7.venture3Icon = preload("res://Textures/priceIcons/price2750.png")
+	$TextureButton7.venture4Icon = preload("res://Textures/priceIcons/price10000.png")
+	
 	$TextureButton8/Label.text = "CASINO SITE"
 	$TextureButton8.givesMoney = 16
 	$TextureButton8.givesData = 6
@@ -292,6 +326,11 @@ func _ready():
 	$TextureButton8.venture4Data = 24
 	$TextureButton8.venture4Rep = -30
 	
+	$TextureButton8.venture1Icon = preload("res://Textures/priceIcons/price1000.png")
+	$TextureButton8.venture2Icon = preload("res://Textures/priceIcons/price1850.png")
+	$TextureButton8.venture3Icon = preload("res://Textures/priceIcons/price2500.png")
+	$TextureButton8.venture4Icon = preload("res://Textures/priceIcons/price5000.png")
+	
 	$TextureButton9/Label.text="FOOD DELIVERY SERVICE"
 	$TextureButton9.givesMoney = 11
 	$TextureButton9.givesData = 3
@@ -323,6 +362,11 @@ func _ready():
 	$TextureButton9.venture4Money = 0
 	$TextureButton9.venture4Data = 9
 	$TextureButton9.venture4Rep = -10
+	
+	$TextureButton9.venture1Icon = preload("res://Textures/priceIcons/price550.png")
+	$TextureButton9.venture2Icon = preload("res://Textures/priceIcons/price1000.png")
+	$TextureButton9.venture3Icon = preload("res://Textures/priceIcons/price2100.png")
+	$TextureButton9.venture4Icon = preload("res://Textures/priceIcons/price3500.png")
 
 	get_node("Button").hide()
 	get_node("Button2").hide()

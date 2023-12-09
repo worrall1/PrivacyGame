@@ -125,14 +125,13 @@ texture_pressed = ExtResource("27_bqfan")
 texture_disabled = ExtResource("5_06g46")
 
 [node name="TextureButton9" parent="." instance=ExtResource("3_fny23")]
-visible = false
 offset_left = 631.0
 offset_top = 651.0
 offset_right = 849.0
 offset_bottom = 864.0
 texture_normal = ExtResource("29_j8yw3")
-texture_pressed = ExtResource("30_jil6f")
-texture_disabled = ExtResource("31_w30h7")
+texture_pressed = ExtResource("31_w30h7")
+texture_disabled = ExtResource("30_jil6f")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 941.0
