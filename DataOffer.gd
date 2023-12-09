@@ -27,7 +27,7 @@ func _on_button_pressed():
 		if((Globals.blueData > blueData) && (Globals.redData > redData) && (Globals.money > money) && (Globals.reputation > rep)):
 			Globals.blueData -= blueData
 			Globals.redData -= redData
-			Globals.money -= money
+			Globals.money += money
 			Globals.reputation -= rep
 			if(number == 1):
 				DataOfferRepo.taken1 = true
@@ -69,5 +69,5 @@ func set_values(newTitle, newBlueData, newRedData, newMoney, newRep, newLabel, t
 	$VBoxContainer/VBoxContainer/HBoxContainer2/RedDataCost.text = str(redData)
 	$VBoxContainer/VBoxContainer/HBoxContainer/BlueDataCost.text = str(blueData)
 	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = str(money)
-	$VBoxContainer/VBoxContainer/HBoxContainer3/Rep.text = "-" + str(rep) + "Reputation"
+	$VBoxContainer/VBoxContainer/HBoxContainer3/Rep.text = "- " + str(rep) + " Reputation"
 	pass

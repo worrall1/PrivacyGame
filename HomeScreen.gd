@@ -3,11 +3,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Globals.bdps>1:
-		$CPUParticles2D.amount= Globals.bdps * 10
-	elif Globals.bdps==1:
-		$CPUParticles2D.amount = 1
-	$CPUParticles2D2.amount = Globals.mps
+	#if Globals.bdps>1:
+	#	$CPUParticles2D.amount= Globals.bdps
+	#elif Globals.bdps==1:
+	#	$CPUParticles2D.amount = 1
+	$CPUParticles2D.amount = Globals.bdps
+	$CPUParticles2D2.amount = Globals.mps / 10
 	
 	if Globals.tutorialProgress == 7:
 		if Globals.quarter > 0:
@@ -20,7 +21,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Label.text = "£" + str(Globals.money)
+	$Label.text = "£" + str(Globals.money) + "K"
 	pass
 
 

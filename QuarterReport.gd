@@ -80,11 +80,11 @@ func set_new_data_offers():
 		if i > startRed:
 			redOffered = Globals.rdps * (randi() % 100 + 30)
 		
-		moneyOffered = blueOffered * ((randi() % 30 + 45) / 1000)
-		var reputationSwing = blueOffered / 2000
+		moneyOffered = int ( blueOffered * ((randi() % 30 + 45) / 1000.0))
+		var reputationSwing = int( blueOffered / 2000.0)
 		if redOffered > 0:
-			moneyOffered += redOffered * ((randi() % 300 + 265) / 1000)
-			reputationSwing += redOffered / 200
+			moneyOffered += int( redOffered * ((randi() % 300 + 265) / 1000.0))
+			reputationSwing += int( redOffered / 200.0)
 
  
 
