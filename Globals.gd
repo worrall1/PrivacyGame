@@ -1,14 +1,14 @@
 extends Node
 
 var money = 250
-var mps = 1
+var mps = 0
 var moneyTotal = 0
 var upkeep = 0
 var blueData = 0
-var bdps = 1
+var bdps = 0
 var blueDataTotal = 0
 var redData = 0
-var rdps = 1
+var rdps = 0
 var redDataTotal = 0
 var date = 0 #integer count of how many days have elapsed
 var sfxVol = 0.5

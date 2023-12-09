@@ -35,28 +35,32 @@ func _ready():
 	
 	#Venture 1
 	$TextureButton/Label.text = "SOCIAL MEDIA"
+	$TextureButton.givesMoney = 1
+	$TextureButton.givesData = 3
+	$TextureButton.givesPriv = 2
 	
 	$TextureButton.cost =200
 	$TextureButton.ventureNum = 1
-	$TextureButton.venture1Text = "Buy 2000 Followers £50"
+	$TextureButton.venture1Text = "Personalised Ads\n Spy on your users so that ads will get you more money"
 	$TextureButton.venture1Cost = 50
 	$TextureButton.venture1Priv = 2
 	$TextureButton.venture1Money = 1
 	$TextureButton.venture1Data = 2
 	$TextureButton.venture1Rep = 0
-	$TextureButton.venture2Text = "Run an ad campaign £75"
+	$TextureButton.venture1Icon = preload("res://Textures/priceIcons/price50.png")
+	$TextureButton.venture2Text = "Addictive Design\n"
 	$TextureButton.venture2Cost = 120
 	$TextureButton.venture2Priv = 4
 	$TextureButton.venture2Money = 2
 	$TextureButton.venture2Data = 5
 	$TextureButton.venture2Rep = 0
-	$TextureButton.venture3Text = "Replace me"
+	$TextureButton.venture3Text = "Enable Third Party Ad Services\n"
 	$TextureButton.venture3Cost = 250
 	$TextureButton.venture3Priv = 4
 	$TextureButton.venture3Money = 3
 	$TextureButton.venture3Data = 6
 	$TextureButton.venture3Rep = -3
-	$TextureButton.venture4Text = "Replace me"
+	$TextureButton.venture4Text = "Agree to give us all your data\n"
 	$TextureButton.venture4Cost = 750
 	$TextureButton.venture4Priv = 8
 	$TextureButton.venture4Money = 0
@@ -65,6 +69,10 @@ func _ready():
 	
 	#Venture 2
 	$TextureButton2/Label.text = "PHOTO SHARING"
+	$TextureButton2.givesMoney = 1
+	$TextureButton2.givesData = 2
+	$TextureButton2.givesPriv = 2
+	
 	$TextureButton2.cost =250
 	$TextureButton2.ventureNum = 2
 	$TextureButton2.venture1Text = "Buy 2000 Followers £50"
@@ -93,6 +101,10 @@ func _ready():
 	$TextureButton2.venture4Rep = -15
 	
 	$TextureButton3/Label.text="E-COMMERCE SITE"
+	$TextureButton3.givesMoney = 9
+	$TextureButton3.givesData = 2
+	$TextureButton3.givesPriv = 4
+	
 	$TextureButton3.cost =1200
 	$TextureButton3.ventureNum = 3
 	$TextureButton3.venture1Text = "Buy 2000 Followers £50"
@@ -120,7 +132,11 @@ func _ready():
 	$TextureButton3.venture4Data = 9
 	$TextureButton3.venture4Rep = -15
 	
-	$TextureButton4/Label.text="MEDIA SHARING"
+	$TextureButton4/Label.text="VIDEO SHARING"
+	$TextureButton4.givesMoney = 1
+	$TextureButton4.givesData = 4
+	$TextureButton4.givesPriv = 2
+	
 	$TextureButton4.cost =300
 	$TextureButton4.ventureNum = 4
 	$TextureButton4.venture1Text = "Buy 2000 Followers £50"
@@ -149,6 +165,10 @@ func _ready():
 	$TextureButton4.venture4Rep = -4
 	
 	$TextureButton5/Label.text = "ONLINE DATING"
+	$TextureButton5.givesMoney = 2
+	$TextureButton5.givesData = 12
+	$TextureButton5.givesPriv = 8
+	
 	$TextureButton5.cost =700
 	$TextureButton5.ventureNum = 5
 	$TextureButton5.venture1Text = "Buy 2000 Followers £50"
@@ -177,6 +197,10 @@ func _ready():
 	$TextureButton5.venture4Rep = -14
 
 	$TextureButton6/Label.text = "COMPARISON SHOPPING"
+	$TextureButton6.givesMoney = 3
+	$TextureButton6.givesData = 8
+	$TextureButton6.givesPriv = 4
+	
 	$TextureButton6.cost =650
 	$TextureButton6.ventureNum = 6
 	$TextureButton6.venture1Text = "Buy 2000 Followers £50"
@@ -205,6 +229,10 @@ func _ready():
 	$TextureButton6.venture4Rep = -18
 
 	$TextureButton7/Label.text = "MAPS SERVICE"
+	$TextureButton7.givesMoney = 10
+	$TextureButton7.givesData = 8
+	$TextureButton7.givesPriv = 10
+	
 	$TextureButton7.cost =2500
 	$TextureButton7.ventureNum = 7
 	$TextureButton7.venture1Text = "Buy 2000 Followers £50"
@@ -233,6 +261,10 @@ func _ready():
 	$TextureButton7.venture4Rep = -30
 	
 	$TextureButton8/Label.text = "CASINO SITE"
+	$TextureButton8.givesMoney = 16
+	$TextureButton8.givesData = 6
+	$TextureButton8.givesPriv = 8
+	
 	$TextureButton8.ventureNum = 8
 	$TextureButton8.cost =2000
 	$TextureButton8.venture1Text = "Buy 2000 Followers £50"
@@ -261,6 +293,10 @@ func _ready():
 	$TextureButton8.venture4Rep = -30
 	
 	$TextureButton9/Label.text="FOOD DELIVERY SERVICE"
+	$TextureButton9.givesMoney = 11
+	$TextureButton9.givesData = 3
+	$TextureButton9.givesPriv = 4
+	
 	$TextureButton9.cost = 1250
 	$TextureButton9.ventureNum = 9
 	$TextureButton9.venture1Text = "Buy 2000 Followers £50"

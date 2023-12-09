@@ -6,7 +6,9 @@ var purchase =false
 var thisNode = null
 var Unlocked = false
 var ventureNum = 0
-
+var givesMoney = 0
+var givesData = 0
+var givesPriv = 0
 
 var venture1Text = "null"
 var venture1Cost = 20
@@ -14,6 +16,7 @@ var venture1Data = 0
 var venture1Priv = 0
 var venture1Rep = 0
 var venture1Money = 0
+var venture1Icon = null
 var venture2Text = "null"
 var venture2Cost = 30
 var venture2Data = 0
@@ -92,6 +95,8 @@ func _on_toggled(button_pressed):
 		parent.venture1.repInc = venture1Rep
 		parent.venture1.moneyInc = venture1Money
 		parent.venture1.text = venture1Text
+		parent.venture1.icon = venture1Icon
+		
 		parent.venture2.text = venture2Text
 		parent.venture2.ventureType = ventureNum
 		parent.venture2.upgradeNumber = 1
@@ -99,6 +104,7 @@ func _on_toggled(button_pressed):
 		parent.venture2.privInc = venture2Priv
 		parent.venture2.repInc = venture2Rep
 		parent.venture2.moneyInc = venture2Money
+		
 		parent.venture3.text = venture3Text
 		parent.venture3.ventureType = ventureNum
 		parent.venture3.upgradeNumber = 2
@@ -106,6 +112,7 @@ func _on_toggled(button_pressed):
 		parent.venture3.privInc = venture3Priv
 		parent.venture3.repInc = venture3Rep
 		parent.venture3.moneyInc = venture3Money
+		
 		parent.venture4.text = venture4Text
 		parent.venture3.ventureType = ventureNum
 		parent.venture3.upgradeNumber = 3
@@ -113,7 +120,8 @@ func _on_toggled(button_pressed):
 		parent.venture4.privInc = venture4Priv
 		parent.venture4.repInc = venture4Rep
 		parent.venture4.moneyInc = venture4Money
-		parent.venture4.cost = venture1Cost
+		
+		parent.venture1.cost = venture1Cost
 		parent.venture2.cost = venture2Cost
 		parent.venture3.cost = venture3Cost
 		parent.venture4.cost = venture4Cost
@@ -136,7 +144,10 @@ func _on_toggled(button_pressed):
 func _on_button_pressed():
 	
 	if Globals.money>=cost:
-		Globals.money-=cost
+		Globals.money -=cost
+		Globals.mps += givesMoney
+		Globals.bdps += givesData
+		Globals.rdps += givesPriv
 		Unlocked=true
 		var venture = "venture"+str(ventureNum)
 		Globals.get(venture)
