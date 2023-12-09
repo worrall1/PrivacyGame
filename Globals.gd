@@ -77,9 +77,9 @@ func _process(delta):
 		if redData < 1000:
 			breachProb = (redData * 0.03)*(redData * 0.04) / (securityFreq*securityFreq + 6.0)
 		elif redData < 10000:
-			breachProb = (redDataTotal * 0.04)*(redDataTotal * 0.05) / (securityFreq*securityFreq + 5.0)
+			breachProb = (redData * 0.04)*(redData * 0.05) / (securityFreq*securityFreq + 5.0)
 		else:
-			breachProb = (redDataTotal * 0.05)*(redDataTotal * 0.06) / max(securityFreq,1)
+			breachProb = (redData * 0.05)*(redData * 0.06) / max(securityFreq,1)
 		#breachProb = (redDataTotal / max(securityFreq, 1))/100
 	
 		if(timeModifier > 0):
