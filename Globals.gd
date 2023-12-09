@@ -54,6 +54,7 @@ var upgrade9 = [false,false,false,false]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	pass # Replace with function body.
 
 
@@ -73,7 +74,15 @@ func _process(delta):
 
 	if (time >= 1):
 		time -= 1
-		breachProb = (redDataTotal / max(securityFreq, 1))/100
+		if redDataTotal < 100:
+			breachProb = 0.0
+		elif redDataTotal < 1000:
+			breachProb = (redDataTotal * 0.01)*(redDataTotal * 0.01) / (securityFreq + 10.0)
+		elif redDataTotal < 5000:
+			breachProb = (redDataTotal * 0.07)*(redDataTotal * 0.07) / (securityFreq + 5.0)
+		else:
+			breachProb = (redDataTotal * 0.5)*(redDataTotal * 0.5) / securityFreq
+		#breachProb = (redDataTotal / max(securityFreq, 1))/100
 	
 		if(timeModifier > 0):
 			reputationModifier = reputation / 100
@@ -90,7 +99,7 @@ func _process(delta):
 		if(seconds > 20):
 			quarter += 1
 			seconds = 0
-			var breachValue = randf()
+			var breachValue = (randf() * 100)
 			if (breachValue < breachProb):
 				breachThisQuarter = true
 				reputation -= 40
@@ -99,13 +108,13 @@ func _process(delta):
 	pass
 	
 func update_security_level():
-	if breachProb > 0.3:
+	if breachProb > 50:
 		securityLevel = "inadequate"
-	elif breachProb > 0.1:
+	elif breachProb > 30:
 		securityLevel = "poor"
-	elif breachProb > 0.05:
+	elif breachProb > 5:
 		securityLevel = "medium"
-	elif breachProb > 0.03:
+	elif breachProb > 3:
 		securityLevel = "good"
 	else:
 		securityLevel = "excellent"

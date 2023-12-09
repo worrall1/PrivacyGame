@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-var hireCost = 100 # Initial cost to hire a team member
+var hireCost = 60 # Initial cost to hire a team member
 var charityCost = 200
 var statementCost = 50
 var charityRep = 5
@@ -23,7 +23,19 @@ func _ready():
 func _process(delta):
 	$PersData.text = str(Globals.redData)
 	$SecLevel.text = str(Globals.securityLevel)
-	$BreachProb.text = str(min(Globals.breachProb * 100, 100)) + "%"
+	var maxBreach = min(Globals.breachProb, 100)
+	var splitBreach = str(maxBreach).split(".")
+	var niceBreach = ""
+	var dot = false
+	var sigfigs = 5
+	for item in splitBreach:	
+		if dot == true:
+			niceBreach += "."
+			dot = false
+		niceBreach += item.left(min(3, sigfigs))	
+		sigfigs -= min(3, item.length())
+		dot = true
+	$BreachProb.text = niceBreach + "%"
 	$StatementCost.text = str(statementCost)
 	$CharityCost.text = str(charityCost)
 	$EventCost.text = str(eventCost)
@@ -37,7 +49,8 @@ func _on_hire_pressed():
 	if Globals.money >= hireCost:
 		Globals.securityFreq += 1
 		Globals.money -= hireCost
-		hireCost += 50 
+		hireCost += 20 
+		$Hire.text = "HIRE: " + str(hireCost) + "K"
 		$SecurityLabel.text = str(Globals.securityFreq)
 
 
@@ -51,7 +64,7 @@ func check_breach_status():
 	var security_breach_sprite = $Securitybreach  # Adjust the path to your Sprite node
 	var no_breach_sprite = $Nobreach  # Adjust the path to your Sprite node
 
-	if Globals.breachProb >= 0.03:
+	if Globals.breachProb >= 30:
 		security_breach_sprite.visible = true
 		no_breach_sprite.visible = false
 	else:
