@@ -39,6 +39,8 @@ func _process(delta):
 	$StatementCost.text = str(statementCost)
 	$CharityCost.text = str(charityCost)
 	$EventCost.text = str(eventCost)
+	hireCost = int( 60 *pow(1.5, Globals.securityFreq))
+	$Hire.text = "HIRE: " + str(hireCost) + "K"
 	# Disable the hire button if not enough money
 	$Hire.disabled = Globals.money < hireCost
 	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost
@@ -49,8 +51,6 @@ func _on_hire_pressed():
 	if Globals.money >= hireCost:
 		Globals.securityFreq += 1
 		Globals.money -= hireCost
-		hireCost += 20 
-		$Hire.text = "HIRE: " + str(hireCost) + "K"
 		$SecurityLabel.text = str(Globals.securityFreq)
 
 

@@ -74,36 +74,40 @@ func _process(delta):
 
 	if (time >= 1):
 		time -= 1
-		if redDataTotal < 100:
-			breachProb = 0.0
-		elif redDataTotal < 1000:
-			breachProb = (redDataTotal * 0.01)*(redDataTotal * 0.01) / (securityFreq + 10.0)
-		elif redDataTotal < 5000:
-			breachProb = (redDataTotal * 0.07)*(redDataTotal * 0.07) / (securityFreq + 5.0)
+		if redData < 1000:
+			breachProb = (redData * 0.03)*(redData * 0.04) / (securityFreq*securityFreq + 6.0)
+		elif redData < 10000:
+			breachProb = (redDataTotal * 0.04)*(redDataTotal * 0.05) / (securityFreq*securityFreq + 5.0)
 		else:
-			breachProb = (redDataTotal * 0.5)*(redDataTotal * 0.5) / securityFreq
+			breachProb = (redDataTotal * 0.05)*(redDataTotal * 0.06) / max(securityFreq,1)
 		#breachProb = (redDataTotal / max(securityFreq, 1))/100
 	
 		if(timeModifier > 0):
-			reputationModifier = reputation / 100
-			money += mps * reputationModifier
+			reputationModifier = reputation / 100.0
+			money += int (mps * reputationModifier)
 			money -= upkeep
-			moneyTotal += mps * reputationModifier
-			blueData += bdps * reputationModifier
-			blueDataTotal += bdps * reputationModifier
-			redData += rdps 
-			redDataTotal += rdps
+			moneyTotal += int (mps * reputationModifier)
+			blueData += int (bdps * reputationModifier)
+			blueDataTotal += int (bdps * reputationModifier)
+			redData += int(rdps * reputationModifier)
+			redDataTotal += int(rdps * reputationModifier)
 			seconds += 1
 			breachTemp = redDataTotal
 			update_security_level()
-		if(seconds > 20):
+		if(seconds > 60):
 			quarter += 1
 			seconds = 0
 			var breachValue = (randf() * 100)
 			if (breachValue < breachProb):
 				breachThisQuarter = true
-				reputation -= 40
-				redData = 0
+				if redDataTotal < 1000:
+					reputation -= 20
+				elif redDataTotal < 5000:
+					reputation -= 35
+				else:
+					reputation -= 50
+				var loss = randf_range(2,9)
+				redData = int(redData / loss)
 			get_tree().change_scene_to_file("res://YearlyReport.tscn")
 	pass
 	

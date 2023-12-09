@@ -34,7 +34,6 @@ func _ready():
 		People are very upset and this 
 		will affect your reputation"
 		get_node("Secure_Breached").texture = load("res://Textures/icons/person-incognito.svg")
-		Globals.reputation -= 50
 		if (Globals.reputation < 0):
 			Globals.reputation = 0
 		Globals.breachThisQuarter == false
@@ -80,14 +79,13 @@ func set_new_data_offers():
 		if i > startRed:
 			redOffered = Globals.rdps * (randi() % 100 + 30)
 		
-		moneyOffered = int ( blueOffered * ((randi() % 30 + 45) / 1000.0))
-		var reputationSwing = int( blueOffered / 2000.0)
+		moneyOffered = int ( blueOffered * ((randi() % 30 + 45) / 250.0))
+		var reputationSwing = int( blueOffered / 200.0)
 		if redOffered > 0:
-			moneyOffered += int( redOffered * ((randi() % 300 + 265) / 1000.0))
-			reputationSwing += int( redOffered / 200.0)
+			moneyOffered += int( redOffered * ((randi() % 300 + 265) / 250.0))
+			reputationSwing += int( redOffered / 20.0)
 
  
-
 		var newTitle = "title"
 		var newExplanation = "explanataion"
 		if i == 0:

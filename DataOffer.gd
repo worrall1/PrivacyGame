@@ -24,7 +24,7 @@ func _process(_delta):
 
 func _on_button_pressed():
 	if Globals.tutorial == false:
-		if((Globals.blueData > blueData) && (Globals.redData > redData) && (Globals.money > money) && (Globals.reputation > rep)):
+		if((Globals.blueData > blueData) && (Globals.redData > redData) && (Globals.reputation > rep)):
 			Globals.blueData -= blueData
 			Globals.redData -= redData
 			Globals.money += money
