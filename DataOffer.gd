@@ -14,7 +14,7 @@ func _ready():
 	$VBoxContainer/Label.text = label
 	$VBoxContainer/VBoxContainer/HBoxContainer2/RedDataCost.text = "-" + str(redData)
 	$VBoxContainer/VBoxContainer/HBoxContainer/BlueDataCost.text = "-" + str(blueData)
-	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = "+" + str(money)
+	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = "+ £" + str(money) + "k"
 	$VBoxContainer/VBoxContainer/HBoxContainer3/Rep.text = "-" + str(rep) + " Reputation"
 	pass # Replace with function body.
 
@@ -68,6 +68,6 @@ func set_values(newTitle, newBlueData, newRedData, newMoney, newRep, newLabel, t
 	$VBoxContainer/Label.text = label
 	$VBoxContainer/VBoxContainer/HBoxContainer2/RedDataCost.text = str(redData)
 	$VBoxContainer/VBoxContainer/HBoxContainer/BlueDataCost.text = str(blueData)
-	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = str(money)
+	$VBoxContainer/VBoxContainer/HBoxContainer4/Money.text = "£" + str(money) + "k"
 	$VBoxContainer/VBoxContainer/HBoxContainer3/Rep.text = "- " + str(rep) + " Reputation"
 	pass

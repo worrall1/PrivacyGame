@@ -17,6 +17,7 @@ var reputation = 100 #integer 1 - 100 value for reputation
 var reputationLastQuarter = 100
 var charityCost = 200
 var charityPileUp = 0
+var statementCost = 500
 var statementDone = false
 var eventCost = 150
 var eventPileUp = 0

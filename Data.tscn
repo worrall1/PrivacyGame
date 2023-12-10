@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://DataScreen.gd" id="1_df1we"]
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_kc13r"]
-[ext_resource type="Texture2D" uid="uid://bb0ls8lgdt7ai" path="res://Textures/backgrounds/backgroundData.jpg" id="2_a7umu"]
+[ext_resource type="Texture2D" uid="uid://dfqoh0o30lom6" path="res://Textures/backgrounds/backgroundData.jpg" id="2_a7umu"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_lkrdd"]
 [ext_resource type="PackedScene" uid="uid://vdcnckar136l" path="res://DataOffer.tscn" id="4_hnjbq"]
 [ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="6_7svl6"]
@@ -24,65 +24,65 @@ texture = ExtResource("2_a7umu")
 [node name="NinePatchRect" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 84.0
 offset_top = 247.0
-offset_right = 369.0
-offset_bottom = 477.0
+offset_right = 389.0
+offset_bottom = 532.0
 
 [node name="NinePatchRect2" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 449.0
 offset_top = 245.0
-offset_right = 734.0
-offset_bottom = 475.0
+offset_right = 755.0
+offset_bottom = 534.0
 
 [node name="NinePatchRect3" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 816.0
 offset_top = 244.0
-offset_right = 1101.0
-offset_bottom = 474.0
+offset_right = 1124.0
+offset_bottom = 531.0
 
 [node name="NinePatchRect4" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 1188.0
 offset_top = 245.0
-offset_right = 1473.0
-offset_bottom = 475.0
+offset_right = 1494.0
+offset_bottom = 532.0
 
 [node name="NinePatchRect5" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 1559.0
 offset_top = 246.0
-offset_right = 1844.0
-offset_bottom = 476.0
+offset_right = 1864.0
+offset_bottom = 533.0
 
 [node name="NinePatchRect6" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 85.0
 offset_top = 616.0
-offset_right = 370.0
-offset_bottom = 846.0
+offset_right = 391.0
+offset_bottom = 903.0
 
 [node name="NinePatchRect7" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 451.0
 offset_top = 616.0
-offset_right = 736.0
-offset_bottom = 846.0
+offset_right = 756.0
+offset_bottom = 905.0
 
 [node name="NinePatchRect8" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 816.0
 offset_top = 615.0
-offset_right = 1101.0
-offset_bottom = 845.0
+offset_right = 1122.0
+offset_bottom = 904.0
 
 [node name="NinePatchRect9" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 1186.0
 offset_top = 616.0
-offset_right = 1471.0
-offset_bottom = 846.0
+offset_right = 1492.0
+offset_bottom = 903.0
 
 [node name="NinePatchRect10" parent="." instance=ExtResource("4_hnjbq")]
 offset_left = 1561.0
 offset_top = 616.0
-offset_right = 1846.0
-offset_bottom = 846.0
+offset_right = 1866.0
+offset_bottom = 905.0
 
 [node name="Control" parent="." instance=ExtResource("6_7svl6")]
-offset_left = 773.0
-offset_top = 378.0
-offset_right = 773.0
-offset_bottom = 378.0
+offset_left = 786.0
+offset_top = 380.0
+offset_right = 786.0
+offset_bottom = 380.0

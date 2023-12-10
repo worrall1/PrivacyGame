@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cu75c6ntku4eg" path="res://Textures/iconsWhite/money.svg" id="5_4u48h"]
 
 [node name="NinePatchRect" type="NinePatchRect"]
-offset_right = 285.0
-offset_bottom = 230.0
+offset_right = 305.0
+offset_bottom = 287.0
 texture = ExtResource("1_b5dt4")
 script = ExtResource("2_wxfa6")
 
@@ -16,8 +16,8 @@ script = ExtResource("2_wxfa6")
 layout_mode = 0
 offset_left = 2.0
 offset_top = 3.0
-offset_right = 284.0
-offset_bottom = 231.0
+offset_right = 303.0
+offset_bottom = 283.0
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -28,6 +28,9 @@ text_direction = 3
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -75,6 +78,13 @@ alignment = 1
 layout_mode = 2
 text = "Rep"
 
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
@@ -92,10 +102,10 @@ stretch_mode = 5
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
-offset_left = 1.0
-offset_top = 187.0
-offset_right = 284.0
-offset_bottom = 230.0
+offset_left = 2.0
+offset_top = 245.0
+offset_right = 305.0
+offset_bottom = 288.0
 text = "Accept"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
