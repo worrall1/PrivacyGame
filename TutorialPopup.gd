@@ -108,11 +108,15 @@ func _process(delta):
 		elif Globals.tutorialProgress == 14:
 			show()
 			$Panel/Label.text = "Selling people's personal data
-			is not appreciated by the people who
-			have trusted you with their data but
-			hopefully they won't find out so this
-			will only affect your reputation
-			slightly"
+			is huge breach of trust... but we don't
+			care, it makes money!"
+			$Panel/Button.show()
+		elif Globals.tutorialProgress == 15:
+			show()
+			$Panel/Label.text = "In fact, selling the data gets
+			it out of your hands; it's not your
+			problem anymore. Less chance of a
+			breach!"
 			$Panel/Button.show()
 		else:
 			hide()
@@ -122,7 +126,7 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	if (Globals.tutorialProgress == 6) || (Globals.tutorialProgress == 11) || (Globals.tutorialProgress == 14):
+	if (Globals.tutorialProgress == 6) || (Globals.tutorialProgress == 11) || (Globals.tutorialProgress == 15):
 		Globals.tutorial = false
 	Globals.tutorialProgress += 1
 	pass # Replace with function body.

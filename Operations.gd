@@ -1,22 +1,17 @@
 extends CanvasLayer
 
 
-var hireCost = 60 # Initial cost to hire a team member
-var charityCost = 200
-var statementCost = 50
+#var hireCost = 60 # Initial cost to hire a team member
+#var charityCost = 200
+var statementCost = 500
 var charityRep = 5
-var statementRep = 2
+var statementRep = 10
 var eventRep = 3
-var eventCost = 150
+#var eventCost = 150
 
-# Additional PR Action
-var charityCostIncrement = 50
-var statementCostIncrement = 25
-var eventCostIncrement = 75
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	update_pr_buttons()
 	check_breach_status()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,58 +32,52 @@ func _process(delta):
 		dot = true
 	$BreachProb.text = niceBreach + "%"
 	$StatementCost.text = str(statementCost)
-	$CharityCost.text = str(charityCost)
-	$EventCost.text = str(eventCost)
-	hireCost = int( 60 *pow(1.5, Globals.securityFreq))
-	$Hire.text = "HIRE: " + str(hireCost) + "K"
+	$CharityCost.text = str(Globals.charityCost)
+	$EventCost.text = str(Globals.eventCost)
+	$Hire.text = "HIRE: " + str(Globals.securityCost) + "K"
+	$SecurityLabel.text = str(Globals.securityFreq-1)
 	# Disable the hire button if not enough money
-	$Hire.disabled = Globals.money < hireCost
-	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost
+	$Hire.disabled = Globals.money < Globals.securityCost
+	$StatementButton.disabled = !Globals.breachThisQuarter or Globals.money < statementCost or Globals.statementDone
+	$CharityButton.disabled = Globals.money < Globals.charityCost
+	$EventButton.disabled = Globals.money < Globals.eventCost
 	check_breach_status()
 
 
 func _on_hire_pressed():
-	if Globals.money >= hireCost:
+	if Globals.money >= Globals.securityCost:
 		Globals.securityFreq += 1
-		Globals.money -= hireCost
-		$SecurityLabel.text = str(Globals.securityFreq)
+		Globals.money -= Globals.securityCost
+		Globals.securityCost = int(60 * pow(1.5,(Globals.securityFreq-1)))
+		$SecurityLabel.text = str(Globals.securityFreq-1)
 
-
-func update_pr_buttons():
-	# Disables the PR buttons if there isn't enough money
-	$CharityButton.disabled = Globals.money < charityCost
-	$StatementButton.disabled = Globals.money < statementCost
-	
 
 func check_breach_status():
-	var security_breach_sprite = $Securitybreach  # Adjust the path to your Sprite node
-	var no_breach_sprite = $Nobreach  # Adjust the path to your Sprite node
-
 	if Globals.breachProb >= 30:
-		security_breach_sprite.visible = true
-		no_breach_sprite.visible = false
+		$Securitybreach.visible = true
+		$Nobreach.visible = false
 	else:
-		security_breach_sprite.visible = false
-		no_breach_sprite.visible = true
+		$Securitybreach.visible = false
+		$Nobreach.visible = true
+
 
 func _on_charity_button_pressed():
-	if Globals.money >= charityCost:
-		Globals.money -= charityCost
+	if Globals.money >= Globals.charityCost:
+		Globals.money -= Globals.charityCost
 		Globals.reputation += charityRep
-		charityCost += charityCostIncrement * 3
-		update_pr_buttons()
+		Globals.charityCost = 200 * pow(1.5, Globals.charityPileUp)
+		Globals.charityPileUp += 1
 
 
 func _on_statement_button_pressed():
-	if Globals.money >= statementCost:
+	if Globals.money >= Globals.statementCost && !Globals.statementDone:
 		Globals.money -= statementCost
 		Globals.reputation += statementRep
-		statementCost += statementCostIncrement * 1.5
-		update_pr_buttons()
+		Globals.statementDone = true
 
 func _on_event_button_pressed():
-	if Globals.money >= eventCost:
-		Globals.money -= eventCost
+	if Globals.money >= Globals.eventCost:
+		Globals.money -= Globals.eventCost
 		Globals.reputation += eventRep
-		eventCost += eventCostIncrement * 2.3
-		update_pr_buttons()
+		Globals.eventCost = 150 * pow(1.5, Globals.eventPileUp)
+		Globals.eventPileUp += 1

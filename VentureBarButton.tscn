@@ -79,5 +79,6 @@ offset_top = 79.0
 offset_right = 633.0
 offset_bottom = 119.0
 bbcode_enabled = true
+scroll_active = false
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

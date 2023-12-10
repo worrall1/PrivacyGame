@@ -87,12 +87,12 @@ layout_mode = 2
 
 [node name="BlueData" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.0156863, 0.247059, 1, 1)
+theme_override_colors/font_color = Color(0.603922, 0.85098, 0.960784, 1)
 text = "0"
 
 [node name="BDPS" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.0156863, 0.247059, 1, 1)
+theme_override_colors/font_color = Color(0.603922, 0.85098, 0.960784, 1)
 text = "0"
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]

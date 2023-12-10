@@ -5,6 +5,10 @@ extends NinePatchRect
 var previousTimeModifier
 
 var companyNames = ["Daternia", "Technosian", "Saphram Systems", "On the Books"]
+
+var blueExplanations = ["We will sell them dishwashers", "We want to know if they have babies", "We need their location data", "We need gender data", "We will make data profiles for every user"]
+
+var redExplanations = ["We will send them spam emails", "We will spam call them", "We will steal their identities", "We will scam their banks", "We're selling it on the dark web", "Don't ask questions", "Don't think about the users"]
  
 
 # Called when the node enters the scene tree for the first time.
@@ -25,7 +29,8 @@ func _ready():
 	var year = floor(Globals.quarter/4)
 	get_node("Date").text = "Year " + str(year + 1) + " Q" + str((Globals.quarter%4) + 1)
 	get_node("Profit").text = str(Globals.money - Globals.moneyLastQuarter)
-	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
+	get_node("Data Generation").text = str(Globals.blueData - Globals.blueDataLastQuarter)
+	$"Data Generation2".text = str(Globals.redData - Globals.redDataLastQuarter)
 	if (Globals.breachThisQuarter == true):
 		get_node("Breach Explanation").text = "Hackers have breached your database
 		and now have access to all your users' 
@@ -45,6 +50,7 @@ func _ready():
 	get_node("Reputation Swing").text = "Reputation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
 	Globals.moneyLastQuarter = Globals.money
 	Globals.blueDataLastQuarter = Globals.blueData
+	Globals.redDataLastQuarter = Globals.redData
 	Globals.reputationLastQuarter = Globals.reputation
 	pass # Replace with function body.
 
@@ -80,14 +86,17 @@ func set_new_data_offers():
 			redOffered = Globals.rdps * (randi() % 100 + 30)
 		
 		moneyOffered = int ( blueOffered * ((randi() % 30 + 45) / 250.0))
-		var reputationSwing = int( blueOffered / 200.0)
+		var reputationSwing = int( blueOffered / Globals.bdps / 200.0)
+		var newExplanation = ""
+		
 		if redOffered > 0:
 			moneyOffered += int( redOffered * ((randi() % 300 + 265) / 250.0))
-			reputationSwing += int( redOffered / 20.0)
-
+			reputationSwing += int( redOffered / Globals.rdps / 20.0)
+			newExplanation = redExplanations[randi_range(0, redExplanations.size() - 1)]
+		else:
+			newExplanation = blueExplanations[randi_range(0, blueExplanations.size() - 1)]
  
-		var newTitle = "title"
-		var newExplanation = "explanataion"
+		var newTitle = companyNames[randi_range(0, companyNames.size() - 1)]
 		if i == 0:
 			DataOfferRepo.money1 = moneyOffered
 			DataOfferRepo.blueData1 = blueOffered

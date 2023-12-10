@@ -262,6 +262,7 @@ theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 50
 
 [node name="Securitybreach" type="Sprite2D" parent="."]
+visible = false
 z_index = -1
 position = Vector2(1437, 885)
 scale = Vector2(0.674847, 0.659509)

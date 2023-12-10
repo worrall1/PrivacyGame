@@ -52,7 +52,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	$Button.text="Purchase £"+str(cost)
+	$Button.text="Purchase £"+str(cost) + "K"
 	if Unlocked==false:
 		self.disabled=true
 		if Globals.money >= cost:
