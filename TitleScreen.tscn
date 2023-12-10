@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddxtl0c0bcg1m"]
 
 [ext_resource type="Script" path="res://TitleScreen.gd" id="1_1e6du"]
-[ext_resource type="Texture2D" uid="uid://blh2abkj5fp3o" path="res://Textures/backgroundTitle.png" id="2_oekwt"]
+[ext_resource type="Texture2D" uid="uid://ca7kr446n0yo" path="res://Textures/backgroundTitle.png" id="2_oekwt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7d8y"]
-bg_color = Color(0.282353, 0.686275, 0.541176, 1)
+bg_color = Color(0.160784, 0.00392157, 0.00392157, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -17,7 +17,7 @@ shadow_size = 6
 shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e053"]
-bg_color = Color(0.160784, 0.458824, 0.34902, 1)
+bg_color = Color(0.101961, 0, 0, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
