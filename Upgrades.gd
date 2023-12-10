@@ -36,7 +36,7 @@ func _ready():
 	#Venture 1
 	$TextureButton/Label.text = "SOCIAL MEDIA"
 	$TextureButton.givesMoney = 1
-	$TextureButton.givesData = 3
+	$TextureButton.givesData = 1
 	$TextureButton.givesPriv = 0
 	
 	$TextureButton.cost =200
@@ -44,8 +44,8 @@ func _ready():
 	$TextureButton.venture1Text = "Personalised Ads\nSpy on your users so that Ads will get you more money"
 	$TextureButton.venture1Cost = 50
 	$TextureButton.venture1Priv = 1
-	$TextureButton.venture1Money = 3
-	$TextureButton.venture1Data = 4
+	$TextureButton.venture1Money = 1
+	$TextureButton.venture1Data = 2
 	$TextureButton.venture1Rep = 0
 	$TextureButton.venture1Icon = preload("res://Textures/priceIcons/price50.png")
 	$TextureButton.venture2Text = "Addictive Design \nRedesign your site so users never want to leave"

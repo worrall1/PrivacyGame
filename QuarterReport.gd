@@ -29,7 +29,8 @@ func _ready():
 	var year = floor(Globals.quarter/4)
 	get_node("Date").text = "Year " + str(year + 1) + " Q" + str((Globals.quarter%4) + 1)
 	get_node("Profit").text = str(Globals.money - Globals.moneyLastQuarter)
-	get_node("Data Generation").text = str(Globals.money - Globals.moneyLastQuarter)
+	get_node("Data Generation").text = str(Globals.blueData - Globals.blueDataLastQuarter)
+	$"Data Generation2".text = str(Globals.redData - Globals.redDataLastQuarter)
 	if (Globals.breachThisQuarter == true):
 		get_node("Breach Explanation").text = "Hackers have breached your database
 		and now have access to all your users' 
@@ -49,6 +50,7 @@ func _ready():
 	get_node("Reputation Swing").text = "Reputation Swing: " + str(Globals.reputation - Globals.reputationLastQuarter) + ("%")
 	Globals.moneyLastQuarter = Globals.money
 	Globals.blueDataLastQuarter = Globals.blueData
+	Globals.redDataLastQuarter = Globals.redData
 	Globals.reputationLastQuarter = Globals.reputation
 	pass # Replace with function body.
 

@@ -15,7 +15,14 @@ var sfxVol = 0.5
 var musicVol = 0.5
 var reputation = 100 #integer 1 - 100 value for reputation
 var reputationLastQuarter = 100
-var securityFreq = 0
+var charityCost = 200
+var charityPileUp = 0
+var statementDone = false
+var eventCost = 150
+var eventPileUp = 0
+
+var securityCost = 60
+var securityFreq = 1
 var breachProb = 0
 var breachTemp = 0 #used when updating breach chance
 var breachThisQuarter = false
@@ -25,6 +32,7 @@ var time = 0
 var seconds = 0
 var moneyLastQuarter = 0
 var blueDataLastQuarter = 0
+var redDataLastQuarter = 0
 var repLastQuarter = 0
 var timeModifier = 1
 var reputationModifier = 1
@@ -74,12 +82,8 @@ func _process(delta):
 
 	if (time >= 1):
 		time -= 1
-		if redData < 1000:
-			breachProb = (redData * 0.03)*(redData * 0.04) / (securityFreq*securityFreq + 6.0)
-		elif redData < 10000:
-			breachProb = (redData * 0.04)*(redData * 0.05) / (securityFreq*securityFreq + 5.0)
-		else:
-			breachProb = (redData * 0.05)*(redData * 0.06) / max(securityFreq,1)
+		#breachProb = (redData * 0.03)*(redData * 0.04) / (securityFreq*securityFreq + 6.0)
+		breachProb = pow((redData*0.03), 3) / (pow(securityFreq, 5) + 20.0)
 		#breachProb = (redDataTotal / max(securityFreq, 1))/100
 	
 		if(timeModifier > 0):
@@ -97,17 +101,23 @@ func _process(delta):
 		if(seconds > 60):
 			quarter += 1
 			seconds = 0
+			if charityPileUp > 0:
+				charityPileUp -= 1
+				charityCost = 200 * pow(1.5, Globals.charityPileUp)
+			if eventPileUp > 0:
+				eventPileUp -= 1
+				eventCost = 150 * pow(1.5, Globals.eventPileUp)
 			var breachValue = (randf() * 100)
 			if (breachValue < breachProb):
 				breachThisQuarter = true
+				statementDone = false
 				if redDataTotal < 1000:
 					reputation -= 20
 				elif redDataTotal < 5000:
 					reputation -= 35
 				else:
 					reputation -= 50
-				var loss = randf_range(2,9)
-				redData = int(redData / loss)
+				redData = 0
 			get_tree().change_scene_to_file("res://YearlyReport.tscn")
 	pass
 	
