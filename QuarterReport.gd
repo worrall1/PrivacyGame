@@ -4,7 +4,7 @@ extends NinePatchRect
 
 var previousTimeModifier
 
-var companyNames = ["Daternia", "Technosian", "Saphram Systems", "On the Books"]
+var companyNames = ["Daternia", "Technosian", "Saphram Systems", "On the Books", "Novel Facade", "A Sciency Word", "Anonymous Buyer", "Anonymous Buyer", "Wye", "Zed", "CheapTat.com", "Data Curator"]
 
 var blueExplanations = ["We will sell them dishwashers", "We want to know if they have babies", "We need their location data", "We need gender data", "We will make data profiles for every user"]
 
