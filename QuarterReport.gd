@@ -6,9 +6,9 @@ var previousTimeModifier
 
 var companyNames = ["Daternia", "Technosian", "Saphram Systems", "On the Books", "Novel Facade", "A Sciency Word", "Anonymous Buyer", "Anonymous Buyer", "Wye", "Zed", "CheapTat.com", "Data Curator"]
 
-var blueExplanations = ["We will sell them dishwashers", "We want to know if they have babies", "We need their location data", "We need gender data", "We will make data profiles for every user"]
+var blueExplanations = ["We will advertise to them", "We want to know marital status", "We need their location data", "We need gender data", "We will make data profiles of users", "We want age information", "We want home ownership data", "We're targeting single mothers"]
 
-var redExplanations = ["We will send them spam emails", "We will spam call them", "We will steal their identities", "We will scam their banks", "We're selling it on the dark web", "Don't ask questions", "Don't think about the users"]
+var redExplanations = ["We will send them spam emails", "We will spam call them", "We will steal their identities", "We will scam their banks", "We're selling it on the dark web", "Don't ask questions", "Don't think about the users", "We're selling their debit cards", "This is legal", "Keep this under the table"]
  
 
 # Called when the node enters the scene tree for the first time.
