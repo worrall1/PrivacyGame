@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://sn6bydjgf6o5"]
 
-[ext_resource type="Texture2D" uid="uid://cn08hqjdj3a0q" path="res://Textures/backgrounds/bottomBar.png" id="1_rirpf"]
+[ext_resource type="Texture2D" uid="uid://wdayetwxle3o" path="res://Textures/backgrounds/bottomBar.png" id="1_rirpf"]
 [ext_resource type="Script" path="res://BottomBar.gd" id="2_tgjna"]
-[ext_resource type="Texture2D" uid="uid://cu75c6ntku4eg" path="res://Textures/iconsWhite/money.svg" id="3_vd28u"]
-[ext_resource type="Texture2D" uid="uid://f1lhysa32hpx" path="res://Textures/iconsWhite/nonsensetive-data.svg" id="4_cfbbn"]
-[ext_resource type="Texture2D" uid="uid://bbn37pugtckkd" path="res://Textures/iconsWhite/sensetive-data.svg.svg" id="5_erqlt"]
-[ext_resource type="Texture2D" uid="uid://gkilkfbtahj4" path="res://Textures/iconsWhite/pause-solid.svg" id="6_xyis5"]
-[ext_resource type="Texture2D" uid="uid://bxxg1b40hbnn2" path="res://Textures/iconsWhite/forward-solid.svg" id="7_5vmwq"]
-[ext_resource type="Texture2D" uid="uid://dxtjrxgwoiwdp" path="res://Textures/iconsWhite/play-solid.svg" id="8_cpbov"]
+[ext_resource type="Texture2D" uid="uid://df3tlhgcvk4pq" path="res://Textures/iconsWhite/money.svg" id="3_vd28u"]
+[ext_resource type="Texture2D" uid="uid://dwuu0mu0r1e6e" path="res://Textures/iconsWhite/nonsensetive-data.svg" id="4_cfbbn"]
+[ext_resource type="Texture2D" uid="uid://bnrwfixhgaob7" path="res://Textures/iconsWhite/sensetive-data.svg.svg" id="5_erqlt"]
+[ext_resource type="Texture2D" uid="uid://bo8hu7yn1ggp7" path="res://Textures/iconsWhite/pause-solid.svg" id="6_xyis5"]
+[ext_resource type="Texture2D" uid="uid://bu5ys7m23b0rj" path="res://Textures/iconsWhite/forward-solid.svg" id="7_5vmwq"]
+[ext_resource type="Texture2D" uid="uid://ykyw0iov5233" path="res://Textures/iconsWhite/play-solid.svg" id="8_cpbov"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0bcb"]
 bg_color = Color(0.0862745, 0.207843, 0.301961, 1)

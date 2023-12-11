@@ -3,13 +3,21 @@
 [ext_resource type="Script" path="res://TutorialPopup.gd" id="1_a58y1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x8qp"]
-bg_color = Color(0.478431, 0.6, 0.835294, 1)
+bg_color = Color(0.258824, 0.376471, 0.611765, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 corner_radius_top_left = 7
 corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn35j"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
 corner_radius_top_left = 7
 corner_radius_top_right = 7
 corner_radius_bottom_right = 7

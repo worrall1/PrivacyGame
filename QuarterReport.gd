@@ -16,11 +16,11 @@ func _ready():
 	randomize()
 	if(Globals.money < 3000):
 		texture = load("res://Textures/officeLevels/crib0.png")
-	elif(3000 <= Globals.money < 6000):
+	elif(3000 <= Globals.money && Globals.money < 6000):
 		texture = load("res://Textures/officeLevels/crib1.png")
-	elif(6000 <= Globals.money < 12000):
+	elif(6000 <= Globals.money && Globals.money < 12000):
 		texture = load("res://Textures/officeLevels/crib2.png")
-	elif(12000 <= Globals.money < 24000):
+	elif(12000 <= Globals.money && Globals.money < 24000):
 		texture = load("res://Textures/officeLevels/crib3.png")
 	else:
 		texture = load("res://Textures/officeLevels/crib4.png")

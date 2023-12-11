@@ -68,7 +68,7 @@ func _ready():
 	$TextureButton.venture4Rep = -10
 	
 	$TextureButton.venture2Icon = preload("res://Textures/priceIcons/price75.png")
-	$TextureButton.venture3Icon = preload("res://Textures/priceIcons/price250.png")
+	$TextureButton.venture3Icon = preload("res://Textures/icons/cookie-bite-icon.png")
 	$TextureButton.venture4Icon = preload("res://Textures/priceIcons/price750.png")
 	
 	#Venture 2

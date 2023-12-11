@@ -8,7 +8,12 @@ func _ready():
 	#elif Globals.bdps==1:
 	#	$CPUParticles2D.amount = 1
 	$CPUParticles2D.amount = Globals.bdps
-	$CPUParticles2D2.amount = Globals.mps / 10
+	$CPUParticles2D2.amount = Globals.mps 
+	
+	if Globals.mps==0:
+		$CPUParticles2D2.hide()
+	else:
+		$CPUParticles2D2.show()
 	
 	if Globals.tutorialProgress == 7:
 		if Globals.quarter > 0:

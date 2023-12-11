@@ -19,8 +19,9 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dad4d"]
-content_margin_left = 10.0
+content_margin_left = 40.0
 content_margin_right = 25.0
+content_margin_bottom = 20.0
 bg_color = Color(0.172549, 0.423529, 0.556863, 1)
 border_width_left = 2
 border_width_top = 2
@@ -57,7 +58,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_0i0rv")
 keep_pressed_outside = true
 text = "Purchase 1000 GB's of Personal Emails"
 icon = ExtResource("1_53n86")
-alignment = 2
+alignment = 0
 script = ExtResource("1_v64p1")
 
 [node name="Label" type="Label" parent="."]
