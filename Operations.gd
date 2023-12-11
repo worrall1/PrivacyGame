@@ -42,6 +42,19 @@ func _process(delta):
 	$CharityButton.disabled = Globals.money < Globals.charityCost
 	$EventButton.disabled = Globals.money < Globals.eventCost
 	check_breach_status()
+	
+	$Sprite2D.hide()
+	$Sprite2D2.hide()
+	$Sprite2D3.hide()
+	
+	if (Globals.tutorial == true):
+		if Globals.tutorialProgress == 8:
+			$Sprite2D.show()
+		elif Globals.tutorialProgress == 9:
+			$Sprite2D3.show()
+		elif Globals.tutorialProgress == 10:
+			$Sprite2D2.show()
+
 
 
 func _on_hire_pressed():

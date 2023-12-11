@@ -8,10 +8,12 @@ var moneyInc = 0
 var dataInc = 0
 var privInc = 0
 var repInc = 0
+var ventureIc = null
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 	
 	
@@ -21,6 +23,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$TextureRect.texture = ventureIc
 	$RichTextLabel.text = "[color=green]"+ str(moneyInc)+"£/ps[/color]  "+ "[color=blue]"+ str(dataInc)+"/ps[/color]  "+"[color=red]"+ str(privInc)+"/ps[/color]                                                               "+"[color=black]"+ str(repInc)+" rep[/color]"
 	
 	var venture = "upgrade"+str(ventureType)

@@ -1,25 +1,30 @@
-[gd_scene load_steps=16 format=3 uid="uid://daputx404ywkw"]
+[gd_scene load_steps=19 format=3 uid="uid://daputx404ywkw"]
 
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_76qjh"]
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_c6lw8"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
-[ext_resource type="Texture2D" uid="uid://db340ccd3hlkn" path="res://Textures/officeLevels/criboriginal.png" id="4_7dp8v"]
+[ext_resource type="Texture2D" uid="uid://d2w6so6j5rtsm" path="res://Textures/officeLevels/criboriginal.png" id="4_7dp8v"]
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
 [ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="5_8lm8t"]
-[ext_resource type="Texture2D" uid="uid://vqbpibwds7my" path="res://Textures/particles.png" id="6_t0bp0"]
+[ext_resource type="Texture2D" uid="uid://xqn241loa5ts" path="res://Textures/particles.png" id="6_t0bp0"]
 [ext_resource type="Script" path="res://RedData.gd" id="7_buhkh"]
-[ext_resource type="Texture2D" uid="uid://b5veko6kg3nwj" path="res://Textures/dataMonitor.png" id="7_fcun6"]
-[ext_resource type="Texture2D" uid="uid://cb27a5c37txq6" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
-[ext_resource type="Texture2D" uid="uid://cepnhy53ndlsl" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
+[ext_resource type="Texture2D" uid="uid://oe2ww1y3sr2e" path="res://Textures/dataMonitor.png" id="7_fcun6"]
+[ext_resource type="Texture2D" uid="uid://cnwe41bu55bpf" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
+[ext_resource type="Texture2D" uid="uid://04t3pewjflfu" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
 [ext_resource type="Script" path="res://BlueData.gd" id="9_rfmpq"]
-[ext_resource type="Texture2D" uid="uid://dg5waifrbbu1h" path="res://Textures/backgrounds/redData.png" id="11_rw01r"]
-[ext_resource type="Texture2D" uid="uid://dixd6kx1nkua4" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
+[ext_resource type="Texture2D" uid="uid://ce7q4irdql133" path="res://Textures/backgrounds/redData.png" id="11_rw01r"]
+[ext_resource type="Texture2D" uid="uid://sv56m76uhk5m" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
+[ext_resource type="Shader" path="res://tutorial.gdshader" id="15_6fj6o"]
+[ext_resource type="Texture2D" uid="uid://b5x5stjquuim2" path="res://Textures/icons/arrow.png" id="16_7i4lc"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bf60y"]
 particles_animation = true
 particles_anim_h_frames = 2
 particles_anim_v_frames = 1
 particles_anim_loop = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7hxi"]
+shader = ExtResource("15_6fj6o")
 
 [node name="HomeScreen" type="Node2D"]
 position = Vector2(563, -2)
@@ -226,3 +231,41 @@ position = Vector2(1289, 399)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_m7hxi")
+position = Vector2(980, 219)
+rotation = -0.261799
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("16_7i4lc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_m7hxi")
+position = Vector2(-230, 950)
+rotation = 1.57079
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("16_7i4lc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_m7hxi")
+position = Vector2(399, 139)
+rotation = 5.49778
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("16_7i4lc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_m7hxi")
+position = Vector2(457, 140)
+rotation = 5.49778
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("16_7i4lc")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_m7hxi")
+position = Vector2(646, 139)
+rotation = 5.49778
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("16_7i4lc")

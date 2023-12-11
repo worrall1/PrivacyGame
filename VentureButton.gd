@@ -17,6 +17,7 @@ var venture1Priv = 0
 var venture1Rep = 0
 var venture1Money = 0
 var venture1Icon = null
+var venture1price = null
 var venture2Text = "null"
 var venture2Cost = 30
 var venture2Data = 0
@@ -24,6 +25,7 @@ var venture2Priv = 0
 var venture2Rep = 0
 var venture2Money = 0
 var venture2Icon = null
+var venture2price = null
 var venture3Text = "null"
 var venture3Cost = 40
 var venture3Data = 0
@@ -31,6 +33,7 @@ var venture3Priv = 0
 var venture3Rep = 0
 var venture3Money = 0
 var venture3Icon = null
+var venture3price = null
 var venture4Text = "Placeholder"
 var venture4Cost = 50
 var venture4Data = 0
@@ -38,6 +41,7 @@ var venture4Priv = 0
 var venture4Rep = 0
 var venture4Money = 0
 var venture4Icon = null
+var venture4price = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -88,6 +92,7 @@ func _on_toggled(button_pressed):
 		parent.venture1.moneyInc = venture1Money
 		parent.venture1.text = venture1Text
 		parent.venture1.icon = venture1Icon
+		parent.venture1.ventureIc = venture1price
 		
 		parent.venture2.text = venture2Text
 		parent.venture2.ventureType = ventureNum
@@ -97,6 +102,7 @@ func _on_toggled(button_pressed):
 		parent.venture2.repInc = venture2Rep
 		parent.venture2.moneyInc = venture2Money
 		parent.venture2.icon = venture2Icon
+		parent.venture2.ventureIc = venture2price
 		
 		parent.venture3.text = venture3Text
 		parent.venture3.ventureType = ventureNum
@@ -106,6 +112,7 @@ func _on_toggled(button_pressed):
 		parent.venture3.repInc = venture3Rep
 		parent.venture3.moneyInc = venture3Money
 		parent.venture3.icon = venture3Icon
+		parent.venture3.ventureIc = venture3price
 		
 		parent.venture4.text = venture4Text
 		parent.venture4.ventureType = ventureNum
@@ -115,6 +122,7 @@ func _on_toggled(button_pressed):
 		parent.venture4.repInc = venture4Rep
 		parent.venture4.moneyInc = venture4Money
 		parent.venture4.icon = venture4Icon
+		parent.venture4.ventureIc = venture4price
 		
 		parent.venture1.cost = venture1Cost
 		parent.venture2.cost = venture2Cost

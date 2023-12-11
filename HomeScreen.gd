@@ -7,8 +7,13 @@ func _ready():
 	#	$CPUParticles2D.amount= Globals.bdps
 	#elif Globals.bdps==1:
 	#	$CPUParticles2D.amount = 1
+	if Globals.mps==0:
+		$CPUParticles2D2.hide()
+	else:
+		$CPUParticles2D2.show()
+		$CPUParticles2D2.amount = Globals.mps 
 	$CPUParticles2D.amount = Globals.bdps
-	$CPUParticles2D2.amount = Globals.mps 
+	
 	
 	if Globals.mps==0:
 		$CPUParticles2D2.hide()
@@ -27,6 +32,29 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Label.text = "£" + str(Globals.money) + "K"
+	$Sprite2D.hide()
+	$Sprite2D2.hide()
+	$Sprite2D3.hide()
+	$Sprite2D4.hide()
+	$Sprite2D5.hide()
+	if (Globals.tutorial == true):
+		if Globals.tutorialProgress == 0:
+			pass
+			
+			
+		elif Globals.tutorialProgress == 1:
+			
+			$Sprite2D.show()
+			
+		elif Globals.tutorialProgress == 2:
+			$Sprite2D2.show()
+		elif Globals.tutorialProgress == 3:
+			$Sprite2D3.show()
+		elif Globals.tutorialProgress == 7:
+			$Sprite2D4.show()
+		elif Globals.tutorialProgress == 12:
+			$Sprite2D5.show()
+		
 	pass
 
 

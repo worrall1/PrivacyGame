@@ -124,14 +124,14 @@ func _process(delta):
 	
 func update_security_level():
 	if breachProb > 50:
-		securityLevel = "inadequate"
+		securityLevel = "INADEQUATE"
 	elif breachProb > 30:
-		securityLevel = "poor"
+		securityLevel = "POOR"
 	elif breachProb > 5:
-		securityLevel = "medium"
+		securityLevel = "MEDIUM"
 	elif breachProb > 3:
-		securityLevel = "good"
+		securityLevel = "GOOD"
 	else:
-		securityLevel = "excellent"
+		securityLevel = "EXCELLENT"
 	
 

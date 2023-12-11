@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bxd7avsp3rgn3"]
+[gd_scene load_steps=39 format=3 uid="uid://bxd7avsp3rgn3"]
 
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_hmu2l"]
 [ext_resource type="Script" path="res://Upgrades.gd" id="1_ppvvd"]
@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://c1dsj6hcjfuet" path="res://Textures/ventures/foodDeliveryLocked.png" id="30_jil6f"]
 [ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="31_4oo70"]
 [ext_resource type="Texture2D" uid="uid://bbn1s02dsl4qd" path="res://Textures/ventures/foodDeliverySelect.png" id="31_w30h7"]
+[ext_resource type="Shader" path="res://tutorial.gdshader" id="35_3ynoh"]
+[ext_resource type="Texture2D" uid="uid://b5x5stjquuim2" path="res://Textures/icons/arrow.png" id="36_wpowt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wcj"]
 bg_color = Color(0.364706, 0.654902, 0.686275, 1)
@@ -42,6 +44,9 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_size = 10
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_151mv"]
+shader = ExtResource("35_3ynoh")
 
 [node name="Upgrades" type="Node2D"]
 script = ExtResource("1_ppvvd")
@@ -192,7 +197,18 @@ offset_top = 351.0
 offset_right = 735.0
 offset_bottom = 351.0
 
-[connection signal="pressed" from="Button" to="." method="_on_button1_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_151mv")
+position = Vector2(256, 357)
+rotation = -2.09439
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("36_wpowt")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_151mv")
+position = Vector2(284, 229)
+rotation = -3.14159
+scale = Vector2(0.0466668, 0.0466668)
+texture = ExtResource("36_wpowt")
