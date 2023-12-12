@@ -14,8 +14,14 @@ func _ready():
 		$CPUParticles2D2.hide()
 	else:
 		$CPUParticles2D2.show()
-		$CPUParticles2D2.amount = Globals.mps 
-	$CPUParticles2D.amount = Globals.bdps
+		$CPUParticles2D2.amount = Globals.mps
+	
+	if Globals.bdps==0:
+		$CPUParticles2D.hide()
+	else:
+		$CPUParticles2D.show()
+		$CPUParticles2D.amount = Globals.mps
+	
 	
 	
 	if Globals.mps==0:

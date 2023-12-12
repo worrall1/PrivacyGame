@@ -28,6 +28,7 @@ func _on_button_pressed():
 			Globals.blueData -= blueData
 			Globals.redData -= redData
 			Globals.money += money
+			Globals.moneyTotal += money
 			Globals.reputation -= rep
 			if(number == 1):
 				DataOfferRepo.taken1 = true

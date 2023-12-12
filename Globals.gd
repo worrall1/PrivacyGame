@@ -1,8 +1,8 @@
 extends Node
 
-var money = 2990
-var mps = 1
-var moneyTotal = 2990
+var money = 250
+var mps = 0
+var moneyTotal = 250
 var upkeep = 0
 var blueData = 0
 var bdps = 0
@@ -69,6 +69,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	print(moneyTotal)
 	
 	if tutorial == false:
 		time += delta * timeModifier

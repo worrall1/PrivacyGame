@@ -107,128 +107,127 @@ initial_velocity_min = 200.0
 initial_velocity_max = 200.0
 
 [node name="RedData" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-199, 276)
+position = Vector2(-149, 272)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData2" type="Sprite2D" parent="."]
-position = Vector2(-150, 275)
+position = Vector2(-99, 273)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData3" type="Sprite2D" parent="."]
-position = Vector2(-104, 276)
+position = Vector2(-53, 274)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="BlueData" type="Sprite2D" parent="."]
-position = Vector2(-25, 322)
+position = Vector2(11, 331)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData2" type="Sprite2D" parent="."]
-position = Vector2(30, 322)
+position = Vector2(66, 331)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData3" type="Sprite2D" parent="."]
-position = Vector2(84, 323)
+position = Vector2(120, 332)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="RedData4" type="Sprite2D" parent="."]
-position = Vector2(117, 273)
+position = Vector2(143, 462)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData5" type="Sprite2D" parent="."]
-position = Vector2(166, 272)
+position = Vector2(192, 461)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData6" type="Sprite2D" parent="."]
-position = Vector2(212, 273)
+position = Vector2(238, 462)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="BlueData4" type="Sprite2D" parent="."]
-position = Vector2(318, 335)
+position = Vector2(376, 353)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData5" type="Sprite2D" parent="."]
-position = Vector2(373, 335)
+position = Vector2(431, 353)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData6" type="Sprite2D" parent="."]
-position = Vector2(427, 336)
+position = Vector2(485, 354)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="RedData7" type="Sprite2D" parent="."]
-position = Vector2(471, 460)
+position = Vector2(800, 435)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData8" type="Sprite2D" parent="."]
-position = Vector2(520, 459)
+position = Vector2(849, 434)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData9" type="Sprite2D" parent="."]
-position = Vector2(566, 460)
+position = Vector2(895, 435)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="BlueData7" type="Sprite2D" parent="."]
-position = Vector2(951, 322)
+position = Vector2(960, 300)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData8" type="Sprite2D" parent="."]
-position = Vector2(1006, 322)
+position = Vector2(1015, 300)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData9" type="Sprite2D" parent="."]
-position = Vector2(1060, 323)
+position = Vector2(1069, 301)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="RedData10" type="Sprite2D" parent="."]
-position = Vector2(1194, 399)
+position = Vector2(1200, 332)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData11" type="Sprite2D" parent="."]
-position = Vector2(1243, 398)
+position = Vector2(1249, 331)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData12" type="Sprite2D" parent="."]
-position = Vector2(1289, 399)
+position = Vector2(1295, 332)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")

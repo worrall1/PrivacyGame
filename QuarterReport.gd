@@ -41,7 +41,7 @@ func _ready():
 		get_node("Secure_Breached").texture = load("res://Textures/icons/person-incognito.svg")
 		if (Globals.reputation < 0):
 			Globals.reputation = 0
-		Globals.breachThisQuarter == false
+		Globals.breachThisQuarter = false
 	else:
 		get_node("Breach Explanation").text = "All your data is secure this month.
 		Well done!"
@@ -84,6 +84,9 @@ func set_new_data_offers():
 		var redOffered = 0
 		if i > startRed:
 			redOffered = Globals.rdps * (randi() % 100 + 30)
+			var alsoBlue = randi() % 2
+			if (alsoBlue == 1):
+				blueOffered = 0
 		
 		moneyOffered = int ( blueOffered * ((randi() % 30 + 45) / 250.0))
 		var reputationSwing = int( blueOffered / Globals.bdps / 200.0)
