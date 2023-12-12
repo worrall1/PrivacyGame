@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://d03jolgjr3k1i"]
+
+[ext_resource type="Script" path="res://congrats.gd" id="1_d7r8x"]
+[ext_resource type="Texture2D" uid="uid://soestp8n8kde" path="res://Textures/upgradeIcons/levelUp.png" id="1_soam5"]
+
+[sub_resource type="Gradient" id="Gradient_21s58"]
+offsets = PackedFloat32Array(0.50365, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xyt2n"]
+gradient = SubResource("Gradient_21s58")
+
+[sub_resource type="Curve" id="Curve_ypiay"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ypvcu"]
+curve = SubResource("Curve_ypiay")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_408jr"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 500.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 20.0
+scale_max = 20.0
+scale_curve = SubResource("CurveTexture_ypvcu")
+color_ramp = SubResource("GradientTexture1D_xyt2n")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_d7r8x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 602.0
+offset_top = 110.0
+offset_right = 1402.0
+offset_bottom = 710.0
+texture = ExtResource("1_soam5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 768.0
+offset_top = 355.0
+offset_right = 1260.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 35
+text = "CONGRATS YOU LEVELED UP!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 768.0
+offset_top = 407.0
+offset_right = 1241.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 20
+text = "Enjoy Your New Office,
+Keep Up The Good Work For Further Upgrades"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+self_modulate = Color(0.0431373, 1, 1, 1)
+position = Vector2(731, 396)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_408jr")
+explosiveness = 1.0
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+self_modulate = Color(0.0431373, 1, 1, 1)
+position = Vector2(1296, 407)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_408jr")
+explosiveness = 1.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 959.0
+offset_top = 495.0
+offset_right = 1050.0
+offset_bottom = 526.0
+text = "CONTINUE"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

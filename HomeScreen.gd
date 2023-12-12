@@ -1,5 +1,7 @@
 extends Node2D
 
+var level = null
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -7,6 +9,7 @@ func _ready():
 	#	$CPUParticles2D.amount= Globals.bdps
 	#elif Globals.bdps==1:
 	#	$CPUParticles2D.amount = 1
+	$Node2D.hide()
 	if Globals.mps==0:
 		$CPUParticles2D2.hide()
 	else:
@@ -31,6 +34,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+
 	$Label.text = "£" + str(Globals.money) + "K"
 	$Sprite2D.hide()
 	$Sprite2D2.hide()

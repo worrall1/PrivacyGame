@@ -1,8 +1,8 @@
 extends Node
 
-var money = 1000
-var mps = 0
-var moneyTotal = 0
+var money = 2990
+var mps = 1
+var moneyTotal = 2990
 var upkeep = 0
 var blueData = 0
 var bdps = 0

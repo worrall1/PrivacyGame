@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://daputx404ywkw"]
+[gd_scene load_steps=20 format=3 uid="uid://daputx404ywkw"]
 
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_76qjh"]
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_c6lw8"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://sv56m76uhk5m" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
 [ext_resource type="Shader" path="res://tutorial.gdshader" id="15_6fj6o"]
 [ext_resource type="Texture2D" uid="uid://b5x5stjquuim2" path="res://Textures/icons/arrow.png" id="16_7i4lc"]
+[ext_resource type="PackedScene" uid="uid://d03jolgjr3k1i" path="res://congrats.tscn" id="17_2v4p2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bf60y"]
 particles_animation = true
@@ -269,3 +270,7 @@ position = Vector2(646, 139)
 rotation = 5.49778
 scale = Vector2(0.0466668, 0.0466668)
 texture = ExtResource("16_7i4lc")
+
+[node name="Node2D" parent="." instance=ExtResource("17_2v4p2")]
+visible = false
+position = Vector2(-595, 192)
