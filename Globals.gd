@@ -13,7 +13,7 @@ var redDataTotal = 0
 var date = 0 #integer count of how many days have elapsed
 var sfxVol = 0.5
 var musicVol = 0.5
-var reputation = 100 #integer 1 - 100 value for reputation
+var reputation = 80 #integer 1 - 100 value for reputation
 var reputationLastQuarter = 100
 var charityCost = 200
 var charityPileUp = 0
@@ -21,6 +21,7 @@ var statementCost = 500
 var statementDone = false
 var eventCost = 150
 var eventPileUp = 0
+var once = 0
 
 var securityCost = 60
 var securityFreq = 1
