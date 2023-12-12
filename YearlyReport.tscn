@@ -182,13 +182,4 @@ position = Vector2(419, 626)
 scale = Vector2(0.171875, 0.162109)
 texture = ExtResource("7_hcp0q")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1166.0
-offset_top = 602.0
-offset_right = 1371.0
-offset_bottom = 636.0
-theme = ExtResource("4_48dly")
-text = "ADD TOOLTIP HERE"
-
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
