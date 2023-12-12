@@ -31,9 +31,9 @@ func _process(delta):
 		sigfigs -= min(3, item.length())
 		dot = true
 	$BreachProb.text = niceBreach + "%"
-	$StatementCost.text = str(statementCost)
-	$CharityCost.text = str(Globals.charityCost)
-	$EventCost.text = str(Globals.eventCost)
+	$StatementCost.text = str(statementCost) + "K"
+	$CharityCost.text = str(Globals.charityCost) + "K"
+	$EventCost.text = str(Globals.eventCost) + "K"
 	$Hire.text = "HIRE: " + str(Globals.securityCost) + "K"
 	$SecurityLabel.text = str(Globals.securityFreq-1)
 	# Disable the hire button if not enough money

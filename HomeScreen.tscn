@@ -3,20 +3,20 @@
 [ext_resource type="Script" path="res://HomeScreen.gd" id="1_76qjh"]
 [ext_resource type="PackedScene" uid="uid://c0bb5yedovxdm" path="res://TopBar.tscn" id="1_c6lw8"]
 [ext_resource type="PackedScene" uid="uid://sn6bydjgf6o5" path="res://BottomBar.tscn" id="2_jd85w"]
-[ext_resource type="Texture2D" uid="uid://d2w6so6j5rtsm" path="res://Textures/officeLevels/criboriginal.png" id="4_7dp8v"]
+[ext_resource type="Texture2D" uid="uid://dki1pslmubx4i" path="res://Textures/officeLevels/criboriginal.png" id="4_7dp8v"]
 [ext_resource type="Script" path="res://Crib.gd" id="4_shits"]
 [ext_resource type="PackedScene" uid="uid://jv1swch4my8y" path="res://TutorialPopup.tscn" id="5_8lm8t"]
-[ext_resource type="Texture2D" uid="uid://xqn241loa5ts" path="res://Textures/particles.png" id="6_t0bp0"]
+[ext_resource type="Texture2D" uid="uid://vms5j0lrb5ka" path="res://Textures/particles.png" id="6_t0bp0"]
 [ext_resource type="Script" path="res://RedData.gd" id="7_buhkh"]
-[ext_resource type="Texture2D" uid="uid://oe2ww1y3sr2e" path="res://Textures/dataMonitor.png" id="7_fcun6"]
-[ext_resource type="Texture2D" uid="uid://cnwe41bu55bpf" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
-[ext_resource type="Texture2D" uid="uid://04t3pewjflfu" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
+[ext_resource type="Texture2D" uid="uid://bry5dek7epam5" path="res://Textures/dataMonitor.png" id="7_fcun6"]
+[ext_resource type="Texture2D" uid="uid://je0p33rd51oh" path="res://Textures/moneyIcon.png" id="8_sfv5e"]
+[ext_resource type="Texture2D" uid="uid://dbr6nrnlvd3ta" path="res://Textures/dollarIcon.png" id="9_ojw0e"]
 [ext_resource type="Script" path="res://BlueData.gd" id="9_rfmpq"]
-[ext_resource type="Texture2D" uid="uid://ce7q4irdql133" path="res://Textures/backgrounds/redData.png" id="11_rw01r"]
-[ext_resource type="Texture2D" uid="uid://sv56m76uhk5m" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
+[ext_resource type="Texture2D" uid="uid://cxvysgoe1e4xr" path="res://Textures/backgrounds/redData.png" id="11_rw01r"]
+[ext_resource type="Texture2D" uid="uid://bwoardo26l6qt" path="res://Textures/backgrounds/blueData.png" id="13_jxbff"]
 [ext_resource type="Shader" path="res://tutorial.gdshader" id="15_6fj6o"]
-[ext_resource type="Texture2D" uid="uid://b5x5stjquuim2" path="res://Textures/icons/arrow.png" id="16_7i4lc"]
-[ext_resource type="PackedScene" uid="uid://d03jolgjr3k1i" path="res://congrats.tscn" id="17_2v4p2"]
+[ext_resource type="Texture2D" uid="uid://cqp0ussw7u230" path="res://Textures/icons/arrow.png" id="16_7i4lc"]
+[ext_resource type="PackedScene" path="res://congrats.tscn" id="17_2v4p2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bf60y"]
 particles_animation = true
@@ -107,73 +107,73 @@ initial_velocity_min = 200.0
 initial_velocity_max = 200.0
 
 [node name="RedData" type="Sprite2D" parent="."]
-position = Vector2(-149, 272)
+position = Vector2(-152, 322)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData2" type="Sprite2D" parent="."]
-position = Vector2(-99, 273)
+position = Vector2(-102, 323)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData3" type="Sprite2D" parent="."]
-position = Vector2(-53, 274)
+position = Vector2(-56, 324)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="BlueData" type="Sprite2D" parent="."]
-position = Vector2(11, 331)
+position = Vector2(18, 383)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData2" type="Sprite2D" parent="."]
-position = Vector2(66, 331)
+position = Vector2(73, 383)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData3" type="Sprite2D" parent="."]
-position = Vector2(120, 332)
+position = Vector2(127, 384)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="RedData4" type="Sprite2D" parent="."]
-position = Vector2(143, 462)
+position = Vector2(157, 520)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData5" type="Sprite2D" parent="."]
-position = Vector2(192, 461)
+position = Vector2(206, 519)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData6" type="Sprite2D" parent="."]
-position = Vector2(238, 462)
+position = Vector2(252, 520)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="BlueData4" type="Sprite2D" parent="."]
-position = Vector2(376, 353)
+position = Vector2(589, 370)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData5" type="Sprite2D" parent="."]
-position = Vector2(431, 353)
+position = Vector2(644, 370)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData6" type="Sprite2D" parent="."]
-position = Vector2(485, 354)
+position = Vector2(698, 371)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
@@ -197,37 +197,37 @@ texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="BlueData7" type="Sprite2D" parent="."]
-position = Vector2(960, 300)
+position = Vector2(1087, 482)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData8" type="Sprite2D" parent="."]
-position = Vector2(1015, 300)
+position = Vector2(1142, 482)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="BlueData9" type="Sprite2D" parent="."]
-position = Vector2(1069, 301)
+position = Vector2(1196, 483)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("13_jxbff")
 script = ExtResource("9_rfmpq")
 
 [node name="RedData10" type="Sprite2D" parent="."]
-position = Vector2(1200, 332)
+position = Vector2(1208, 363)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData11" type="Sprite2D" parent="."]
-position = Vector2(1249, 331)
+position = Vector2(1257, 362)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
 
 [node name="RedData12" type="Sprite2D" parent="."]
-position = Vector2(1295, 332)
+position = Vector2(1303, 363)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("11_rw01r")
 script = ExtResource("7_buhkh")
